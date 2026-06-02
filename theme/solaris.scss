@@ -165,10 +165,48 @@ $nav-inset: 40px;   // 좌우 화살표 안쪽 여백 (조절 지점)
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
 .two-col.wide-left { grid-template-columns: 1.3fr 1fr; }
 
-// 임베드 다이어그램 (slide3/slide6 iframe)
-.diagram-embed {
-  width: 100%; border: none; background: #fff;
-  border-radius: 0;
+// 본문 인라인 SVG 도면 — 슬라이드 가용 영역 중앙 정렬
+// (기존 iframe 임베드 방식을 대체. CL-Link 플랫폼 구조 도면 등)
+.diagram-stage {
+  display: flex;
+  justify-content: center;     // 가로 중앙
+  align-items: center;         // 세로 중앙
+  width: 100%;
+  margin: 0.3em 0;
+}
+.diagram-stage .s6-svg {
+  display: block;
+  width: 100%;                 // 가용폭 적극 사용
+  height: auto;                // viewBox 비율(1280:770) 유지
+  max-width: 1180px;           // 절대 상한
+  max-height: 620px;           // 세로 상한 (제목 영역 포함 슬라이드 내 수용)
+}
+
+// --- 도면 전용 슬라이드: 제목 좌상단 오버레이 / 도면 풀스크린 확대 ---
+// 도면 viewBox 좌상단(0~550, 0~300)이 비어 있어 제목과 충돌하지 않는다.
+.reveal section.diagram-slide {
+  height: 100%;
+  // 자동 생성 h2 숨김 (메뉴 표기는 data-menu-title이 담당)
+  > h2 { display: none; }
+}
+.diagram-head {
+  position: absolute; top: 0; left: 0; z-index: 2;
+  max-width: 500px;            // 제목·부제 한 줄 유지 (도면 좌상단 백색 여백 활용)
+  .diagram-title {
+    color: $navy; font-weight: 700; font-size: 1.5em; line-height: 1.15;
+    margin-bottom: 0.35em;
+  }
+  // 오버레이 내부에서는 부제 음수 마진 제거 (제목과 간격 정상화)
+  .subtitle { margin-top: 0; }
+}
+// 도면을 슬라이드 전체로 확장 (.diagram-stage 일반 규칙을 override)
+.reveal section.diagram-slide .diagram-stage {
+  position: absolute; inset: 0;
+  margin: 0;
+}
+.reveal section.diagram-slide .s6-svg {
+  width: 100%; height: 100%;
+  max-width: 100%; max-height: 100%;   // 슬라이드 높이를 최대 활용
 }
 
 // 강조 인용/태그라인 (slide 마무리 문구)

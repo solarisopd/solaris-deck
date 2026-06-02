@@ -153,14 +153,81 @@ format:
 
 ---
 
-## CL-Link 플랫폼 구조 {data-menu-title="CL-Link 구조"}
+## CL-Link 플랫폼 구조 {.diagram-slide data-menu-title="CL-Link 구조"}
 
+<div class="diagram-head">
+<div class="diagram-title">CL-Link 플랫폼 구조</div>
 <div class="eyebrow">Part II · 핵심솔루션</div>
 <div class="subtitle">자금의 왕복 사이클 전 분기점에 시스템적 통제를 작동시킨다.</div>
+</div>
+
+<div class="diagram-stage">
 
 ```{=html}
-<iframe class="diagram-embed" src="../assets/slide6.html" style="height:560px;"></iframe>
+<svg class="s6-svg" viewBox="0 0 1280 770" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CL-Link 플랫폼 자금 순환 구조도">
+  <style>
+    .s6-navy{fill:#1A2A66;filter:url(#s6sh)}
+    .s6-brand{fill:#2A5ADA;filter:url(#s6sh)}
+    .s6-region{fill:#EDF1FC}
+    .s6-clabel{fill:#6B7AA0;font-size:18px;font-weight:600;letter-spacing:1px}
+    .s6-title-inv{fill:#fff;font-size:17px;font-weight:700;letter-spacing:0.08em}
+    .s6-sub-inv{fill:#fff;font-size:13px;font-weight:400}
+    .s6-flow{fill:none;stroke-linecap:butt;stroke-dasharray:0 100;opacity:0}
+    .s6-tip{opacity:0}
+    .s6g0{animation:s6g0 8.0s linear infinite}.s6pt0{animation:s6t0 8.0s linear infinite}.s6ph0{animation:s6h0 8.0s linear infinite}.s6g1{animation:s6g1 8.0s linear infinite}.s6pt1{animation:s6t1 8.0s linear infinite}.s6ph1{animation:s6h1 8.0s linear infinite}.s6g2{animation:s6g2 8.0s linear infinite}.s6pt2{animation:s6t2 8.0s linear infinite}.s6ph2{animation:s6h2 8.0s linear infinite}.s6g3{animation:s6g3 8.0s linear infinite}.s6pt3{animation:s6t3 8.0s linear infinite}.s6ph3{animation:s6h3 8.0s linear infinite}.s6g4{animation:s6g4 8.0s linear infinite}.s6pt4{animation:s6t4 8.0s linear infinite}.s6ph4{animation:s6h4 8.0s linear infinite}.s6g5{animation:s6g5 8.0s linear infinite}.s6pt5{animation:s6t5 8.0s linear infinite}.s6ph5{animation:s6h5 8.0s linear infinite}.s6g6{animation:s6g6 8.0s linear infinite}.s6pt6{animation:s6t6 8.0s linear infinite}.s6ph6{animation:s6h6 8.0s linear infinite}
+    @keyframes s6g0{0%{stroke-dasharray:0 100;opacity:1}7.50%{stroke-dasharray:100 100;opacity:1}81.25%{stroke-dasharray:100 100;opacity:1}86.25%{stroke-dasharray:100 100;opacity:0}100%{stroke-dasharray:100 100;opacity:0}}@keyframes s6t0{0%{opacity:0}7.50%{opacity:0}9.00%{opacity:1}81.25%{opacity:1}86.25%{opacity:0}100%{opacity:0}}@keyframes s6h0{0%{opacity:0}3.12%{opacity:0}3.75%{opacity:1}81.25%{opacity:1}86.25%{opacity:0}100%{opacity:0}}@keyframes s6g1{0%{stroke-dasharray:0 100;opacity:0}6.88%{stroke-dasharray:0 100;opacity:1}14.37%{stroke-dasharray:100 100;opacity:1}81.25%{stroke-dasharray:100 100;opacity:1}86.25%{stroke-dasharray:100 100;opacity:0}100%{stroke-dasharray:100 100;opacity:0}}@keyframes s6t1{0%{opacity:0}14.37%{opacity:0}15.88%{opacity:1}81.25%{opacity:1}86.25%{opacity:0}100%{opacity:0}}@keyframes s6h1{0%{opacity:0}10.00%{opacity:0}10.63%{opacity:1}81.25%{opacity:1}86.25%{opacity:0}100%{opacity:0}}@keyframes s6g2{0%{stroke-dasharray:0 100;opacity:0}13.75%{stroke-dasharray:0 100;opacity:1}21.25%{stroke-dasharray:100 100;opacity:1}81.25%{stroke-dasharray:100 100;opacity:1}86.25%{stroke-dasharray:100 100;opacity:0}100%{stroke-dasharray:100 100;opacity:0}}@keyframes s6t2{0%{opacity:0}21.25%{opacity:0}22.75%{opacity:1}81.25%{opacity:1}86.25%{opacity:0}100%{opacity:0}}@keyframes s6h2{0%{opacity:0}16.88%{opacity:0}17.50%{opacity:1}81.25%{opacity:1}86.25%{opacity:0}100%{opacity:0}}@keyframes s6g3{0%{stroke-dasharray:0 100;opacity:0}20.62%{stroke-dasharray:0 100;opacity:1}28.12%{stroke-dasharray:100 100;opacity:1}81.25%{stroke-dasharray:100 100;opacity:1}86.25%{stroke-dasharray:100 100;opacity:0}100%{stroke-dasharray:100 100;opacity:0}}@keyframes s6t3{0%{opacity:0}28.12%{opacity:0}29.62%{opacity:1}81.25%{opacity:1}86.25%{opacity:0}100%{opacity:0}}@keyframes s6h3{0%{opacity:0}23.75%{opacity:0}24.38%{opacity:1}81.25%{opacity:1}86.25%{opacity:0}100%{opacity:0}}@keyframes s6g4{0%{stroke-dasharray:0 100;opacity:0}27.50%{stroke-dasharray:0 100;opacity:1}35.00%{stroke-dasharray:100 100;opacity:1}81.25%{stroke-dasharray:100 100;opacity:1}86.25%{stroke-dasharray:100 100;opacity:0}100%{stroke-dasharray:100 100;opacity:0}}@keyframes s6t4{0%{opacity:0}35.00%{opacity:0}36.50%{opacity:1}81.25%{opacity:1}86.25%{opacity:0}100%{opacity:0}}@keyframes s6h4{0%{opacity:0}30.63%{opacity:0}31.25%{opacity:1}81.25%{opacity:1}86.25%{opacity:0}100%{opacity:0}}@keyframes s6g5{0%{stroke-dasharray:0 100;opacity:0}34.38%{stroke-dasharray:0 100;opacity:1}41.88%{stroke-dasharray:100 100;opacity:1}81.25%{stroke-dasharray:100 100;opacity:1}86.25%{stroke-dasharray:100 100;opacity:0}100%{stroke-dasharray:100 100;opacity:0}}@keyframes s6t5{0%{opacity:0}41.88%{opacity:0}43.38%{opacity:1}81.25%{opacity:1}86.25%{opacity:0}100%{opacity:0}}@keyframes s6h5{0%{opacity:0}37.50%{opacity:0}38.12%{opacity:1}81.25%{opacity:1}86.25%{opacity:0}100%{opacity:0}}@keyframes s6g6{0%{stroke-dasharray:0 100;opacity:0}41.25%{stroke-dasharray:0 100;opacity:1}48.75%{stroke-dasharray:100 100;opacity:1}81.25%{stroke-dasharray:100 100;opacity:1}86.25%{stroke-dasharray:100 100;opacity:0}100%{stroke-dasharray:100 100;opacity:0}}@keyframes s6t6{0%{opacity:0}48.75%{opacity:0}50.25%{opacity:1}81.25%{opacity:1}86.25%{opacity:0}100%{opacity:0}}@keyframes s6h6{0%{opacity:0}44.38%{opacity:0}45.00%{opacity:1}81.25%{opacity:1}86.25%{opacity:0}100%{opacity:0}}
+    @media print{.s6-flow,.s6-tip{opacity:1;stroke-dasharray:none;animation:none}}
+    .s6-svg text{dominant-baseline:middle;text-anchor:middle}
+  </style>
+  <defs><filter id="s6sh" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDev="3" flood-color="#16223D" flood-opacity="0.10"/></filter></defs>
+  <rect class="s6-region" x="150" y="300" width="980" height="400" rx="0"/>
+  <text class="s6-clabel" x="220" y="350">CL-Link</text>
+  <text x="640" y="688" fill="#B7C4E6" font-size="15" font-weight="700" letter-spacing="2" font-style="italic">Octopus</text>
+
+  <path id="s6data" d="M290,548 A350,90 0 0 1 990,548" fill="none" stroke="none"/>
+  <text x="850" y="445" fill="#9FAFDD" font-size="12" font-weight="700" text-anchor="middle">DATA</text>
+  <text font-size="12" fill="#9FB0E0" letter-spacing="2" style="text-anchor:start;opacity:0;font-family:'Monaco','Consolas','Menlo','Courier New',monospace">
+    <animate attributeName="opacity" from="0" to="0.7" begin="0s" dur="0.7s" fill="freeze"/>
+    <textPath href="#s6data" startOffset="-260">10101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010<animate attributeName="startOffset" values="-260;-120;-260" keyTimes="0;0.5;1" dur="16s" begin="0s" repeatCount="indefinite" calcMode="linear"/></textPath>
+  </text>
+
+  <path class="s6-flow s6g0" pathLength="100" d="M664,112 L664,256" stroke="#16223D" stroke-width="1.6"/>
+  <path class="s6-tip s6pt0" d="M0,0 L-8,-4 L-8,4 Z" fill="#16223D" transform="translate(664,256) rotate(90)"/>
+  <path class="s6-flow s6g1" pathLength="100" d="M664,350 L664,498" stroke="#566273" stroke-width="1.6"/>
+  <path class="s6-tip s6pt1" d="M0,0 L-8,-4 L-8,4 Z" fill="#566273" transform="translate(664,498) rotate(90)"/>
+  <path class="s6-flow s6g2" pathLength="100" d="M728,548 L900,548" stroke="#566273" stroke-width="1.6"/>
+  <path class="s6-tip s6pt2" d="M0,0 L-8,-4 L-8,4 Z" fill="#566273" transform="translate(900,548) rotate(0)"/>
+  <path class="s6-flow s6g3" pathLength="100" d="M990,548 A350,90 0 0 1 290,548" stroke="#566273" stroke-width="1.6"/>
+  <path class="s6-tip s6pt3" d="M0,0 L-8,-4 L-8,4 Z" fill="#566273" transform="translate(330.4,590) rotate(-154.0)"/>
+  <path class="s6-flow s6g4" pathLength="100" d="M378,548 L550,548" stroke="#5B86E5" stroke-width="1.6"/>
+  <path class="s6-tip s6pt4" d="M0,0 L-8,-4 L-8,4 Z" fill="#5B86E5" transform="translate(550,548) rotate(0)"/>
+  <path class="s6-flow s6g5" pathLength="100" d="M616,498 L616,346" stroke="#5B86E5" stroke-width="1.6"/>
+  <path class="s6-tip s6pt5" d="M0,0 L-8,-4 L-8,4 Z" fill="#5B86E5" transform="translate(616,346) rotate(-90)"/>
+  <path class="s6-flow s6g6" pathLength="100" d="M616,256 L616,114" stroke="#5B86E5" stroke-width="1.6"/>
+  <path class="s6-tip s6pt6" d="M0,0 L-8,-4 L-8,4 Z" fill="#5B86E5" transform="translate(616,114) rotate(-90)"/>
+
+  <text class="s6-tip s6ph0" x="700" y="185" fill="#16223D" font-size="13" font-weight="700" text-anchor="start">자금조달</text>
+  <g class="s6-tip s6ph1"><circle cx="664" cy="424" r="11" fill="#1A2A66"/><text x="664" y="424" fill="#fff" font-size="12" font-weight="700">1</text></g>
+  <text class="s6-tip s6ph1" x="730" y="424" fill="#16223D" font-size="13" font-weight="700" text-anchor="start">기업운전자금 대출</text>
+  <g class="s6-tip s6ph2"><circle cx="814" cy="548" r="11" fill="#1A2A66"/><text x="814" y="548" fill="#fff" font-size="12" font-weight="700">2</text></g>
+  <text class="s6-tip s6ph2" x="815" y="524" fill="#16223D" font-size="13" font-weight="700" text-anchor="middle">개인 대출</text>
+  <g class="s6-tip s6ph3"><circle cx="640" cy="638" r="11" fill="#1A2A66"/><text x="640" y="638" fill="#fff" font-size="12" font-weight="700">3</text></g>
+  <text class="s6-tip s6ph3" x="640" y="663" fill="#16223D" font-size="13" font-weight="700" text-anchor="middle">주식 레버리지 투자</text>
+  <g class="s6-tip s6ph4"><circle cx="464" cy="548" r="11" fill="#2A5ADA"/><text x="464" y="548" fill="#fff" font-size="12" font-weight="700">4</text></g>
+  <text class="s6-tip s6ph4" x="465" y="524" fill="#2A5ADA" font-size="13" font-weight="700" text-anchor="middle">원리금 상환</text>
+  <g class="s6-tip s6ph5"><circle cx="616" cy="424" r="11" fill="#2A5ADA"/><text x="616" y="424" fill="#fff" font-size="12" font-weight="700">5</text></g>
+  <text class="s6-tip s6ph5" x="530" y="424" fill="#2A5ADA" font-size="13" font-weight="700" text-anchor="end">기업운전자금 원리금 상환</text>
+  <text class="s6-tip s6ph6" x="580" y="185" fill="#2A5ADA" font-size="13" font-weight="700" text-anchor="end">자금상환</text>
+
+  <rect class="s6-navy" x="552.0" y="28.0" width="176" height="84" rx="4"/><text class="s6-title-inv" x="640" y="70" style="letter-spacing:0.16em">대주단</text>
+  <rect class="s6-navy" x="552.0" y="258.0" width="176" height="84" rx="4"/><text class="s6-title-inv" x="640" y="292" style="letter-spacing:0.16em">SPC</text><text class="s6-sub-inv" x="640" y="313">자금관리</text>
+  <rect class="s6-navy" x="202.0" y="506.0" width="176" height="84" rx="4"/><text class="s6-title-inv" x="290" y="540">대출계좌</text><text class="s6-sub-inv" x="290" y="561">여신계좌</text>
+  <rect class="s6-brand" x="552.0" y="506.0" width="176" height="84" rx="4"/><text class="s6-title-inv" x="640" y="548">여신회원사</text>
+  <rect class="s6-navy" x="902.0" y="506.0" width="176" height="84" rx="4"/><text class="s6-title-inv" x="990" y="548">증권계좌</text>
+</svg>
 ```
+
+</div>
 
 <div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
 
