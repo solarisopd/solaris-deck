@@ -1,0 +1,93 @@
+[
+  {
+    "objectID": "dcm/index.html#section",
+    "href": "dcm/index.html#section",
+    "title": "SOLARIS OPPIDUM",
+    "section": " ",
+    "text": "SOLARIS OPPIDUM · PART III — 시스템 시연\n\n\n동적 담보관리\n\n\n공개 데이터가 종목·계좌 등급으로 환산되어, 매 영업일 각 계좌의 동적 LTV를 자동으로 정한다.\n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+  },
+  {
+    "objectID": "dcm/index.html#동적-담보관리-한눈에",
+    "href": "dcm/index.html#동적-담보관리-한눈에",
+    "title": "SOLARIS OPPIDUM",
+    "section": "동적 담보관리 한눈에",
+    "text": "동적 담보관리 한눈에\n\n평상시 운용 · 매 영업일 1회 자동 배치 (17:30 수집 → 18:10 계좌등급 재산정)\n\n\n\n\n①\n\n\n데이터 수집\n\n\n시세 · 재무 · 공시 (KRX·DART)\n\n\n\n→\n\n\n\n②\n\n\n7팩터 종목등급\n\n\n보유 종목별 평가\n\n\n\n→\n\n\n\n③\n\n\n계좌등급 산정\n\n\n집중/분산 보정\n\n\n\n→\n\n\n\n④\n\n\n동적 LTV 적용·감시\n\n\n등급별 동적 LTV\n\n\n\n\n①~④ 전 과정은 매 영업일 1회 자동 배치로 수행되며, 평가 전 과정에 사람의 임의 개입이 없다. LTV 임계점 도달 시 위기 자동 통제가 발동된다.\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+  },
+  {
+    "objectID": "dcm/index.html#평가-구조-종목등급에서-계좌등급으로",
+    "href": "dcm/index.html#평가-구조-종목등급에서-계좌등급으로",
+    "title": "SOLARIS OPPIDUM",
+    "section": "평가 구조 — 종목등급에서 계좌등급으로",
+    "text": "평가 구조 — 종목등급에서 계좌등급으로\n\n종목을 등급으로 환산하고, 종목별 등급의 조합으로 계좌등급과 동적 LTV를 산출한다.\n\n\n\n\n종목등급 · A~E\n\n\n개별 종목을 공개 데이터로 등급화. 보유 종목별 평가.\n\n\n\n\n계좌등급 · PA~PE\n\n\n종목등급 조합 + 집중/분산 보정. 쏠림은 페널티, 분산은 보너스.\n\n\n\n\n동적 LTV\n\n\n확정된 계좌등급에 따라 적용. 상시 갱신 · 자동 통제 연계.\n\n\n\n\n전 과정은 KRX·DART 공개 데이터로 매 영업일 자동 산출되며, 사람의 임의 개입이 없다.\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+  },
+  {
+    "objectID": "dcm/index.html#종목등급-7팩터-스코어링",
+    "href": "dcm/index.html#종목등급-7팩터-스코어링",
+    "title": "SOLARIS OPPIDUM",
+    "section": "종목등급 — 7팩터 스코어링",
+    "text": "종목등급 — 7팩터 스코어링\n\n사람의 판단이 아니라, 공개 데이터로 산출되는 7개 축의 가중 합산이다.\n\n\n\n\n평가 축\n가중치\n근거\n\n\n\n\n재무건전성\n34%\n영업이익·현금흐름·순이익\n\n\n재무안전성\n24%\n부채비율·유동비율·자본잠식\n\n\n시장성\n15%\n5일 평균 거래대금 (청산 가능성)\n\n\n규모\n10%\n시가총액\n\n\n시장안정성\n10%\n상장시장·소속부·지수 편입\n\n\n지배구조\n5%\n최대주주·사명 변경 이력\n\n\n건전성\n2%\n시장조치·불성실공시 벌점\n\n\n\n\n가중치는 담보 회수 가능성과 직결되는 재무 축(건전성 34% + 안전성 24% = 58%)에 집중되어, 단순한 시총·거래량 우위가 담보 부실 위험을 가리지 못하도록 설계되었다.\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+  },
+  {
+    "objectID": "dcm/index.html#종목등급-5단계-등급과-사전-차단",
+    "href": "dcm/index.html#종목등급-5단계-등급과-사전-차단",
+    "title": "SOLARIS OPPIDUM",
+    "section": "종목등급 — 5단계 등급과 사전 차단",
+    "text": "종목등급 — 5단계 등급과 사전 차단\n\n담보 부적격 종목은 평가 이전에 차단되고, 통과 종목만 등급별 관리된다.\n\n\n\n\n등급\n의미\n집중률 한도 (계좌 내 최대 비중)\n\n\n\n\nA\n우량\n100%\n\n\nB\n양호\n70%\n\n\nC\n보통\n50%\n\n\nD\n주의\n30%\n\n\nE\n경계\n15%\n\n\nX\n거래불가 (평가 외)\n0% · 담보가치 0원 · 차단 시 강제 부여\n\n\n\n\n관리종목·거래정지·자본잠식·시총 미달 등 부적격 종목은 점수 평가 이전에 차단(X등급)된다. 집중률 한도는 등급이 낮을수록 좁혀 쏠림 위험을 구조적으로 차단한다.\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+  },
+  {
+    "objectID": "dcm/index.html#계좌등급-보유-종목에서-계좌-위험도를-산출",
+    "href": "dcm/index.html#계좌등급-보유-종목에서-계좌-위험도를-산출",
+    "title": "SOLARIS OPPIDUM",
+    "section": "계좌등급 — 보유 종목에서 계좌 위험도를 산출",
+    "text": "계좌등급 — 보유 종목에서 계좌 위험도를 산출\n\n계좌가 보유한 종목들의 등급을 종합하고, 쏠림을 보정해 계좌의 위험을 등급화한다.\n\n\n\n\n①\n\n\n종목등급 가중평균\n\n\n보유 비중 기준 등급 합산\n\n\n\n→\n\n\n\n②\n\n\n집중도(HHI) 보정\n\n\n분산 우대 · 쏠림 페널티\n\n\n\n→\n\n\n\n③\n\n\n계좌등급 PA~PE\n\n\n→ 계좌 동적 LTV 결정\n\n\n\n\nHHI(집중도 지표) — 같은 평균등급이라도 분산된 계좌는 한도 여력을 더 주고, 한 종목에 쏠린 계좌는 LTV를 보수적으로 낮춘다. 분산 그 자체가 담보가 된다.\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+  },
+  {
+    "objectID": "dcm/index.html#위기-시-자동-통제-청산이-곧-우량화",
+    "href": "dcm/index.html#위기-시-자동-통제-청산이-곧-우량화",
+    "title": "SOLARIS OPPIDUM",
+    "section": "위기 시 자동 통제 — 청산이 곧 우량화",
+    "text": "위기 시 자동 통제 — 청산이 곧 우량화\n\nLTV 임계점에 도달한 계좌에 한해, 하위 등급 종목 자동 청산으로 잔여 계좌의 등급은 오히려 상승한다.\n\n\n\n\n①\n\n\n반대매매 트리거\n\n\n계좌 LTV 임계점 도달\n\n\n\n→\n\n\n\n②\n\n\n하위 등급 종목 자동 청산\n\n\n최저 등급부터 매도\n\n\n\n→\n\n\n\n③\n\n\n계좌등급 우량화\n\n\n잔여 종목 평균등급 상승\n\n\n\n\n위기는 통제의 시작이지, 손실의 시작이 아니다 — 하위 등급 종목이 떨어져 나갈수록 남은 계좌의 담보 질은 높아지고, LTV 여력은 회복된다.\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+  },
+  {
+    "objectID": "dcm/index.html#검증된-통제-대주단-원금의-방어선",
+    "href": "dcm/index.html#검증된-통제-대주단-원금의-방어선",
+    "title": "SOLARIS OPPIDUM",
+    "section": "검증된 통제, 대주단 원금의 방어선",
+    "text": "검증된 통제, 대주단 원금의 방어선\n\n\n\n5년\n\n\n가동 트랙\n\n\n\n\n0.24%\n\n\n부실율 (COVID-19 폭락기 포함)\n\n\n\n\n국내 최초\n\n\n계좌 단위 동적 담보관리\n\n\n\n\n\n\n실시간 통제\n\n\n매 영업일 전 계좌 등급 자동 재산정 — 위험이 사후가 아닌 상시로 관리된다.\n\n\n\n\n자동 회수\n\n\n임계점 도달 시 하위 종목 자동 청산 — 회수가 사람의 판단을 기다리지 않는다.\n\n\n\n\n임의 개입 0\n\n\n공개 데이터 기반 규칙 산출 — 평가·청산 전 과정에서 자의적 개입이 차단된다.\n\n\n\n\n동적 담보관리는 CL-Link 인프라의 [운용] 분기를 책임지며, 대주단 원금의 담보 부족 노출을 최소화하는 기술적 통제 장치이다.\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "SOLARIS OPPIDUM · CL-Link",
+    "section": "",
+    "text": "Part I–II\n    INVESTMENT MEMORANDUM\n    CL-Link 플랫폼 투자 설명자료. 시장분석부터 핵심 솔루션(CB-RMS·Octopus), 비즈니스 모델, 회사소개까지 15개 슬라이드.\n    발표 시작 →\n  \n  \n    Part III · 시스템 시연\n    Dynamic Collateral Management\n    동적 담보관리 로직 상세. 7팩터 종목등급, 계좌등급 산정, 동적 LTV, 위기 시 자동 통제 메커니즘.\n    발표 시작 →"
+  },
+  {
+    "objectID": "im/index.html#section",
+    "href": "im/index.html#section",
+    "title": "SOLARIS OPPIDUM",
+    "section": " ",
+    "text": "SOLARIS OPPIDUM · INFORMATION MEMORANDUM\n\n\nCL-Link 플랫폼\n\n\n증권 연계신용을 위한 SaaS 기반 통합 담보관리 인프라\n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+  },
+  {
+    "objectID": "im/index.html#시장분석-레버리지-시장의-회복",
+    "href": "im/index.html#시장분석-레버리지-시장의-회복",
+    "title": "SOLARIS OPPIDUM",
+    "section": "시장분석 — 레버리지 시장의 회복",
+    "text": "시장분석 — 레버리지 시장의 회복\n\nPart I · 시장분석\n\n\n국내 신용융자 잔고는 조정기를 지나 다시 증가세로 전환되었다.\n\n\n\n\n23.5조원\n\n\n신용융자 잔고 (’25.9)\n\n\n\n\n120조원\n\n\n국내 투자자 해외주식 보유잔고\n\n\n\n\n4–8조원\n\n\n잠재 담보 레버리지 수요\n\n\n\n\n자본시장법상 국내 증권사의 해외주식 신용공여가 전면 금지되어, 수천억 원 규모의 신규 수요가 구조적 공백 상태로 남아 있다.\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+  },
+  {
+    "objectID": "im/index.html#핵심-솔루션-cl-link-플랫폼-구조",
+    "href": "im/index.html#핵심-솔루션-cl-link-플랫폼-구조",
+    "title": "SOLARIS OPPIDUM",
+    "section": "핵심 솔루션 — CL-Link 플랫폼 구조",
+    "text": "핵심 솔루션 — CL-Link 플랫폼 구조\n\nPart II · 핵심솔루션\n\n\n자금의 왕복 사이클 전 분기점에 시스템적 통제를 작동시킨다.\n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+  },
+  {
+    "objectID": "im/index.html#cb-rms-핵심-경쟁력-5s-framework",
+    "href": "im/index.html#cb-rms-핵심-경쟁력-5s-framework",
+    "title": "SOLARIS OPPIDUM",
+    "section": "CB-RMS 핵심 경쟁력 — 5S Framework",
+    "text": "CB-RMS 핵심 경쟁력 — 5S Framework\n\nPart II · 핵심솔루션\n\n\n\n\n\n\n\n\n\n역량\n내용\n구현 방식\n\n\n\n\nSpeed 초저지연\n담보비율 재계산 → 반대매매 왕복 지연 최소화\n증권 내부 설치형 RMS + 광케이블 직결\n\n\nSafety 컴플라이언스\n담보·원리금 정산의 증빙성·추적성 확보\n디지털 신탁 / 전자문서 / 감사추적\n\n\nScale 확장성\n여신 온보딩 가속, 유지보수 절감\nOctopus 단일 접점 / 2주 온보딩\n\n\nSmarts 정밀 리스크\n교차담보 LTV·반대매매 트리거 산출\nFX Haircut / 상관변동성 모델\n\n\nOps 운영 가시성\n감사·리스크 리뷰 용이\n메시지 단위 로깅 / 리플레이 감사\n\n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+  }
+]
