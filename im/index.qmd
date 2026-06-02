@@ -191,20 +191,20 @@ format:
     <textPath href="#s6data" startOffset="-260">10101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010<animate attributeName="startOffset" values="-260;-120;-260" keyTimes="0;0.5;1" dur="16s" begin="0s" repeatCount="indefinite" calcMode="linear"/></textPath>
   </text>
 
-  <path class="s6-flow s6g0" pathLength="100" d="M664,112 L664,256" stroke="#16223D" stroke-width="1.6"/>
-  <path class="s6-tip s6pt0" d="M0,0 L-8,-4 L-8,4 Z" fill="#16223D" transform="translate(664,256) rotate(90)"/>
+  <path class="s6-flow s6g0" pathLength="100" d="M664,120 L664,250" stroke="#16223D" stroke-width="1.6"/>
+  <path class="s6-tip s6pt0" d="M0,0 L-8,-4 L-8,4 Z" fill="#16223D" transform="translate(664,250) rotate(90)"/>
   <path class="s6-flow s6g1" pathLength="100" d="M664,350 L664,498" stroke="#566273" stroke-width="1.6"/>
   <path class="s6-tip s6pt1" d="M0,0 L-8,-4 L-8,4 Z" fill="#566273" transform="translate(664,498) rotate(90)"/>
-  <path class="s6-flow s6g2" pathLength="100" d="M728,548 L900,548" stroke="#566273" stroke-width="1.6"/>
-  <path class="s6-tip s6pt2" d="M0,0 L-8,-4 L-8,4 Z" fill="#566273" transform="translate(900,548) rotate(0)"/>
-  <path class="s6-flow s6g3" pathLength="100" d="M990,548 A350,90 0 0 1 290,548" stroke="#566273" stroke-width="1.6"/>
-  <path class="s6-tip s6pt3" d="M0,0 L-8,-4 L-8,4 Z" fill="#566273" transform="translate(330.4,590) rotate(-154.0)"/>
-  <path class="s6-flow s6g4" pathLength="100" d="M378,548 L550,548" stroke="#5B86E5" stroke-width="1.6"/>
-  <path class="s6-tip s6pt4" d="M0,0 L-8,-4 L-8,4 Z" fill="#5B86E5" transform="translate(550,548) rotate(0)"/>
-  <path class="s6-flow s6g5" pathLength="100" d="M616,498 L616,346" stroke="#5B86E5" stroke-width="1.6"/>
-  <path class="s6-tip s6pt5" d="M0,0 L-8,-4 L-8,4 Z" fill="#5B86E5" transform="translate(616,346) rotate(-90)"/>
-  <path class="s6-flow s6g6" pathLength="100" d="M616,256 L616,114" stroke="#5B86E5" stroke-width="1.6"/>
-  <path class="s6-tip s6pt6" d="M0,0 L-8,-4 L-8,4 Z" fill="#5B86E5" transform="translate(616,114) rotate(-90)"/>
+  <path class="s6-flow s6g2" pathLength="100" d="M736,548 L894,548" stroke="#566273" stroke-width="1.6"/>
+  <path class="s6-tip s6pt2" d="M0,0 L-8,-4 L-8,4 Z" fill="#566273" transform="translate(894,548) rotate(0)"/>
+  <path class="s6-flow s6g3" pathLength="100" d="M931,598 A350,90 0 0 1 349,598" stroke="#566273" stroke-width="1.6"/>
+  <path class="s6-tip s6pt3" d="M0,0 L-8,-4 L-8,4 Z" fill="#566273" transform="translate(349,598) rotate(-159.0)"/>
+  <path class="s6-flow s6g4" pathLength="100" d="M386,548 L544,548" stroke="#5B86E5" stroke-width="1.6"/>
+  <path class="s6-tip s6pt4" d="M0,0 L-8,-4 L-8,4 Z" fill="#5B86E5" transform="translate(544,548) rotate(0)"/>
+  <path class="s6-flow s6g5" pathLength="100" d="M616,498 L616,350" stroke="#5B86E5" stroke-width="1.6"/>
+  <path class="s6-tip s6pt5" d="M0,0 L-8,-4 L-8,4 Z" fill="#5B86E5" transform="translate(616,350) rotate(-90)"/>
+  <path class="s6-flow s6g6" pathLength="100" d="M616,250 L616,120" stroke="#5B86E5" stroke-width="1.6"/>
+  <path class="s6-tip s6pt6" d="M0,0 L-8,-4 L-8,4 Z" fill="#5B86E5" transform="translate(616,120) rotate(-90)"/>
 
   <text class="s6-tip s6ph0" x="700" y="185" fill="#16223D" font-size="13" font-weight="700" text-anchor="start">자금조달</text>
   <g class="s6-tip s6ph1"><circle cx="664" cy="424" r="11" fill="#1A2A66"/><text x="664" y="424" fill="#fff" font-size="12" font-weight="700">1</text></g>
