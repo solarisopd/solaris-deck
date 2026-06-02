@@ -70,24 +70,108 @@
     "text": "SOLARIS OPPIDUM · INFORMATION MEMORANDUM\n\n\nCL-Link 플랫폼\n\n\n증권 연계신용을 위한 SaaS 기반 통합 담보관리 인프라\n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
-    "objectID": "im/index.html#시장분석-레버리지-시장의-회복",
-    "href": "im/index.html#시장분석-레버리지-시장의-회복",
+    "objectID": "im/index.html#목차",
+    "href": "im/index.html#목차",
     "title": "SOLARIS OPPIDUM",
-    "section": "시장분석 — 레버리지 시장의 회복",
-    "text": "시장분석 — 레버리지 시장의 회복\n\nPart I · 시장분석\n\n\n국내 신용융자 잔고는 조정기를 지나 다시 증가세로 전환되었다.\n\n\n\n\n23.5조원\n\n\n신용융자 잔고 (’25.9)\n\n\n\n\n120조원\n\n\n국내 투자자 해외주식 보유잔고\n\n\n\n\n4–8조원\n\n\n잠재 담보 레버리지 수요\n\n\n\n\n자본시장법상 국내 증권사의 해외주식 신용공여가 전면 금지되어, 수천억 원 규모의 신규 수요가 구조적 공백 상태로 남아 있다.\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+    "section": "목차",
+    "text": "목차\n\nCL-Link 플랫폼 투자 설명자료 구성\n\n\n\n\nPart I · 시장분석\n\n\n레버리지 시장의 회복 흐름, 연계신용 시장, TAM·SAM·SOM, 제도·시스템 공백, 해외 선행모델 비교\n\n\n\n\nPart II · 핵심솔루션 CL-Link\n\n\nCB-RMS 교차담보 시스템, Octopus 중계 버스, 5S 경쟁력, 고객 세그먼트, 기술 IP, 가치 제안\n\n\n\n\nPart III · 회사소개\n\n\n㈜솔라리스오피둠 개요 및 핵심 성과\n\n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
-    "objectID": "im/index.html#핵심-솔루션-cl-link-플랫폼-구조",
-    "href": "im/index.html#핵심-솔루션-cl-link-플랫폼-구조",
+    "objectID": "im/index.html#시장분석-레버리지-시장의-변동성과-회복",
+    "href": "im/index.html#시장분석-레버리지-시장의-변동성과-회복",
     "title": "SOLARIS OPPIDUM",
-    "section": "핵심 솔루션 — CL-Link 플랫폼 구조",
-    "text": "핵심 솔루션 — CL-Link 플랫폼 구조\n\nPart II · 핵심솔루션\n\n\n자금의 왕복 사이클 전 분기점에 시스템적 통제를 작동시킨다.\n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+    "section": "시장분석 — 레버리지 시장의 변동성과 회복",
+    "text": "시장분석 — 레버리지 시장의 변동성과 회복\n\nPart I · 시장분석\n\n\n국내 신용융자 잔고는 조정기를 지나 다시 증가세로 전환되었다.\n\n\n\n\n24.8조원\n\n\n’21년 신용융자 정점\n\n\n\n\n23.5조원\n\n\n’25.9 기준 잔고 (회복세)\n\n\n\n\n전면 금지\n\n\n국내 증권사 해외주식 신용공여\n\n\n\n\n\n\n국내 레버리지 시장의 회복세\n\n\n’20년 COVID-19 폭락장 당시 유동성 증대로 신용융자가 급증해 ’21년 24.8조 원 정점. ’22년 금리 인상기 조정 후 증시 상승에 따라 최근 활발한 증가세 진입.\n\n\n\n\n해외 레버리지 시장의 구조적 공백\n\n\n미국 기술주 중심 해외주식 투자 수요 급증으로 수천억 원 규모 신규 유입. 자본시장법상 국내 증권사의 해외주식 신용공여 전면 금지. 대안인 담보대출은 레버리지·LTV 조건이 불리.\n\n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
-    "objectID": "im/index.html#cb-rms-핵심-경쟁력-5s-framework",
-    "href": "im/index.html#cb-rms-핵심-경쟁력-5s-framework",
+    "objectID": "im/index.html#연계신용-시장-규모와-담보관리-현황",
+    "href": "im/index.html#연계신용-시장-규모와-담보관리-현황",
     "title": "SOLARIS OPPIDUM",
-    "section": "CB-RMS 핵심 경쟁력 — 5S Framework",
-    "text": "CB-RMS 핵심 경쟁력 — 5S Framework\n\nPart II · 핵심솔루션\n\n\n\n\n\n\n\n\n\n역량\n내용\n구현 방식\n\n\n\n\nSpeed 초저지연\n담보비율 재계산 → 반대매매 왕복 지연 최소화\n증권 내부 설치형 RMS + 광케이블 직결\n\n\nSafety 컴플라이언스\n담보·원리금 정산의 증빙성·추적성 확보\n디지털 신탁 / 전자문서 / 감사추적\n\n\nScale 확장성\n여신 온보딩 가속, 유지보수 절감\nOctopus 단일 접점 / 2주 온보딩\n\n\nSmarts 정밀 리스크\n교차담보 LTV·반대매매 트리거 산출\nFX Haircut / 상관변동성 모델\n\n\nOps 운영 가시성\n감사·리스크 리뷰 용이\n메시지 단위 로깅 / 리플레이 감사\n\n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+    "section": "연계신용 시장 규모와 담보관리 현황",
+    "text": "연계신용 시장 규모와 담보관리 현황\n\nPart I · 시장분석\n\n\n연계신용대출은 자산건전성 99.8%의 초우량 기초자산이며, 부실율은 5년간 0.24%에 그쳤다.\n\n\n\n\n99.8%\n\n\n자산건전성 (초우량 기초자산)\n\n\n\n\n0.24%\n\n\n부실율 (’17–’21 자료)\n\n\n\n\nKOSPI −30%\n\n\nCOVID 폭락기에도 낮은 손실률\n\n\n\n\n\n\n연계신용 시장 규모\n\n\nDSR 시행(’22년) 이전까지 캐피탈 등 여신기관이 지속 성장. 시행 이후 대출여력 감소로 시장 급격히 축소. 최근 주식시장 호황으로 잔고 증가 전환.\n\n\n\n\n담보관리 현황\n\n\n’18–’19년 대위변제율 일시 증가는 IPO 정책 변화(상장요건 완화) 영향. COVID-19 폭락(KOSPI −30%) 상황에서도 낮은 담보 손실률로 시스템 우수성 확인.\n\n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+  },
+  {
+    "objectID": "im/index.html#해외주식-레버리지-시장-tam-sam-som",
+    "href": "im/index.html#해외주식-레버리지-시장-tam-sam-som",
+    "title": "SOLARIS OPPIDUM",
+    "section": "해외주식 레버리지 시장 — TAM / SAM / SOM",
+    "text": "해외주식 레버리지 시장 — TAM / SAM / SOM\n\nPart I · 시장분석\n\n\n국내 투자자 해외주식 보유잔고 약 120조 원을 기반으로 시장 규모를 산출한다.\n\n\n\n\n\n\n\n\n\n구분\n규모\n산출 근거\n\n\n\n\nTAM 전체시장\n약 8~10조 원\n국내 투자자 해외주식 보유잔고 약 120조 원 × 보수적 LTV 8% 적용\n\n\nSAM 도달가능\n약 2~3조 원\n현재 주식담보대출 시장 규모 및 연간 성장률 적용\n\n\nSOM 실질목표\n약 1천억~5천억 원\n5차년 CUM 목표 1조 원의 잠재 레버리지 기반\n\n\n\n\nCEO 전임 실적(DB증권 연계신용 누적잔고 8,000억 원 달성)을 통해, 인프라 구축 즉시 수요 흡수 가능성이 검증되었다.\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+  },
+  {
+    "objectID": "im/index.html#관점별-시장-제도시스템-공백",
+    "href": "im/index.html#관점별-시장-제도시스템-공백",
+    "title": "SOLARIS OPPIDUM",
+    "section": "관점별 시장 제도·시스템 공백",
+    "text": "관점별 시장 제도·시스템 공백\n\nPart I · 시장분석\n\n\n국내 투자자의 해외주식 레버리지 경로는 모두 구조적 한계에 직면해 있다.\n\n\n\n\n\n\n\n\n\n투자 경로\n레버리지 가능 여부\n문제점\n\n\n\n\n국내 상장 해외 ETF (TIGER·KODEX)\n신용매수 가능 (국내주식 동일)\nETF 제한 — 개별 해외주식 직접 노출 불가\n\n\n해외직투 (미국주식 직접 보유)\n국내 증권사 신용공여 불가\n담보대출만 가능, LTV 60% 이하, 금리 5~8%\n\n\n국내 대부·캐피탈 주식담보대출\n가능 (DSR 예외 구조)\n비표준화·고금리, 증권 연동 시스템 부재\n\n\n\n\nDSR 시행(’22.7) 이후 B2B·법인 대상 증권연계 신용이 여신사의 유일한 성장 채널이나, 통합 RMS 부재와 전자질권 미비가 진입을 가로막는다.\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+  },
+  {
+    "objectID": "im/index.html#해외-선행-모델과의-차별점",
+    "href": "im/index.html#해외-선행-모델과의-차별점",
+    "title": "SOLARIS OPPIDUM",
+    "section": "해외 선행 모델과의 차별점",
+    "text": "해외 선행 모델과의 차별점\n\nPart I · 시장분석\n\n\n기존 크로스보더 RMS는 국내 규제 대응과 전자질권 설정이 불가능하다.\n\n\n\n\n\n\n\n\n\n\n구분\n미국 Interactive Brokers\n일본 SBI증권\n솔라리스오피둠 CL-Link\n\n\n\n\n크로스보더 RMS\n자체 글로벌 플랫폼\n국내 한정\n국내 여신기관 ↔︎ 증권사 연동 특화\n\n\n국내 규제 대응\n해당 없음\n해당 없음\n자본시장법 + 전자금융법 완전 준수\n\n\n전자질권 설정\n불가\n불가\nCL-Link 대출채권 관리\n\n\n한국 시장 적용\n불가 (외국법인)\n불가\n국내 유일 적용 가능 솔루션\n\n\n\n\nCL-Link는 통합 RMS 부재, 개발 비용 부담, 전자질권 미비라는 세 가지 문제를 단일 플랫폼으로 해결하는 유일한 국내 솔루션이다.\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+  },
+  {
+    "objectID": "im/index.html#핵심솔루션-cb-rms-교차담보-시스템",
+    "href": "im/index.html#핵심솔루션-cb-rms-교차담보-시스템",
+    "title": "SOLARIS OPPIDUM",
+    "section": "핵심솔루션 — CB-RMS 교차담보 시스템",
+    "text": "핵심솔루션 — CB-RMS 교차담보 시스템\n\nPart II · 핵심솔루션\n\n\n국내·해외 주식을 단일 담보풀로 구성해 교차담보 레버리지 한도를 산출하는 증권사 설치형 시스템.\n\n\n\n\nCL-Link · Collateral-Link Platform\n\n\n담보(Collateral)를 중심으로 증권 여신·정산을 초저지연(Ultra-Low Latency)으로 연결하는 플랫폼.\n\n\n\n\nCB-RMS · 교차담보 리스크관리 시스템\n\n\n환율·변동성 리스크를 통합 산출하고 자동 반대매매를 수행. ’리스크 없는 새로운 투자 기회 발굴’의 핵심 프로그램.\n\n\n\n\n\n\n기존 보유 국내주식 활용\n\n\n보유 국내 주식을 별도 현금 없이 담보로 해외주식(특히 미국)에 투자 가능.\n\n\n\n\n글로벌 시장 접근성 확대\n\n\n전 세계 시총 1.5% 수준 국내시장을 넘어, 40%를 차지하는 미국주식시장으로의 진입 장벽 해소.\n\n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+  },
+  {
+    "objectID": "im/index.html#cl-link-플랫폼-구조",
+    "href": "im/index.html#cl-link-플랫폼-구조",
+    "title": "SOLARIS OPPIDUM",
+    "section": "CL-Link 플랫폼 구조",
+    "text": "CL-Link 플랫폼 구조\n\nPart II · 핵심솔루션\n\n\n자금의 왕복 사이클 전 분기점에 시스템적 통제를 작동시킨다.\n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+  },
+  {
+    "objectID": "im/index.html#리스크-분산-효과와-기술특허",
+    "href": "im/index.html#리스크-분산-효과와-기술특허",
+    "title": "SOLARIS OPPIDUM",
+    "section": "리스크 분산 효과와 기술·특허",
+    "text": "리스크 분산 효과와 기술·특허\n\nPart II · 핵심솔루션\n\n\n\n\n40%\n\n\n미국 시장 (전세계 시총 비중)\n\n\n\n\n0.3\n\n\n한·미 일간 수익률 상관계수\n\n\n\n\n−3.8%\n\n\n교차담보 시 포트폴리오 변동성\n\n\n\n\n\n\n동적 담보관리 (특허출원예정)\n\n\n시장가 연동 재평가, 자체 종목등급(A–E)·우량종목 교체, 계좌 담보등급 로직, 자동 마진콜 트리거 — Octopus 핵심 엔진.\n\n\n\n\n자동 담보청산\n\n\n3단계 밴드(Warning→Margin Call→Liquidation), 시차별 분할 집행, 베스트 실행, 재진입 방지, 감사추적·리플레이.\n\n\n\n\n하이브리드 연동 보안 (출원중)\n\n\nFail-Secure 기반 듀얼채널. 장애 시 민감정보(PII) 라우팅만 선별 차단하고 일반 통신망은 정상 유지.\n\n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+  },
+  {
+    "objectID": "im/index.html#octopus-담보-중계-전용-메시지-버스",
+    "href": "im/index.html#octopus-담보-중계-전용-메시지-버스",
+    "title": "SOLARIS OPPIDUM",
+    "section": "Octopus — 담보 중계 전용 메시지 버스",
+    "text": "Octopus — 담보 중계 전용 메시지 버스\n\nPart II · 핵심솔루션\n\n\n다수 여신기관과 증권사 RMS 간 이벤트를 표준 메시지로 교환하는 N:1 중계 레이어.\n\n\n\n\n여신기관\n\n\n캐피탈 · 저축은행 · 대부 · 온투업\n\n\n\n→\n\n\n\nOctopus\n\n\nREST / FIX / gRPC · 표준 스키마 변환 · 순서 보장\n\n\n\n→\n\n\n\n증권사\n\n\nCB-RMS · HTS/MTS · OMS · 계좌계\n\n\n\n\n\n\n온보딩 표준화 · N:1 확장\n\n\n맞춤 어댑터로 개별 개발 부담 축소, 다수 여신을 단일 버스로 통합해 2주 온보딩.\n\n\n\n\n리스크 동기화 · 장애 대응\n\n\n순서 보장으로 이중집행 차단, 버스트 제어·백프레셔·DLQ로 장중 피크·장애 대처.\n\n\n\n\n저지연 · 감사\n\n\n광케이블 IDC 연동으로 기존 전용선 대비 지연 단축, 불변 로그·리플레이로 감사 추적.\n\n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+  },
+  {
+    "objectID": "im/index.html#cl-link-핵심-경쟁력-5s-framework",
+    "href": "im/index.html#cl-link-핵심-경쟁력-5s-framework",
+    "title": "SOLARIS OPPIDUM",
+    "section": "CL-Link 핵심 경쟁력 — 5S Framework",
+    "text": "CL-Link 핵심 경쟁력 — 5S Framework\n\nPart II · 핵심솔루션\n\n\n\n\n\n\n\n\n\n역량\n내용\n구현 방식\n\n\n\n\nSpeed 초저지연\n담보비율 재계산 → 반대매매 왕복 지연 최소화\n증권 내부 설치형 RMS + 광케이블 직결\n\n\nSafety 컴플라이언스\n담보·원리금 정산의 증빙성·추적성 확보\n디지털 신탁 / 전자문서 / 감사추적\n\n\nScale 확장성\n여신 온보딩 가속, 유지보수 절감\nOctopus 단일 접점 / 2주 온보딩\n\n\nSmarts 정밀 리스크\n교차담보 LTV·반대매매 트리거 산출\nFX Haircut / 상관변동성 모델\n\n\nOps 운영 가시성\n감사·리스크 리뷰 용이\n메시지 단위 로깅 / 리플레이 감사\n\n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+  },
+  {
+    "objectID": "im/index.html#고객-세그먼트-페인포인트",
+    "href": "im/index.html#고객-세그먼트-페인포인트",
+    "title": "SOLARIS OPPIDUM",
+    "section": "고객 세그먼트 / 페인포인트",
+    "text": "고객 세그먼트 / 페인포인트\n\nPart II · 핵심솔루션\n\n\n\n\n\n\n\n\n\n세그먼트\n주요 Pain Point\nCL-Link 가치\n\n\n\n\n증권사\n해외 신용공여 공백, 다중 여신 연동 복잡, 피크 지연·반대매매 체결 품질\n내부 RMS + 광케이블로 저지연 실행 / 거래 정확도 확장 / 환전 기회 확대\n\n\n여신(대부·캐피탈·저축)\n온보딩 장기화, 증권사별 연결구조 비효율, 자금조달 어려움\nOctopus 단일 접점 2주 온보딩 / 신탁·공인전자 관리로 대주단 신뢰 확보\n\n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+  },
+  {
+    "objectID": "im/index.html#기술-ip-포트폴리오-및-ai-기반-개발역량",
+    "href": "im/index.html#기술-ip-포트폴리오-및-ai-기반-개발역량",
+    "title": "SOLARIS OPPIDUM",
+    "section": "기술 IP 포트폴리오 및 AI 기반 개발역량",
+    "text": "기술 IP 포트폴리오 및 AI 기반 개발역량\n\nPart II · 핵심솔루션\n\n\n\n\n\n\n\n\n\n구분\n내용\n비고\n\n\n\n\nSOLAB 연구전담부서\n과기정통부 KOITA 심사 인증 (제2025150182호)\n2026.1월 설립\n\n\n특허출원중\nFail-Secure 기반 듀얼채널 하이브리드 연동 보안\n장애 시 보안 상태 유지\n\n\n특허출원예정\n동적 담보관리 시스템 (비우량→우량 전환 계좌 등급평가)\nOctopus 핵심 엔진\n\n\n\n\n\n\nAI 기반 개발 가속\n\n\nClaude Code, ChatGPT Codex, GitHub Copilot 도입으로 코딩·문서화·테스트 가속. 업무 유형별 개발 속도 최대 10~30배 단축.\n\n\n\n\n100% 자체 개발 (In-house)\n\n\n기획·개발·운영 단일 루프로 사일로 해소. 기술 보안·품질·감사 내부 통제 확립, 전용 광케이블·서버로 지연 리스크 차단.\n\n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+  },
+  {
+    "objectID": "im/index.html#가치-제안-고객별-도입-효과",
+    "href": "im/index.html#가치-제안-고객별-도입-효과",
+    "title": "SOLARIS OPPIDUM",
+    "section": "가치 제안 — 고객별 도입 효과",
+    "text": "가치 제안 — 고객별 도입 효과\n\nPart II · 핵심솔루션\n\n\n\n\n증권사 · CB-RMS Suite 도입\n\n\n✓ 해외 신용공여 채널 확보✓ 다중 여신기관 통합 연동✓ 저지연 반대매매 실행✓ 환전 수익 기회 확대✓ 고객 유입 증대\n\n\n\n\n여신기관 · CL-Link Suite 도입\n\n\n✓ 2주 내 신속 온보딩✓ 초우량 담보대출 확대✓ 대주단 신뢰 확보✓ DSR 예외 섹터 진입✓ 자금조달 용이\n\n\n\n\n금융 IT 플랫폼 성공 사례(토스·카카오페이) 벤치마킹 — B2B 인프라 선점 및 트랜잭션 데이터 축적 후 B2C로 스케일업.\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+  },
+  {
+    "objectID": "im/index.html#회사소개-솔라리스오피둠",
+    "href": "im/index.html#회사소개-솔라리스오피둠",
+    "title": "SOLARIS OPPIDUM",
+    "section": "회사소개 — ㈜솔라리스오피둠",
+    "text": "회사소개 — ㈜솔라리스오피둠\n\nPart III · 회사소개\n\n\n\n\n\n\n항목\n내용\n\n\n\n\n회사명\n㈜솔라리스오피둠 (SOLARIS OPPIDUM)\n\n\n설립연도\n2024년 1월\n\n\n대표이사\n박세훈\n\n\n소재지\n서울시 강남구 압구정로 113-22, 310\n\n\n전체인력\n5명 (본사)\n\n\n주력사업\n정보통신업·시스템개발·핀테크·거래원장·IDC 컨설팅\n\n\n\n\n\n\n\n핵심 성과\n\n\n• 금융위대부(리드코프) 증권연계신용 시장 진출 총괄 기획 • 국내최초 사업자대상 증권연계신용 론칭 (’23 누적 8,000억원) • 국내최초 법인대상 증권연계신용 론칭 (’22 누적 300억원) • 국내최초 모바일 증권연계신용 플랫폼 론칭 • 증권담보관리 RMS 개발·운영 (하나·NH·대신·한화·유안타·SK·신한·KB 등 다수) • 국내최초 손해보험사(DB손보) 온라인 연계신용 진출 총괄\n\n\n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   }
 ]
