@@ -1,0 +1,82 @@
+---
+pagetitle: "SOLARIS OPPIDUM · Investment Memorandum"
+format:
+  revealjs:
+    theme: ../theme/solaris.scss
+    width: 1280
+    height: 800
+    margin: 0.06
+    slide-number: c/t
+    transition: fade
+    controls: true
+    progress: true
+    center: false
+    embed-resources: false
+---
+
+## &nbsp; {.title-dark .cover data-menu-title="표지"}
+
+::: {.cover-inner}
+<div class="eyebrow">SOLARIS OPPIDUM · INFORMATION MEMORANDUM</div>
+
+<div class="cover-title">CL-Link 플랫폼</div>
+
+<div class="subtitle cover-sub">증권 연계신용을 위한 SaaS 기반 통합 담보관리 인프라</div>
+:::
+
+<div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
+
+---
+
+## 시장분석 — 레버리지 시장의 회복 {data-menu-title="시장분석"}
+
+<div class="eyebrow">Part I · 시장분석</div>
+<div class="subtitle">국내 신용융자 잔고는 조정기를 지나 다시 증가세로 전환되었다.</div>
+
+<div class="stat-row">
+  <div class="stat"><div class="num">23.5<span style="font-size:0.4em;">조원</span></div><div class="lab">신용융자 잔고 ('25.9)</div></div>
+  <div class="stat"><div class="num brand">120<span style="font-size:0.4em;">조원</span></div><div class="lab">국내 투자자 해외주식 보유잔고</div></div>
+  <div class="stat"><div class="num">4–8<span style="font-size:0.4em;">조원</span></div><div class="lab">잠재 담보 레버리지 수요</div></div>
+</div>
+
+<div class="tagline">자본시장법상 국내 증권사의 해외주식 신용공여가 전면 금지되어, 수천억 원 규모의 신규 수요가 구조적 공백 상태로 남아 있다.</div>
+
+<div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
+
+---
+
+## 핵심 솔루션 — CL-Link 플랫폼 구조 {data-menu-title="CL-Link 구조"}
+
+<div class="eyebrow">Part II · 핵심솔루션</div>
+<div class="subtitle">자금의 왕복 사이클 전 분기점에 시스템적 통제를 작동시킨다.</div>
+
+```{=html}
+<iframe class="diagram-embed" src="../assets/slide6.html" style="height:560px;"></iframe>
+```
+
+<div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
+
+---
+
+## CB-RMS 핵심 경쟁력 — 5S Framework {data-menu-title="5S Framework"}
+
+<div class="eyebrow">Part II · 핵심솔루션</div>
+
+| 역량 | 내용 | 구현 방식 |
+|------|------|-----------|
+| **Speed** 초저지연 | 담보비율 재계산 → 반대매매 왕복 지연 최소화 | 증권 내부 설치형 RMS + 광케이블 직결 |
+| **Safety** 컴플라이언스 | 담보·원리금 정산의 증빙성·추적성 확보 | 디지털 신탁 / 전자문서 / 감사추적 |
+| **Scale** 확장성 | 여신 온보딩 가속, 유지보수 절감 | Octopus 단일 접점 / 2주 온보딩 |
+| **Smarts** 정밀 리스크 | 교차담보 LTV·반대매매 트리거 산출 | FX Haircut / 상관변동성 모델 |
+| **Ops** 운영 가시성 | 감사·리스크 리뷰 용이 | 메시지 단위 로깅 / 리플레이 감사 |
+
+<div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
+
+<!--
+====================================================================
+ 남은 슬라이드 (4~15) 자리 — 승인 후 한 장씩 추가:
+ 해외 레버리지 공백 / TAM·SAM·SOM / 제도·시스템 공백 / 유사케이스 비교 /
+ Octopus N:1 (assets/slide3.html 임베드) / 동적담보관리·자동청산 /
+ 고객 세그먼트 / 기술 IP·AI 역량 / 가치 제안 / 회사소개
+====================================================================
+-->

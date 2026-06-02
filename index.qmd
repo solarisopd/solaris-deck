@@ -1,0 +1,34 @@
+---
+title: "SOLARIS OPPIDUM · CL-Link"
+format:
+  html:
+    theme: theme/solaris.scss
+    page-layout: full
+---
+
+```{=html}
+<style>
+  .deck-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:980px;margin:40px auto;}
+  .deck-card{display:block;text-decoration:none;background:#fff;border:1px solid #D8E0F0;padding:36px 32px;transition:.15s;}
+  .deck-card:hover{border-color:#2A5ADA;box-shadow:0 6px 24px rgba(26,42,102,.10);}
+  .deck-eyebrow{font-size:12px;font-weight:700;letter-spacing:.08em;color:#5B6B8C;text-transform:uppercase;}
+  .deck-title{font-size:24px;font-weight:800;color:#1A2A66;margin:8px 0 10px;}
+  .deck-desc{font-size:14px;color:#16223D;line-height:1.6;}
+  .deck-go{margin-top:18px;font-size:13px;font-weight:700;color:#2A5ADA;}
+</style>
+
+<div class="deck-grid">
+  <a class="deck-card" href="im/index.html">
+    <div class="deck-eyebrow">Part I–II</div>
+    <div class="deck-title">INVESTMENT MEMORANDUM</div>
+    <div class="deck-desc">CL-Link 플랫폼 투자 설명자료. 시장분석부터 핵심 솔루션(CB-RMS·Octopus), 비즈니스 모델, 회사소개까지 15개 슬라이드.</div>
+    <div class="deck-go">발표 시작 →</div>
+  </a>
+  <a class="deck-card" href="dcm/index.html">
+    <div class="deck-eyebrow">Part III · 시스템 시연</div>
+    <div class="deck-title">Dynamic Collateral Management</div>
+    <div class="deck-desc">동적 담보관리 로직 상세. 7팩터 종목등급, 계좌등급 산정, 동적 LTV, 위기 시 자동 통제 메커니즘.</div>
+    <div class="deck-go">발표 시작 →</div>
+  </a>
+</div>
+```

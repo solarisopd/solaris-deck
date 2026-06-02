@@ -1,0 +1,158 @@
+---
+pagetitle: "SOLARIS OPPIDUM · Dynamic Collateral Management"
+format:
+  revealjs:
+    theme: ../theme/solaris.scss
+    width: 1280
+    height: 800
+    margin: 0.06
+    slide-number: c/t
+    transition: fade
+    controls: true
+    progress: true
+    center: false
+    embed-resources: false
+---
+
+## &nbsp; {.title-dark .cover data-menu-title="표지"}
+
+::: {.cover-inner}
+<div class="eyebrow">SOLARIS OPPIDUM · PART III — 시스템 시연</div>
+
+<div class="cover-title">동적 담보관리</div>
+
+<div class="subtitle cover-sub">공개 데이터가 종목·계좌 등급으로 환산되어, 매 영업일 각 계좌의 동적 LTV를 자동으로 정한다.</div>
+:::
+
+<div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
+
+---
+
+## 동적 담보관리 한눈에 {data-menu-title="전체 흐름"}
+
+<div class="subtitle">평상시 운용 · 매 영업일 1회 자동 배치 (17:30 수집 → 18:10 계좌등급 재산정)</div>
+
+<div class="flow">
+  <div class="flow-step"><div class="flow-badge">①</div><div class="flow-h">데이터 수집</div><div class="flow-d">시세 · 재무 · 공시 (KRX·DART)</div></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-step"><div class="flow-badge">②</div><div class="flow-h">7팩터 종목등급</div><div class="flow-d">보유 종목별 평가</div></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-step"><div class="flow-badge">③</div><div class="flow-h">계좌등급 산정</div><div class="flow-d">집중/분산 보정</div></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-step"><div class="flow-badge brand">④</div><div class="flow-h">동적 LTV 적용·감시</div><div class="flow-d">등급별 동적 LTV</div></div>
+</div>
+
+<div class="tagline">①~④ 전 과정은 매 영업일 1회 자동 배치로 수행되며, 평가 전 과정에 사람의 임의 개입이 없다. LTV 임계점 도달 시 위기 자동 통제가 발동된다.</div>
+
+<div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
+
+---
+
+## 평가 구조 — 종목등급에서 계좌등급으로 {data-menu-title="평가 구조"}
+
+<div class="subtitle">종목을 등급으로 환산하고, 종목별 등급의 조합으로 계좌등급과 동적 LTV를 산출한다.</div>
+
+<div class="card-grid cols-3">
+  <div class="card"><div class="card-h">종목등급 · A~E</div><div class="card-b">개별 종목을 공개 데이터로 등급화. 보유 종목별 평가.</div></div>
+  <div class="card"><div class="card-h">계좌등급 · PA~PE</div><div class="card-b">종목등급 조합 + 집중/분산 보정. 쏠림은 페널티, 분산은 보너스.</div></div>
+  <div class="card"><div class="card-h">동적 LTV</div><div class="card-b">확정된 계좌등급에 따라 적용. 상시 갱신 · 자동 통제 연계.</div></div>
+</div>
+
+<div class="tagline">전 과정은 KRX·DART 공개 데이터로 매 영업일 자동 산출되며, 사람의 임의 개입이 없다.</div>
+
+<div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
+
+---
+
+## 종목등급 — 7팩터 스코어링 {data-menu-title="7팩터"}
+
+<div class="subtitle">사람의 판단이 아니라, 공개 데이터로 산출되는 7개 축의 가중 합산이다.</div>
+
+| 평가 축 | 가중치 | 근거 |
+|---------|:------:|------|
+| 재무건전성 | **34%** | 영업이익·현금흐름·순이익 |
+| 재무안전성 | **24%** | 부채비율·유동비율·자본잠식 |
+| 시장성 | 15% | 5일 평균 거래대금 (청산 가능성) |
+| 규모 | 10% | 시가총액 |
+| 시장안정성 | 10% | 상장시장·소속부·지수 편입 |
+| 지배구조 | 5% | 최대주주·사명 변경 이력 |
+| 건전성 | 2% | 시장조치·불성실공시 벌점 |
+
+<div class="tagline">가중치는 담보 회수 가능성과 직결되는 재무 축(건전성 34% + 안전성 24% = 58%)에 집중되어, 단순한 시총·거래량 우위가 담보 부실 위험을 가리지 못하도록 설계되었다.</div>
+
+<div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
+
+---
+
+## 종목등급 — 5단계 등급과 사전 차단 {data-menu-title="5단계 등급"}
+
+<div class="subtitle">담보 부적격 종목은 평가 이전에 차단되고, 통과 종목만 등급별 관리된다.</div>
+
+| 등급 | 의미 | 집중률 한도 (계좌 내 최대 비중) |
+|:----:|------|------|
+| **A** | 우량 | 100% |
+| **B** | 양호 | 70% |
+| **C** | 보통 | 50% |
+| **D** | 주의 | 30% |
+| **E** | 경계 | 15% |
+| **X** | 거래불가 (평가 외) | 0% · 담보가치 0원 · 차단 시 강제 부여 |
+
+<div class="tagline">관리종목·거래정지·자본잠식·시총 미달 등 부적격 종목은 점수 평가 이전에 차단(X등급)된다. 집중률 한도는 등급이 낮을수록 좁혀 쏠림 위험을 구조적으로 차단한다.</div>
+
+<div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
+
+---
+
+## 계좌등급 — 보유 종목에서 계좌 위험도를 산출 {data-menu-title="계좌등급"}
+
+<div class="subtitle">계좌가 보유한 종목들의 등급을 종합하고, 쏠림을 보정해 계좌의 위험을 등급화한다.</div>
+
+<div class="flow">
+  <div class="flow-step"><div class="flow-badge">①</div><div class="flow-h">종목등급 가중평균</div><div class="flow-d">보유 비중 기준 등급 합산</div></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-step"><div class="flow-badge">②</div><div class="flow-h">집중도(HHI) 보정</div><div class="flow-d">분산 우대 · 쏠림 페널티</div></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-step"><div class="flow-badge brand">③</div><div class="flow-h">계좌등급 PA~PE</div><div class="flow-d">→ 계좌 동적 LTV 결정</div></div>
+</div>
+
+<div class="tagline">HHI(집중도 지표) — 같은 평균등급이라도 분산된 계좌는 한도 여력을 더 주고, 한 종목에 쏠린 계좌는 LTV를 보수적으로 낮춘다. 분산 그 자체가 담보가 된다.</div>
+
+<div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
+
+---
+
+## 위기 시 자동 통제 — 청산이 곧 우량화 {data-menu-title="자동 통제"}
+
+<div class="subtitle">LTV 임계점에 도달한 계좌에 한해, 하위 등급 종목 자동 청산으로 잔여 계좌의 등급은 오히려 상승한다.</div>
+
+<div class="flow">
+  <div class="flow-step"><div class="flow-badge">①</div><div class="flow-h">반대매매 트리거</div><div class="flow-d">계좌 LTV 임계점 도달</div></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-step"><div class="flow-badge">②</div><div class="flow-h">하위 등급 종목 자동 청산</div><div class="flow-d">최저 등급부터 매도</div></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-step"><div class="flow-badge brand">③</div><div class="flow-h">계좌등급 우량화</div><div class="flow-d">잔여 종목 평균등급 상승</div></div>
+</div>
+
+<div class="tagline">위기는 통제의 시작이지, 손실의 시작이 아니다 — 하위 등급 종목이 떨어져 나갈수록 남은 계좌의 담보 질은 높아지고, LTV 여력은 회복된다.</div>
+
+<div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
+
+---
+
+## 검증된 통제, 대주단 원금의 방어선 {data-menu-title="검증·결론"}
+
+<div class="stat-row">
+  <div class="stat"><div class="num">5<span style="font-size:0.4em;">년</span></div><div class="lab">가동 트랙</div></div>
+  <div class="stat"><div class="num brand">0.24<span style="font-size:0.4em;">%</span></div><div class="lab">부실율 (COVID-19 폭락기 포함)</div></div>
+  <div class="stat"><div class="num">국내 최초</div><div class="lab">계좌 단위 동적 담보관리</div></div>
+</div>
+
+<div class="card-grid cols-3">
+  <div class="card"><div class="card-h">실시간 통제</div><div class="card-b">매 영업일 전 계좌 등급 자동 재산정 — 위험이 사후가 아닌 상시로 관리된다.</div></div>
+  <div class="card"><div class="card-h">자동 회수</div><div class="card-b">임계점 도달 시 하위 종목 자동 청산 — 회수가 사람의 판단을 기다리지 않는다.</div></div>
+  <div class="card"><div class="card-h">임의 개입 0</div><div class="card-b">공개 데이터 기반 규칙 산출 — 평가·청산 전 과정에서 자의적 개입이 차단된다.</div></div>
+</div>
+
+<div class="tagline">동적 담보관리는 CL-Link 인프라의 [운용] 분기를 책임지며, 대주단 원금의 담보 부족 노출을 최소화하는 기술적 통제 장치이다.</div>
+
+<div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>

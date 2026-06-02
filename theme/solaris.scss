@@ -1,0 +1,187 @@
+/*-- scss:defaults --*/
+// =====================================================================
+// SOLARIS OPPIDUM — 공용 발표 테마 (chain.link 톤 / slide6 검증 토큰)
+// reveal.js 용. im/ 와 dcm/ 두 덱이 공유한다.
+// =====================================================================
+
+// --- 색상 토큰 (slide6.html에서 확정) ---
+$navy:       #1A2A66;   // 주 엔티티 / 표 헤더 / 배지 1·2·3
+$brand:      #2A5ADA;   // 브랜드 블루 / 강조 / 배지 4·5
+$blue2:      #5B86E5;   // 보조 블루 (상환 흐름)
+$ink:        #16223D;   // 본문 텍스트
+$mute:       #5B6B8C;   // 보조 텍스트
+$region:     #EDF1FC;   // 옅은 블루 영역 배경
+$sublt:      #C9D6FF;   // 박스 내 보조 라벨
+$line:       #D8E0F0;   // 얇은 구분선
+$bg:         #FFFFFF;   // 슬라이드 배경 (라이트)
+
+// --- Quarto/reveal 변수 매핑 ---
+$body-bg:            $bg;
+$body-color:         $ink;
+$link-color:         $brand;
+$selection-bg:       $sublt;
+
+$presentation-heading-color:        $navy;
+$presentation-heading-font-weight:  700;
+$presentation-font-size-root:       30px;
+
+// 폰트: 한글 Pretendard, 숫자/코드 monospace
+$font-family-sans-serif: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif;
+$presentation-heading-font: $font-family-sans-serif;
+$font-family-monospace: "Monaco", "Consolas", "Menlo", "Courier New", monospace;
+
+/*-- scss:rules --*/
+// =====================================================================
+// 공통 레이아웃 규칙
+// =====================================================================
+
+.reveal {
+  font-family: $font-family-sans-serif;
+  letter-spacing: -0.01em;
+
+  // 가로 overflow 방지 (긴 영문 제목이 화살표 영역을 침범하지 않도록)
+  .slides section {
+    overflow-wrap: break-word;
+    word-break: keep-all;
+  }
+  // Quarto 자동 생성 타이틀 슬라이드가 생길 경우 대비 — 제목 폭 제한
+  .slides section .title { max-width: 90%; margin: 0 auto; }
+
+  // 슬라이드 좌상단 작은 카테고리 라벨 (PART 표기 등)
+  .eyebrow {
+    font-size: 0.5em;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: $mute;
+    text-transform: uppercase;
+    margin-bottom: 0.4em;
+  }
+
+  // 제목 아래 부제 (slide6의 sub 톤)
+  .subtitle {
+    color: $mute;
+    font-size: 0.62em;
+    font-weight: 500;
+    margin-top: -0.2em;
+    margin-bottom: 0.8em;
+  }
+
+  h1, h2 { line-height: 1.15; }
+  h2 { font-size: 1.5em; }
+
+  // --- 기밀 푸터 (모든 슬라이드 공통) ---
+  .confidential {
+    position: fixed;
+    bottom: 12px; right: 18px;
+    font-size: 11px; color: $mute; opacity: 0.7;
+    letter-spacing: 0.04em;
+  }
+}
+
+// =====================================================================
+// 큰 숫자 스탯 콜아웃 (chain.link 패턴) — 5년 / 0.24% / 34%
+// =====================================================================
+.stat-row {
+  display: flex; gap: 28px; align-items: stretch;
+  margin: 0.6em 0;
+}
+.stat {
+  flex: 1;
+  background: $region;
+  border-radius: 0;                 // 직각 (slide6 확정)
+  padding: 22px 20px;
+  .num {
+    font-size: 2.2em; font-weight: 800; color: $navy;
+    line-height: 1; letter-spacing: -0.02em;
+  }
+  .num.brand { color: $brand; }
+  .lab { margin-top: 8px; font-size: 0.5em; color: $mute; font-weight: 600; }
+}
+
+// =====================================================================
+// 기능 카드 그리드 (2열/3열)
+// =====================================================================
+.card-grid { display: grid; gap: 18px; margin: 0.5em 0; }
+.card-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+.card-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.card {
+  background: #fff; border: 1px solid $line; border-radius: 0;
+  padding: 18px 20px;
+  .card-h { color: $navy; font-weight: 700; font-size: 0.62em; margin-bottom: 6px; }
+  .card-b { color: $ink; font-size: 0.5em; line-height: 1.5; }
+}
+
+// =====================================================================
+// 번호형 프로세스 플로우 (①②③④) — slide6 배지 톤
+// =====================================================================
+.flow { display: flex; align-items: center; gap: 10px; margin: 0.6em 0; }
+.flow-step {
+  flex: 1; background: $region; border-radius: 0; padding: 16px 14px;
+  text-align: center;
+}
+.flow-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 26px; height: 26px; border-radius: 50%;
+  background: $navy; color: #fff; font-weight: 700; font-size: 0.5em;
+  margin-bottom: 8px;
+}
+.flow-badge.brand { background: $brand; }
+.flow-h { color: $navy; font-weight: 700; font-size: 0.52em; }
+.flow-d { color: $mute; font-size: 0.42em; margin-top: 4px; }
+.flow-arrow { color: $brand; font-size: 1.2em; font-weight: 700; }
+
+// =====================================================================
+// 표 (chain.link 톤: 헤더 네이비 / 본문 흰 / 얇은 선)
+// =====================================================================
+.reveal table {
+  border-collapse: collapse; width: 100%; font-size: 0.5em;
+  margin: 0.4em 0;
+}
+.reveal table thead th {
+  background: $navy; color: #fff; font-weight: 700;
+  padding: 10px 14px; text-align: left; border: none;
+}
+.reveal table tbody td {
+  padding: 9px 14px; border-bottom: 1px solid $line; color: $ink;
+}
+.reveal table tbody tr:last-child td { border-bottom: none; }
+// 등급 강조 셀
+.reveal table .grade { font-weight: 700; color: $navy; }
+
+// =====================================================================
+// 2단 레이아웃 (좌 텍스트 / 우 그래픽)
+// =====================================================================
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
+.two-col.wide-left { grid-template-columns: 1.3fr 1fr; }
+
+// 임베드 다이어그램 (slide3/slide6 iframe)
+.diagram-embed {
+  width: 100%; border: none; background: #fff;
+  border-radius: 0;
+}
+
+// 강조 인용/태그라인 (slide 마무리 문구)
+.tagline {
+  border-left: 3px solid $brand; padding-left: 16px;
+  color: $ink; font-size: 0.56em; line-height: 1.5; font-style: italic;
+  margin-top: 0.6em;
+}
+
+// 타이틀 슬라이드 (다크) — 표지/마무리
+.reveal section.title-dark {
+  background: $navy; color: #fff;
+  h1, h2 { color: #fff; }
+  .subtitle { color: $sublt; }
+}
+
+// 표지 — flex 중앙 정렬 (margin-top 사용 금지: 세로 overflow→네비 깨짐 방지)
+.reveal section.cover {
+  height: 100%;
+  .cover-inner {
+    position: absolute; top: 50%; left: 0; right: 0;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+  .cover-title { font-size: 2.0em; font-weight: 800; line-height: 1.12; color: #fff; }
+  .cover-sub { font-size: 0.86em; margin-top: 18px; }
+}

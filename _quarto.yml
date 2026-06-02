@@ -1,0 +1,28 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - index.qmd
+    - im/index.qmd
+    - dcm/index.qmd
+
+website:
+  title: "SOLARIS OPPIDUM"
+  site-url: "https://solarisopd.github.io/solaris-deck"
+  navbar:
+    background: "#1A2A66"
+    foreground: "#FFFFFF"
+    left:
+      - text: "INVESTMENT MEMORANDUM"
+        href: im/index.qmd
+      - text: "Dynamic Collateral Management"
+        href: dcm/index.qmd
+  page-footer:
+    background: "#1A2A66"
+    foreground: "#C9D6FF"
+    center: "㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+
+format:
+  html:
+    theme: theme/solaris.scss
+    toc: false
