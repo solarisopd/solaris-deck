@@ -28,24 +28,132 @@ format:
 
 ---
 
-## 시장분석 — 레버리지 시장의 회복 {data-menu-title="시장분석"}
+## 목차 {data-menu-title="목차"}
 
-<div class="eyebrow">Part I · 시장분석</div>
-<div class="subtitle">국내 신용융자 잔고는 조정기를 지나 다시 증가세로 전환되었다.</div>
+<div class="subtitle">CL-Link 플랫폼 투자 설명자료 구성</div>
 
-<div class="stat-row">
-  <div class="stat"><div class="num">23.5<span style="font-size:0.4em;">조원</span></div><div class="lab">신용융자 잔고 ('25.9)</div></div>
-  <div class="stat"><div class="num brand">120<span style="font-size:0.4em;">조원</span></div><div class="lab">국내 투자자 해외주식 보유잔고</div></div>
-  <div class="stat"><div class="num">4–8<span style="font-size:0.4em;">조원</span></div><div class="lab">잠재 담보 레버리지 수요</div></div>
+<div class="card-grid cols-3">
+  <div class="card"><div class="card-h">Part I · 시장분석</div><div class="card-b">레버리지 시장의 회복 흐름, 연계신용 시장, TAM·SAM·SOM, 제도·시스템 공백, 해외 선행모델 비교</div></div>
+  <div class="card"><div class="card-h">Part II · 핵심솔루션 CL-Link</div><div class="card-b">CB-RMS 교차담보 시스템, Octopus 중계 버스, 5S 경쟁력, 고객 세그먼트, 기술 IP, 가치 제안</div></div>
+  <div class="card"><div class="card-h">Part III · 회사소개</div><div class="card-b">㈜솔라리스오피둠 개요 및 핵심 성과</div></div>
 </div>
-
-<div class="tagline">자본시장법상 국내 증권사의 해외주식 신용공여가 전면 금지되어, 수천억 원 규모의 신규 수요가 구조적 공백 상태로 남아 있다.</div>
 
 <div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
 
 ---
 
-## 핵심 솔루션 — CL-Link 플랫폼 구조 {data-menu-title="CL-Link 구조"}
+## 시장분석 — 레버리지 시장의 변동성과 회복 {data-menu-title="레버리지 회복"}
+
+<div class="eyebrow">Part I · 시장분석</div>
+<div class="subtitle">국내 신용융자 잔고는 조정기를 지나 다시 증가세로 전환되었다.</div>
+
+<div class="stat-row">
+  <div class="stat"><div class="num">24.8<span style="font-size:0.4em;">조원</span></div><div class="lab">'21년 신용융자 정점</div></div>
+  <div class="stat"><div class="num brand">23.5<span style="font-size:0.4em;">조원</span></div><div class="lab">'25.9 기준 잔고 (회복세)</div></div>
+  <div class="stat"><div class="num">전면 금지</div><div class="lab">국내 증권사 해외주식 신용공여</div></div>
+</div>
+
+<div class="card-grid cols-2">
+  <div class="card"><div class="card-h">국내 레버리지 시장의 회복세</div><div class="card-b">'20년 COVID-19 폭락장 당시 유동성 증대로 신용융자가 급증해 '21년 24.8조 원 정점. '22년 금리 인상기 조정 후 증시 상승에 따라 최근 활발한 증가세 진입.</div></div>
+  <div class="card"><div class="card-h">해외 레버리지 시장의 구조적 공백</div><div class="card-b">미국 기술주 중심 해외주식 투자 수요 급증으로 수천억 원 규모 신규 유입. 자본시장법상 국내 증권사의 해외주식 신용공여 전면 금지. 대안인 담보대출은 레버리지·LTV 조건이 불리.</div></div>
+</div>
+
+<div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
+
+---
+
+## 연계신용 시장 규모와 담보관리 현황 {data-menu-title="연계신용·담보"}
+
+<div class="eyebrow">Part I · 시장분석</div>
+<div class="subtitle">연계신용대출은 자산건전성 99.8%의 초우량 기초자산이며, 부실율은 5년간 0.24%에 그쳤다.</div>
+
+<div class="stat-row">
+  <div class="stat"><div class="num">99.8<span style="font-size:0.4em;">%</span></div><div class="lab">자산건전성 (초우량 기초자산)</div></div>
+  <div class="stat"><div class="num brand">0.24<span style="font-size:0.4em;">%</span></div><div class="lab">부실율 ('17–'21 자료)</div></div>
+  <div class="stat"><div class="num">KOSPI −30%</div><div class="lab">COVID 폭락기에도 낮은 손실률</div></div>
+</div>
+
+<div class="card-grid cols-2">
+  <div class="card"><div class="card-h">연계신용 시장 규모</div><div class="card-b">DSR 시행('22년) 이전까지 캐피탈 등 여신기관이 지속 성장. 시행 이후 대출여력 감소로 시장 급격히 축소. 최근 주식시장 호황으로 잔고 증가 전환.</div></div>
+  <div class="card"><div class="card-h">담보관리 현황</div><div class="card-b">'18–'19년 대위변제율 일시 증가는 IPO 정책 변화(상장요건 완화) 영향. COVID-19 폭락(KOSPI −30%) 상황에서도 낮은 담보 손실률로 시스템 우수성 확인.</div></div>
+</div>
+
+<div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
+
+---
+
+## 해외주식 레버리지 시장 — TAM / SAM / SOM {data-menu-title="TAM·SAM·SOM"}
+
+<div class="eyebrow">Part I · 시장분석</div>
+<div class="subtitle">국내 투자자 해외주식 보유잔고 약 120조 원을 기반으로 시장 규모를 산출한다.</div>
+
+| 구분 | 규모 | 산출 근거 |
+|------|------|-----------|
+| **TAM** 전체시장 | 약 8~10조 원 | 국내 투자자 해외주식 보유잔고 약 120조 원 × 보수적 LTV 8% 적용 |
+| **SAM** 도달가능 | 약 2~3조 원 | 현재 주식담보대출 시장 규모 및 연간 성장률 적용 |
+| **SOM** 실질목표 | 약 1천억~5천억 원 | 5차년 CUM 목표 1조 원의 잠재 레버리지 기반 |
+
+<div class="tagline">CEO 전임 실적(DB증권 연계신용 누적잔고 8,000억 원 달성)을 통해, 인프라 구축 즉시 수요 흡수 가능성이 검증되었다.</div>
+
+<div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
+
+---
+
+## 관점별 시장 제도·시스템 공백 {data-menu-title="제도·시스템 공백"}
+
+<div class="eyebrow">Part I · 시장분석</div>
+<div class="subtitle">국내 투자자의 해외주식 레버리지 경로는 모두 구조적 한계에 직면해 있다.</div>
+
+| 투자 경로 | 레버리지 가능 여부 | 문제점 |
+|-----------|-------------------|--------|
+| 국내 상장 해외 ETF (TIGER·KODEX) | 신용매수 가능 (국내주식 동일) | ETF 제한 — 개별 해외주식 직접 노출 불가 |
+| 해외직투 (미국주식 직접 보유) | 국내 증권사 신용공여 불가 | 담보대출만 가능, LTV 60% 이하, 금리 5~8% |
+| 국내 대부·캐피탈 주식담보대출 | 가능 (DSR 예외 구조) | 비표준화·고금리, 증권 연동 시스템 부재 |
+
+<div class="tagline">DSR 시행('22.7) 이후 B2B·법인 대상 증권연계 신용이 여신사의 유일한 성장 채널이나, 통합 RMS 부재와 전자질권 미비가 진입을 가로막는다.</div>
+
+<div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
+
+---
+
+## 해외 선행 모델과의 차별점 {data-menu-title="선행모델 비교"}
+
+<div class="eyebrow">Part I · 시장분석</div>
+<div class="subtitle">기존 크로스보더 RMS는 국내 규제 대응과 전자질권 설정이 불가능하다.</div>
+
+| 구분 | 미국 Interactive Brokers | 일본 SBI증권 | 솔라리스오피둠 CL-Link |
+|------|--------------------------|--------------|------------------------|
+| 크로스보더 RMS | 자체 글로벌 플랫폼 | 국내 한정 | 국내 여신기관 ↔ 증권사 연동 특화 |
+| 국내 규제 대응 | 해당 없음 | 해당 없음 | 자본시장법 + 전자금융법 완전 준수 |
+| 전자질권 설정 | 불가 | 불가 | CL-Link 대출채권 관리 |
+| 한국 시장 적용 | 불가 (외국법인) | 불가 | 국내 유일 적용 가능 솔루션 |
+
+<div class="tagline">CL-Link는 통합 RMS 부재, 개발 비용 부담, 전자질권 미비라는 세 가지 문제를 단일 플랫폼으로 해결하는 유일한 국내 솔루션이다.</div>
+
+<div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
+
+---
+
+## 핵심솔루션 — CB-RMS 교차담보 시스템 {data-menu-title="CB-RMS"}
+
+<div class="eyebrow">Part II · 핵심솔루션</div>
+<div class="subtitle">국내·해외 주식을 단일 담보풀로 구성해 교차담보 레버리지 한도를 산출하는 증권사 설치형 시스템.</div>
+
+<div class="card-grid cols-2">
+  <div class="card"><div class="card-h">CL-Link · Collateral-Link Platform</div><div class="card-b">담보(Collateral)를 중심으로 증권 여신·정산을 초저지연(Ultra-Low Latency)으로 연결하는 플랫폼.</div></div>
+  <div class="card"><div class="card-h">CB-RMS · 교차담보 리스크관리 시스템</div><div class="card-b">환율·변동성 리스크를 통합 산출하고 자동 반대매매를 수행. '리스크 없는 새로운 투자 기회 발굴'의 핵심 프로그램.</div></div>
+</div>
+
+<div class="card-grid cols-2">
+  <div class="card"><div class="card-h">기존 보유 국내주식 활용</div><div class="card-b">보유 국내 주식을 별도 현금 없이 담보로 해외주식(특히 미국)에 투자 가능.</div></div>
+  <div class="card"><div class="card-h">글로벌 시장 접근성 확대</div><div class="card-b">전 세계 시총 1.5% 수준 국내시장을 넘어, 40%를 차지하는 미국주식시장으로의 진입 장벽 해소.</div></div>
+</div>
+
+<div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
+
+---
+
+## CL-Link 플랫폼 구조 {data-menu-title="CL-Link 구조"}
 
 <div class="eyebrow">Part II · 핵심솔루션</div>
 <div class="subtitle">자금의 왕복 사이클 전 분기점에 시스템적 통제를 작동시킨다.</div>
@@ -58,7 +166,50 @@ format:
 
 ---
 
-## CB-RMS 핵심 경쟁력 — 5S Framework {data-menu-title="5S Framework"}
+## 리스크 분산 효과와 기술·특허 {data-menu-title="리스크분산·특허"}
+
+<div class="eyebrow">Part II · 핵심솔루션</div>
+
+<div class="stat-row">
+  <div class="stat"><div class="num brand">40<span style="font-size:0.4em;">%</span></div><div class="lab">미국 시장 (전세계 시총 비중)</div></div>
+  <div class="stat"><div class="num">0.3</div><div class="lab">한·미 일간 수익률 상관계수</div></div>
+  <div class="stat"><div class="num">−3.8<span style="font-size:0.4em;">%</span></div><div class="lab">교차담보 시 포트폴리오 변동성</div></div>
+</div>
+
+<div class="card-grid cols-3">
+  <div class="card"><div class="card-h">동적 담보관리 (특허출원예정)</div><div class="card-b">시장가 연동 재평가, 자체 종목등급(A–E)·우량종목 교체, 계좌 담보등급 로직, 자동 마진콜 트리거 — Octopus 핵심 엔진.</div></div>
+  <div class="card"><div class="card-h">자동 담보청산</div><div class="card-b">3단계 밴드(Warning→Margin Call→Liquidation), 시차별 분할 집행, 베스트 실행, 재진입 방지, 감사추적·리플레이.</div></div>
+  <div class="card"><div class="card-h">하이브리드 연동 보안 (출원중)</div><div class="card-b">Fail-Secure 기반 듀얼채널. 장애 시 민감정보(PII) 라우팅만 선별 차단하고 일반 통신망은 정상 유지.</div></div>
+</div>
+
+<div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
+
+---
+
+## Octopus — 담보 중계 전용 메시지 버스 {data-menu-title="Octopus"}
+
+<div class="eyebrow">Part II · 핵심솔루션</div>
+<div class="subtitle">다수 여신기관과 증권사 RMS 간 이벤트를 표준 메시지로 교환하는 N:1 중계 레이어.</div>
+
+<div class="flow">
+  <div class="flow-step"><div class="flow-h">여신기관</div><div class="flow-d">캐피탈 · 저축은행 · 대부 · 온투업</div></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-step" style="background:#1A2A66;"><div class="flow-h" style="color:#fff;">Octopus</div><div class="flow-d" style="color:#C9D6FF;">REST / FIX / gRPC · 표준 스키마 변환 · 순서 보장</div></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-step"><div class="flow-h">증권사</div><div class="flow-d">CB-RMS · HTS/MTS · OMS · 계좌계</div></div>
+</div>
+
+<div class="card-grid cols-3">
+  <div class="card"><div class="card-h">온보딩 표준화 · N:1 확장</div><div class="card-b">맞춤 어댑터로 개별 개발 부담 축소, 다수 여신을 단일 버스로 통합해 2주 온보딩.</div></div>
+  <div class="card"><div class="card-h">리스크 동기화 · 장애 대응</div><div class="card-b">순서 보장으로 이중집행 차단, 버스트 제어·백프레셔·DLQ로 장중 피크·장애 대처.</div></div>
+  <div class="card"><div class="card-h">저지연 · 감사</div><div class="card-b">광케이블 IDC 연동으로 기존 전용선 대비 지연 단축, 불변 로그·리플레이로 감사 추적.</div></div>
+</div>
+
+<div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
+
+---
+
+## CL-Link 핵심 경쟁력 — 5S Framework {data-menu-title="5S Framework"}
 
 <div class="eyebrow">Part II · 핵심솔루션</div>
 
@@ -72,11 +223,84 @@ format:
 
 <div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
 
-<!--
-====================================================================
- 남은 슬라이드 (4~15) 자리 — 승인 후 한 장씩 추가:
- 해외 레버리지 공백 / TAM·SAM·SOM / 제도·시스템 공백 / 유사케이스 비교 /
- Octopus N:1 (assets/slide3.html 임베드) / 동적담보관리·자동청산 /
- 고객 세그먼트 / 기술 IP·AI 역량 / 가치 제안 / 회사소개
-====================================================================
--->
+---
+
+## 고객 세그먼트 / 페인포인트 {data-menu-title="고객 세그먼트"}
+
+<div class="eyebrow">Part II · 핵심솔루션</div>
+
+| 세그먼트 | 주요 Pain Point | CL-Link 가치 |
+|----------|-----------------|--------------|
+| **증권사** | 해외 신용공여 공백, 다중 여신 연동 복잡, 피크 지연·반대매매 체결 품질 | 내부 RMS + 광케이블로 저지연 실행 / 거래 정확도 확장 / 환전 기회 확대 |
+| **여신**<br>(대부·캐피탈·저축) | 온보딩 장기화, 증권사별 연결구조 비효율, 자금조달 어려움 | Octopus 단일 접점 2주 온보딩 / 신탁·공인전자 관리로 대주단 신뢰 확보 |
+
+<div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
+
+---
+
+## 기술 IP 포트폴리오 및 AI 기반 개발역량 {data-menu-title="기술 IP·AI"}
+
+<div class="eyebrow">Part II · 핵심솔루션</div>
+
+| 구분 | 내용 | 비고 |
+|------|------|------|
+| SOLAB 연구전담부서 | 과기정통부 KOITA 심사 인증 (제2025150182호) | 2026.1월 설립 |
+| 특허출원중 | Fail-Secure 기반 듀얼채널 하이브리드 연동 보안 | 장애 시 보안 상태 유지 |
+| 특허출원예정 | 동적 담보관리 시스템 (비우량→우량 전환 계좌 등급평가) | Octopus 핵심 엔진 |
+
+<div class="card-grid cols-2">
+  <div class="card"><div class="card-h">AI 기반 개발 가속</div><div class="card-b">Claude Code, ChatGPT Codex, GitHub Copilot 도입으로 코딩·문서화·테스트 가속. 업무 유형별 개발 속도 최대 10~30배 단축.</div></div>
+  <div class="card"><div class="card-h">100% 자체 개발 (In-house)</div><div class="card-b">기획·개발·운영 단일 루프로 사일로 해소. 기술 보안·품질·감사 내부 통제 확립, 전용 광케이블·서버로 지연 리스크 차단.</div></div>
+</div>
+
+<div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
+
+---
+
+## 가치 제안 — 고객별 도입 효과 {data-menu-title="가치 제안"}
+
+<div class="eyebrow">Part II · 핵심솔루션</div>
+
+<div class="card-grid cols-2">
+  <div class="card"><div class="card-h">증권사 · CB-RMS Suite 도입</div><div class="card-b">✓ 해외 신용공여 채널 확보<br>✓ 다중 여신기관 통합 연동<br>✓ 저지연 반대매매 실행<br>✓ 환전 수익 기회 확대<br>✓ 고객 유입 증대</div></div>
+  <div class="card"><div class="card-h">여신기관 · CL-Link Suite 도입</div><div class="card-b">✓ 2주 내 신속 온보딩<br>✓ 초우량 담보대출 확대<br>✓ 대주단 신뢰 확보<br>✓ DSR 예외 섹터 진입<br>✓ 자금조달 용이</div></div>
+</div>
+
+<div class="tagline">금융 IT 플랫폼 성공 사례(토스·카카오페이) 벤치마킹 — B2B 인프라 선점 및 트랜잭션 데이터 축적 후 B2C로 스케일업.</div>
+
+<div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
+
+---
+
+## 회사소개 — ㈜솔라리스오피둠 {data-menu-title="회사소개"}
+
+<div class="eyebrow">Part III · 회사소개</div>
+
+<div class="two-col">
+<div>
+
+| 항목 | 내용 |
+|------|------|
+| 회사명 | ㈜솔라리스오피둠 (SOLARIS OPPIDUM) |
+| 설립연도 | 2024년 1월 |
+| 대표이사 | 박세훈 |
+| 소재지 | 서울시 강남구 압구정로 113-22, 310 |
+| 전체인력 | 5명 (본사) |
+| 주력사업 | 정보통신업·시스템개발·핀테크·거래원장·IDC 컨설팅 |
+
+</div>
+<div>
+
+<div class="card"><div class="card-h">핵심 성과</div><div class="card-b">
+• 금융위대부(리드코프) 증권연계신용 시장 진출 총괄 기획<br>
+• 국내최초 사업자대상 증권연계신용 론칭 ('23 누적 8,000억원)<br>
+• 국내최초 법인대상 증권연계신용 론칭 ('22 누적 300억원)<br>
+• 국내최초 모바일 증권연계신용 플랫폼 론칭<br>
+• 증권담보관리 RMS 개발·운영 (하나·NH·대신·한화·유안타·SK·신한·KB 등 다수)<br>
+• 국내최초 손해보험사(DB손보) 온라인 연계신용 진출 총괄
+</div></div>
+
+</div>
+</div>
+
+<div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>

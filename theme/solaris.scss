@@ -79,6 +79,17 @@ $font-family-monospace: "Monaco", "Consolas", "Menlo", "Courier New", monospace;
 }
 
 // =====================================================================
+// 네비게이션 화살표 — 외곽선에서 안쪽으로 여백 확보
+// reveal.js edges 레이아웃은 .controls[data-controls-layout=edges] 셀렉터로
+// 화살표 위치를 잡는다(특이성 0,4,0, 기본 var(--r-controls-spacing)=12px).
+// 동일 특이성으로 맞춰 덮어쓴다. !important 미사용.
+// =====================================================================
+$nav-inset: 40px;   // 좌우 화살표 안쪽 여백 (조절 지점)
+
+.reveal .controls[data-controls-layout="edges"] .navigate-left  { left:  $nav-inset; transform: translateX(0); }
+.reveal .controls[data-controls-layout="edges"] .navigate-right { right: $nav-inset; transform: translateX(0); }
+
+// =====================================================================
 // 큰 숫자 스탯 콜아웃 (chain.link 패턴) — 5년 / 0.24% / 34%
 // =====================================================================
 .stat-row {
