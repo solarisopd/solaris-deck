@@ -30,6 +30,60 @@ format:
 
 ---
 
+## 목차 {data-menu-title="목차"}
+
+<div class="eyebrow">CONTENTS · INVESTMENT MEMORANDUM</div>
+<div class="subtitle">담보부 기업운전자금대출(ABL) 투자 설명자료 구성</div>
+
+<div class="card-grid cols-3 toc-cards-compact">
+  <div class="card"><div class="card-h">PART I · 회사와 인프라</div><div class="card-b">Executive Summary · CL-Link 인프라의 정의 · 플랫폼 구조 · 다수 여신 단일 접점(N:1) · 운영 인력</div></div>
+  <div class="card"><div class="card-h">PART II · 거래 구조</div><div class="card-b">자금 구조 — 이원 풀(Two-Pool) · 위험 통제 체계 · 회수 우선순위(Waterfall)</div></div>
+  <div class="card"><div class="card-h">PART III · 시스템 시연</div><div class="card-b">시스템 시연 안내 · 동적 담보관리 시스템 · SPC 담보관리 시스템</div></div>
+  <div class="card"><div class="card-h">PART IV · 본 거래의 조건</div><div class="card-b">Term Sheet — 본 거래 개요 및 조건</div></div>
+  <div class="card"><div class="card-h">PART V · 마무리</div><div class="card-b">인프라 참여자 · 본 인프라의 위치</div></div>
+  <div class="card"><div class="card-h">APPENDIX</div><div class="card-b">면책 및 자료 제공 범위</div></div>
+</div>
+
+<div class="toc-page-list">
+  <div class="toc-part-group">
+    <div class="toc-part-head"><span class="toc-part-tag">PART I</span><span class="toc-part-name">회사와 인프라</span></div>
+    <div class="toc-row"><span class="toc-row-name">Executive Summary</span><span class="toc-row-page">3</span></div>
+    <div class="toc-row"><span class="toc-row-name">CL-Link 인프라의 정의</span><span class="toc-row-page">4</span></div>
+    <div class="toc-row"><span class="toc-row-name">CL-Link 플랫폼 구조</span><span class="toc-row-page">5</span></div>
+    <div class="toc-row"><span class="toc-row-name">다수 여신 단일 접점 (N:1)</span><span class="toc-row-page">6</span></div>
+    <div class="toc-row"><span class="toc-row-name">운영 인력</span><span class="toc-row-page">7</span></div>
+  </div>
+  <div class="toc-part-group">
+    <div class="toc-part-head"><span class="toc-part-tag">PART II</span><span class="toc-part-name">거래 구조</span></div>
+    <div class="toc-row"><span class="toc-row-name">자금 구조 — 이원 풀(Two-Pool)</span><span class="toc-row-page">8</span></div>
+    <div class="toc-row"><span class="toc-row-name">위험 통제 체계</span><span class="toc-row-page">9</span></div>
+    <div class="toc-row"><span class="toc-row-name">회수 우선순위 (Waterfall)</span><span class="toc-row-page">10</span></div>
+  </div>
+  <div class="toc-part-group">
+    <div class="toc-part-head"><span class="toc-part-tag">PART III</span><span class="toc-part-name">시스템 시연</span></div>
+    <div class="toc-row"><span class="toc-row-name">시스템 시연 안내</span><span class="toc-row-page">11</span></div>
+    <div class="toc-row"><span class="toc-row-name">시연 1. 동적 담보관리 시스템</span><span class="toc-row-page">12</span></div>
+    <div class="toc-row"><span class="toc-row-name">시연 2. SPC 담보관리 시스템</span><span class="toc-row-page">13</span></div>
+  </div>
+  <div class="toc-part-group">
+    <div class="toc-part-head"><span class="toc-part-tag">PART IV</span><span class="toc-part-name">본 거래의 조건</span></div>
+    <div class="toc-row"><span class="toc-row-name">Term Sheet — 본 거래 개요 및 조건</span><span class="toc-row-page">14</span></div>
+  </div>
+  <div class="toc-part-group">
+    <div class="toc-part-head"><span class="toc-part-tag">PART V</span><span class="toc-part-name">마무리</span></div>
+    <div class="toc-row"><span class="toc-row-name">인프라 참여자</span><span class="toc-row-page">15</span></div>
+    <div class="toc-row"><span class="toc-row-name">본 인프라의 위치</span><span class="toc-row-page">16</span></div>
+  </div>
+  <div class="toc-part-group">
+    <div class="toc-part-head"><span class="toc-part-tag">APPENDIX</span><span class="toc-part-name">부록</span></div>
+    <div class="toc-row"><span class="toc-row-name">면책 및 자료 제공 범위</span><span class="toc-row-page">17</span></div>
+  </div>
+</div>
+
+<div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
+
+---
+
 ## Executive Summary {data-menu-title="Executive Summary"}
 
 <div class="eyebrow">PART I · 회사와 인프라</div>

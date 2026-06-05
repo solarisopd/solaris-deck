@@ -32,6 +32,18 @@ $font-family-monospace: "Monaco", "Consolas", "Menlo", "Courier New", monospace;
 
 /*-- scss:rules --*/
 // =====================================================================
+// 한글 폰트 — Pretendard (로컬 임베드, 모든 환경에서 동일 렌더링 보장)
+// 파일: assets/fonts/PretendardVariable.woff2 (Variable Font, weight 100~900)
+// =====================================================================
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../assets/fonts/PretendardVariable.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+// =====================================================================
 // 공통 레이아웃 규칙
 // =====================================================================
 
@@ -120,6 +132,67 @@ $nav-inset: 40px;   // 좌우 화살표 안쪽 여백 (조절 지점)
   padding: 18px 20px;
   .card-h { color: $navy; font-weight: 700; font-size: 0.62em; margin-bottom: 6px; }
   .card-b { color: $ink; font-size: 0.5em; line-height: 1.5; }
+}
+
+// =====================================================================
+// 목차 페이지 — 우하단 페이지 리스트 (소제목까지 전체 노출)
+// 상단 6 카드 압축 + 하단 페이지 리스트(3×2 그리드)
+// =====================================================================
+.card-grid.toc-cards-compact {
+  gap: 10px;
+  margin: 0.3em 0;
+  .card {
+    padding: 10px 14px;
+    .card-h { font-size: 0.5em; margin-bottom: 3px; }
+    .card-b { font-size: 0.4em; line-height: 1.4; }
+  }
+}
+
+.toc-page-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 16px;
+  margin: 0.5em 0 0 auto;
+  width: 100%;
+
+  .toc-part-group {
+    background: #fff;
+    border: 1px solid $line;
+    padding: 8px 12px;
+
+    .toc-part-head {
+      display: flex; align-items: center; gap: 6px;
+      padding-bottom: 4px; margin-bottom: 4px;
+      border-bottom: 1px solid $line;
+
+      .toc-part-tag {
+        background: $navy; color: #fff;
+        font-weight: 700; font-size: 0.34em;
+        padding: 1px 6px;
+        letter-spacing: 0.02em;
+      }
+      .toc-part-name {
+        color: $navy; font-weight: 700; font-size: 0.4em;
+      }
+    }
+
+    .toc-row {
+      display: flex; justify-content: space-between; align-items: baseline;
+      padding: 2px 0;
+
+      .toc-row-name {
+        color: $ink; font-size: 0.34em;
+        flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+      }
+      .toc-row-page {
+        color: $mute; font-size: 0.32em; font-weight: 700;
+        background: $region;
+        padding: 1px 7px;
+        min-width: 22px; text-align: center;
+        margin-left: 6px;
+      }
+    }
+  }
 }
 
 // =====================================================================
