@@ -77,18 +77,18 @@
     "text": "㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
-    "objectID": "im/index.html#executive-summary",
-    "href": "im/index.html#executive-summary",
+    "objectID": "im/index.html#section-2",
+    "href": "im/index.html#section-2",
     "title": "SOLARIS OPPIDUM",
-    "section": "Executive Summary",
-    "text": "Executive Summary\n\nPART I · 회사와 인프라\n\n\n출자에서 회수·분배에 이르는 자금 사이클 전체를 자동화한 인프라이다.\n\n\n\n\n8,000개사\n\n\n1차 사용자 시장 (금융위 등록 대부업체)\n\n\n\n\n0.24%\n\n\n5년 누적 부실율 (COVID-19 폭락기 포함)\n\n\n\n\n6~7%\n\n\n예상 수익률 (연, 협의)\n\n\n\n\n\n\n\n\n\n\n구분\n내용\n\n\n\n\n1차 사용자 시장\n금융위 등록 대부업체 약 8,000개사\n\n\n현재 가동 사례\n담보부 기업운전자금대출 ABL │ Master Facility 일백억원\n\n\n인프라 검증 기간\n5년 │ 누적 부실율 0.24% (COVID-19 폭락기 포함)\n\n\n거래 만기\n6개월 ~ 12개월 (롤링)\n\n\n예상 수익률\n연 6.0% ~ 7.0% (협의)\n\n\n\n\n㈜솔라리스오피둠은 한국 스탁론 시장의 운영 인프라(CL-Link)를 설계·운영하는 회사이다. 본 인프라는 대주단 자금이 SPC를 통해 개인 차주에게 도달하고, 원리금이 다시 대주단에게 회수·분배되기까지 전 사이클을 시스템적으로 통제한다.\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+    "section": " ",
+    "text": "㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
-    "objectID": "im/index.html#cl-link-인프라의-정의",
-    "href": "im/index.html#cl-link-인프라의-정의",
+    "objectID": "im/index.html#section-3",
+    "href": "im/index.html#section-3",
     "title": "SOLARIS OPPIDUM",
-    "section": "CL-Link 인프라의 정의",
-    "text": "CL-Link 인프라의 정의\n\nPART I · 회사와 인프라\n\n\n본 인프라는 자금의 왕복 사이클 전 분기점에 시스템적 통제를 작동시킨다.\n\n\n\n\n단계\n자금 위치\n통제 장치\n\n\n\n\n출자\n대주단 자금\n유안타증권 신탁팀 — SPC 인장·계좌 통제\n\n\n수령\nSPC 자금관리계좌\n업무수탁 검증 후 집행\n\n\n전송\n회원사 모계좌\n집금 통제 — Daily Sweep 강제\n\n\n운용\n개인 증권계좌\n동적 담보관리 — 계좌 평가등급\n\n\n회수\n회원사 모계좌\nRMS Daily Sweep — 임의인출 차단\n\n\n환수\nSPC 자금관리계좌\nSPC 명의 근질권 + 자동 Sweep\n\n\n분배\n대주단 / 후순위\nWaterfall 시스템 — 업무수탁 검증\n\n\n\n\n본 사이클의 모든 분기점에서 인간의 임의 개입을 시스템·계약·업무수탁이 차단한다.\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+    "section": " ",
+    "text": "㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
     "objectID": "im/index.html#cl-link-플랫폼-구조",
