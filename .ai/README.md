@@ -10,7 +10,8 @@ GitHub Pages(public)로 배포 → WordPress Docs 메뉴에서 링크.
 
 ## 현재 상태 (2026-06-06)
 - 마지막: 2026-06-06 / Claude Code / 집 PC
-- IM 1쪽(표지)·2쪽(목차)을 slide_ai SVG로 교체 완료 (.svg-slide 방식, 아래 규약 참조)
+- IM 1~8·10~17쪽을 slide_ai SVG로 교체 완료 (.svg-slide 풀블리드, 아래 규약 참조) — 커밋·푸시 완료
+- IM 9쪽(위험 통제 체계)만 마크다운 유지 — 소스에 09.svg 없음 (추후 SVG 입수 시 동일 방식 교체)
 - main 브랜치
 - IM 덱 전면 재작성 완료 — 박세훈 ABL IM 원본 15쪽 + 확정 2쪽(자금순환·N:1) 삽입 (im/index.qmd 560줄)
 - 목차 슬라이드 추가 + Pretendard 로컬 폰트 임베드
@@ -25,7 +26,7 @@ GitHub Pages(public)로 배포 → WordPress Docs 메뉴에서 링크.
 - 슬라이드 헤딩: `## &nbsp; {.svg-slide data-menu-title="..."}`. 어두운(네이비) 아트워크는 `background-color="#1A2A66"` 추가(여백 이음매 제거)
 - **공통 유지(사용자 고정 지시)**: 하단 copyright `<div class="confidential">…</div>`는 각 슬라이드 유지 / 쪽번호(reveal `slide-number:c/t`)·넘김버튼(`controls`)은 전역 자동 적용 — 건드리지 말 것
 - CSS: theme/solaris.scss `.reveal section.svg-slide`(img.slide-art = absolute/inset:0/object-fit:contain) / frontmatter `auto-stretch:false` 필수(미설정 시 r-stretch가 풀블리드 깨뜨림)
-- 진행: 2026-06-06 1쪽(표지)·2쪽(목차) 완료. 3~17쪽은 SVG 첨부 시 동일 방식
+- 진행: 2026-06-06 1~8·10~17쪽 완료(9쪽 제외, 09.svg 미존재). 9쪽 SVG 입수 시 동일 방식으로 교체하면 IM 전체 SVG화 완료
 
 ## 다음 단계
 - IM 3~17쪽 SVG 교체 (사용자 SVG 첨부 시 위 규약대로)
