@@ -282,6 +282,24 @@ $nav-inset: 40px;   // 좌우 화살표 안쪽 여백 (조절 지점)
   max-width: 100%; max-height: 100%;   // 슬라이드 높이를 최대 활용
 }
 
+// =====================================================================
+// 전면 SVG 슬라이드 (AI 아트워크 1쪽 = 1 SVG)
+// im/slides/NN.svg 를 슬라이드 전체에 배치한다.
+// 하단 copyright(.confidential)·쪽번호(reveal slide-number)·
+// 넘김버튼(reveal controls)은 기존 공통 시스템을 그대로 사용한다.
+// =====================================================================
+.reveal section.svg-slide {
+  height: 100%;
+  > h2 { display: none; }              // 자동 h2 숨김 (메뉴는 data-menu-title)
+  p { margin: 0; }                     // 이미지 래퍼 p 여백 제거
+  img.slide-art {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: contain;               // 아트워크 비율 유지, 잘림 없음
+    margin: 0;
+  }
+}
+
 // 강조 인용/태그라인 (slide 마무리 문구)
 .tagline {
   border-left: 3px solid $brand; padding-left: 16px;
