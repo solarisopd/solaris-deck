@@ -300,6 +300,18 @@ $nav-inset: 40px;   // 좌우 화살표 안쪽 여백 (조절 지점)
   }
 }
 
+// 도면 슬라이드의 제목 텍스트 오버레이 (slide_ai 텍스트 SVG)
+// 원본 동적(애니메이션) 다이어그램은 그대로 두고, 제목/부제 텍스트만
+// 새 SVG로 교체한다. 텍스트 SVG는 투명 배경·좌상단 배치.
+.reveal section.diagram-slide img.slide-art-text {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: contain;
+  margin: 0;
+  z-index: 3;            // 동적 다이어그램 위에 텍스트 표시
+  pointer-events: none;  // 다이어그램 동작 방해 방지
+}
+
 // 강조 인용/태그라인 (slide 마무리 문구)
 .tagline {
   border-left: 3px solid $brand; padding-left: 16px;

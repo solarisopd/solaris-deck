@@ -49,11 +49,7 @@ format:
 
 ## CL-Link 플랫폼 구조 {.diagram-slide data-menu-title="CL-Link 구조"}
 
-<div class="diagram-head">
-<div class="diagram-title">CL-Link 플랫폼 구조 — 자금 순환</div>
-<div class="eyebrow">PART I · 회사와 인프라</div>
-<div class="subtitle">자금의 왕복 사이클 전 분기점에 시스템적 통제를 작동시킨다.</div>
-</div>
+![](slides/05.svg){.slide-art-text}
 
 <div class="diagram-stage">
 
@@ -129,11 +125,7 @@ format:
 
 ## 다수 여신 단일 접점 (N:1) {.diagram-slide data-menu-title="N:1 연결 구조"}
 
-<div class="diagram-head">
-<div class="diagram-title">CL-Link 연결 구조 — 다수 여신 단일 접점 (N:1)</div>
-<div class="eyebrow">PART I · 회사와 인프라</div>
-<div class="subtitle">다수 여신 회원사를 단일 접점으로 증권사 시스템(RMS·동적담보관리·SPC 자금관리)에 연결한다.</div>
-</div>
+![](slides/06.svg){.slide-art-text}
 
 <div class="diagram-stage">
 
