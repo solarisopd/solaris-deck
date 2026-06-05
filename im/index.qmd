@@ -31,47 +31,17 @@ format:
 
 ---
 
-## Executive Summary {data-menu-title="Executive Summary"}
+## &nbsp; {.svg-slide data-menu-title="Executive Summary"}
 
-<div class="eyebrow">PART I · 회사와 인프라</div>
-<div class="subtitle">출자에서 회수·분배에 이르는 자금 사이클 전체를 자동화한 인프라이다.</div>
-
-<div class="stat-row">
-  <div class="stat"><div class="num">8,000<span style="font-size:0.4em;">개사</span></div><div class="lab">1차 사용자 시장 (금융위 등록 대부업체)</div></div>
-  <div class="stat"><div class="num brand">0.24<span style="font-size:0.4em;">%</span></div><div class="lab">5년 누적 부실율 (COVID-19 폭락기 포함)</div></div>
-  <div class="stat"><div class="num">6~7<span style="font-size:0.4em;">%</span></div><div class="lab">예상 수익률 (연, 협의)</div></div>
-</div>
-
-| 구분 | 내용 |
-|------|------|
-| 1차 사용자 시장 | 금융위 등록 대부업체 약 8,000개사 |
-| 현재 가동 사례 | 담보부 기업운전자금대출 ABL │ Master Facility 일백억원 |
-| 인프라 검증 기간 | 5년 │ 누적 부실율 0.24% (COVID-19 폭락기 포함) |
-| 거래 만기 | 6개월 ~ 12개월 (롤링) |
-| 예상 수익률 | 연 6.0% ~ 7.0% (협의) |
-
-<div class="tagline">㈜솔라리스오피둠은 한국 스탁론 시장의 운영 인프라(CL-Link)를 설계·운영하는 회사이다. 본 인프라는 대주단 자금이 SPC를 통해 개인 차주에게 도달하고, 원리금이 다시 대주단에게 회수·분배되기까지 전 사이클을 시스템적으로 통제한다.</div>
+![](slides/03.svg){.slide-art}
 
 <div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
 
 ---
 
-## CL-Link 인프라의 정의 {data-menu-title="인프라 정의"}
+## &nbsp; {.svg-slide data-menu-title="인프라 정의"}
 
-<div class="eyebrow">PART I · 회사와 인프라</div>
-<div class="subtitle">본 인프라는 자금의 왕복 사이클 전 분기점에 시스템적 통제를 작동시킨다.</div>
-
-| 단계 | 자금 위치 | 통제 장치 |
-|------|-----------|-----------|
-| 출자 | 대주단 자금 | 유안타증권 신탁팀 — SPC 인장·계좌 통제 |
-| 수령 | SPC 자금관리계좌 | 업무수탁 검증 후 집행 |
-| 전송 | 회원사 모계좌 | 집금 통제 — Daily Sweep 강제 |
-| 운용 | 개인 증권계좌 | 동적 담보관리 — 계좌 평가등급 |
-| 회수 | 회원사 모계좌 | RMS Daily Sweep — 임의인출 차단 |
-| 환수 | SPC 자금관리계좌 | SPC 명의 근질권 + 자동 Sweep |
-| 분배 | 대주단 / 후순위 | Waterfall 시스템 — 업무수탁 검증 |
-
-<div class="tagline">본 사이클의 모든 분기점에서 인간의 임의 개입을 시스템·계약·업무수탁이 차단한다.</div>
+![](slides/04.svg){.slide-art}
 
 <div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
 
