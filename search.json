@@ -95,14 +95,14 @@
     "href": "im/index.html#cl-link-플랫폼-구조",
     "title": "SOLARIS OPPIDUM",
     "section": "CL-Link 플랫폼 구조",
-    "text": "CL-Link 플랫폼 구조\n\n\nCL-Link 플랫폼 구조 — 자금 순환\n\n\nPART I · 회사와 인프라\n\n\n자금의 왕복 사이클 전 분기점에 시스템적 통제를 작동시킨다.\n\n\n\n\n  \n  \n  \n  CL-Link\n  Octopus\n\n  \n  DATA\n  \n    \n    10101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010\n  \n\n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n\n  자금조달\n  1\n  기업운전자금 대출\n  2\n  개인 대출\n  3\n  주식 레버리지 투자\n  4\n  원리금 상환\n  5\n  기업운전자금 원리금 상환\n  자금상환\n\n  대주단\n  SPC자금관리\n  대출계좌여신계좌\n  여신회원사\n  증권계좌\n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+    "text": "CL-Link 플랫폼 구조\n\n\n\n  \n  \n  \n  CL-Link\n  Octopus\n\n  \n  DATA\n  \n    \n    10101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010\n  \n\n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n\n  자금조달\n  1\n  기업운전자금 대출\n  2\n  개인 대출\n  3\n  주식 레버리지 투자\n  4\n  원리금 상환\n  5\n  기업운전자금 원리금 상환\n  자금상환\n\n  대주단\n  SPC자금관리\n  대출계좌여신계좌\n  여신회원사\n  증권계좌\n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
     "objectID": "im/index.html#다수-여신-단일-접점-n1",
     "href": "im/index.html#다수-여신-단일-접점-n1",
     "title": "SOLARIS OPPIDUM",
     "section": "다수 여신 단일 접점 (N:1)",
-    "text": "다수 여신 단일 접점 (N:1)\n\n\nCL-Link 연결 구조 — 다수 여신 단일 접점 (N:1)\n\n\nPART I · 회사와 인프라\n\n\n다수 여신 회원사를 단일 접점으로 증권사 시스템(RMS·동적담보관리·SPC 자금관리)에 연결한다.\n\n\n\n\n    \n    \n      \n        \n      \n    \n\n    \n    CL-Link\n\n    \n    \n    \n    \n    \n    \n    \n\n    \n    \n    \n    \n    \n    \n    \n\n    \n    증권사\n\n    \n    RMS\n    증권사 내부\n\n    \n    동적담보관리\n    종목·계좌관리\n\n    \n    SPC 자금관리\n    SPC 자금흐름\n\n    \n    Octopus\n    통신중계버스\n\n    \n    여신기관 1\n    \n    여신기관 2\n    \n    여신기관 N\n  \n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+    "text": "다수 여신 단일 접점 (N:1)\n\n\n\n    \n    \n      \n        \n      \n    \n\n    \n    CL-Link\n\n    \n    \n    \n    \n    \n    \n    \n\n    \n    \n    \n    \n    \n    \n    \n\n    \n    증권사\n\n    \n    RMS\n    증권사 내부\n\n    \n    동적담보관리\n    종목·계좌관리\n\n    \n    SPC 자금관리\n    SPC 자금흐름\n\n    \n    Octopus\n    통신중계버스\n\n    \n    여신기관 1\n    \n    여신기관 2\n    \n    여신기관 N\n  \n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
     "objectID": "im/index.html#운영-인력",
