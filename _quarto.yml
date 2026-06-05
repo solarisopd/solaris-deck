@@ -24,5 +24,4 @@ website:
 
 format:
   html:
-    theme: theme/solaris.scss
     toc: false
