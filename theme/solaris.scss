@@ -143,6 +143,15 @@ $nav-inset: 40px;   // 좌우 화살표 안쪽 여백 (조절 지점)
   .card-h { color: $navy; font-weight: 700; font-size: 0.62em; margin-bottom: 6px; }
   .card-b { color: $ink; font-size: 0.5em; line-height: 1.5; }
 }
+// 11쪽(시연 안내) 전용 — 본문 글자를 표본문(0.6em)과 동일하게 확대, 카드 높이 130%(≈240px),
+// 옅은 배경($region). 내용은 세로 중앙 정렬. 전역 .card·타 슬라이드에는 영향 없음.
+.reveal section.md-slide.demo-cards .card {
+  background: $region;
+  border: none;
+  min-height: 240px;
+  display: flex; flex-direction: column; justify-content: center;
+  .card-b { font-size: 0.6em; }
+}
 
 // =====================================================================
 // 목차 페이지 — 우하단 페이지 리스트 (소제목까지 전체 노출)
