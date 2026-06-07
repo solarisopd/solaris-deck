@@ -322,10 +322,13 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 
 ---
 
-## 자금 구조 — 이원 풀(Two-Pool) {data-menu-title="자금 구조"}
+## &nbsp; {data-menu-title="자금 구조" .md-slide .ref-card}
 
-<div class="eyebrow">PART II · 거래 구조</div>
+<div class="eyebrow"><span class="part-badge">PART 2</span>거래 구조</div>
+<div class="page-title">자금 구조 — 이원 풀(Two-Pool)</div>
 <div class="subtitle">대주단 자금과 회원사 자기자본은 본 인프라 안에서 분리된 두 풀로 운용된다.</div>
+
+::: {.md-body}
 
 | 구분 | 자금 위치 | 규모 | 자금 출처 | 회수 순위 |
 |------|-----------|------|-----------|-----------|
@@ -333,24 +336,33 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 | Pool A (후순위) | SPC 외부 담보 | 10억 | 회원사 자기자본 | 후순위 |
 | 총 담보풀 | SPC 근질권 | 110억 | ─ | LTV 90.9% |
 
+:::
+
+::: {.md-ref}
 <div class="card-grid cols-1">
   <div class="card"><div class="card-h">회원사 적격 요건</div><div class="card-b">회원사는 본 거래 개시 전 자기자본 10억원으로 적격 스탁론 대출채권을 보유하고, 이를 SPC 명의 근질권으로 사전 설정한다. 사전 형성한 적격 채권은 SPC 외부에 보유되어 1차 손실의 우선 흡수 자본으로 기능하며, 동시에 SPC 근질권으로 설정되어 SPC 대출의 담보를 구성한다. 이로써 본 거래는 개시 시점부터 LTV 90.9%, 무담보 노출 0의 구조로 가동된다.</div></div>
 </div>
+:::
 
 <div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
 
 ---
 
-## 위험 통제 체계 {data-menu-title="위험 통제"}
+## &nbsp; {data-menu-title="위험 통제" .md-slide .wrap-cells .ctrl-table}
 
-<div class="eyebrow">PART II · 거래 구조</div>
+<div class="eyebrow"><span class="part-badge">PART 2</span>거래 구조</div>
+<div class="page-title">위험 통제 체계</div>
 <div class="subtitle">법적·구조적·기술적 세 층의 통제 장치가 위험을 분담한다.</div>
 
+::: {.md-body}
+
 | 구분 | 통제 장치 | 효과 |
-|------|-----------|------|
+|------|--------------|------------------------------|
 | 법적 통제 | 일반법인 SPC + 유안타증권 업무수탁 | SPC 임의 자금집행 차단 │ 인장·계좌 분리 통제 │ 도산 위험 차단 효과 |
 | 구조적 통제 | 회원사 자기자본 후순위 담보 (Pool A) | 부실 1차 손실의 우선 흡수 │ 회원사 자본의 SPC 외부 락업 |
 | 기술적 통제 | RMS 통합 담보관리 시스템 | 담보 실시간 감시 │ 자동 청산(반대매매) │ Daily Sweep 강제 집금 |
+
+:::
 
 <div class="tagline">법적 통제는 임의 자금집행을, 구조적 통제는 영업 부실 손실의 1차 흡수를, 기술적 통제는 시장 충격기 담보가치 하락 시 자동 회수를 담당한다. 세 층의 동시 실패가 없는 한 대주단 원금 손실 가능성은 통제된다.</div>
 

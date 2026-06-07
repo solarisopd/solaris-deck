@@ -163,7 +163,7 @@ $nav-inset: 40px;   // 좌우 화살표 안쪽 여백 (조절 지점)
 // 본문(카드)은 부제목 아래~하단 footer 사이에서 세로 중앙정렬.
 .reveal section.toc-slide {
   height: 100%;
-  padding: 88px 90px 56px;       // 상단(제목 위치)·좌우(여백)·하단(footer 위)
+  padding: 56px 90px 56px;       // 상단(제목 위치, 3쪽과 동일)·좌우(여백)·하단(footer 위)
   box-sizing: border-box;
 
   > h2 { margin: 0 0 0.45em; }    // 제목 위치 = 슬라이드 3
@@ -307,7 +307,21 @@ $nav-inset: 40px;   // 좌우 화살표 안쪽 여백 (조절 지점)
     left: 120px; right: 120px;
     bottom: 48px; margin: 0;
   }
+
+  // 참조부 카드(.md-ref) — 박스형 참조부를 하단 정렬 (예: 8쪽 회원사 적격 요건)
+  .md-ref {
+    position: absolute;
+    left: 120px; right: 120px;
+    bottom: 44px;
+    .card-grid { margin: 0; }
+  }
 }
+// 참조부 카드가 있는 쪽은 본문 영역을 카드 위까지로 (겹침 방지)
+.reveal section.md-slide.ref-card .md-body { bottom: 190px; }
+
+// 통제표(.ctrl-table) — table-layout:fixed로 colgroup 폭(구분선 대시 비율)을 정확히 반영
+// 열 폭은 마크다운 구분선 대시 비율로 지정: 구분 6 / 통제 장치 14 / 효과 30 (≈12/28/60)
+.reveal section.ctrl-table table { table-layout: fixed; }
 
 // 긴 설명 표(.wrap-cells) — 첫 열은 한 줄 유지, 나머지 열은 줄바꿈 허용
 // (예: 7쪽 운영 인력 — '전문성' 칸이 길어 nowrap 시 가로 오버플로)
