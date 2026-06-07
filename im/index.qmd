@@ -140,9 +140,13 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 
 ---
 
-## CL-Link 플랫폼 구조 {.diagram-slide data-menu-title="CL-Link 구조"}
+## &nbsp; {.diagram-slide .diagram-right data-menu-title="CL-Link 구조"}
 
-![](slides/05.svg){.slide-art-text}
+::: {.diagram-head}
+<div class="eyebrow"><span class="part-badge">PART 1</span>CL-Link 인프라</div>
+<div class="page-title">CL-Link 플랫폼 구조 -<br>자금 순환</div>
+<div class="subtitle">자금의 왕복 사이클 전 분기점에 시스템 통제를 작동</div>
+:::
 
 <div class="diagram-stage">
 
