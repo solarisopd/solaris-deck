@@ -74,7 +74,7 @@
     "href": "im/index.html#목차",
     "title": "SOLARIS OPPIDUM",
     "section": "목차",
-    "text": "목차\n\nCONTENTS · INVESTMENT MEMORANDUM\n\n\n담보부 기업운전자금대출(ABL) 투자 설명자료 구성\n\n\n\n  \n    PART I회사와 인프라\n    Executive Summary3\n    CL-Link 인프라의 정의4\n    CL-Link 플랫폼 구조5\n    다수 여신 단일 접점 (N:1)6\n    운영 인력7\n  \n  \n    PART II거래 구조\n    자금 구조 — 이원 풀(Two-Pool)8\n    위험 통제 체계9\n    회수 우선순위 (Waterfall)10\n  \n  \n    PART III시스템 시연\n    시스템 시연 안내11\n    시연 1. 동적 담보관리 시스템12\n    시연 2. SPC 담보관리 시스템13\n  \n  \n    PART IV본 거래의 조건\n    Term Sheet — 본 거래 개요 및 조건14\n  \n  \n    PART V마무리\n    인프라 참여자15\n    본 인프라의 위치16\n  \n  \n    APPENDIX부록\n    면책 및 자료 제공 범위17\n  \n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+    "text": "목차\n\nCONTENTS · INVESTMENT MEMORANDUM\n\n\n담보부 기업운전자금대출(ABL) 투자 설명자료 구성\n\n\n\n  \n    PART ICL-Link 인프라\n    Executive Summary3\n    CL-Link 인프라의 정의4\n    CL-Link 플랫폼 구조5\n    다수 여신 단일 접점 (N:1)6\n    운영 인력7\n  \n  \n    PART II거래 구조\n    자금 구조 — 이원 풀(Two-Pool)8\n    위험 통제 체계9\n    회수 우선순위 (Waterfall)10\n  \n  \n    PART III시스템 시연\n    시스템 시연 안내11\n    시연 1. 동적 담보관리 시스템12\n    시연 2. SPC 담보관리 시스템13\n  \n  \n    PART IV본 거래의 조건\n    Term Sheet — 본 거래 개요 및 조건14\n  \n  \n    PART V마무리\n    인프라 참여자15\n    본 인프라의 위치16\n  \n  \n    APPENDIX부록\n    면책 및 자료 제공 범위17\n  \n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
     "objectID": "im/index.html#section-1",
@@ -158,27 +158,27 @@
     "href": "im/index.html#section-12",
     "title": "SOLARIS OPPIDUM",
     "section": " ",
-    "text": "㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+    "text": "PART 4본 거래의 조건\n\n\nTerm Sheet\n\n\n본 거래의 주요 조건 (거래 개요 통합)\n\n\n\n\n\n\n\n항목\n내용\n\n\n\n\n거래 명칭\n담보부 기업운전자금대출 (ABL)\n\n\n대출 형태\nSPC 선순위 기업대출 (담보부)\n\n\n기초자산\nSPC가 회원사(대부)에 실행한 기업대출채권\n\n\nMaster Facility\n금 일백억원\n\n\n인출 방식\nProportional Drawdown\n\n\n인출 단위\n최소 1억원 / 한도 내 자유 분할\n\n\nLTV\n90.9% 상시 유지\n\n\n예상 수익률\n연 6.0% ~ 7.0% (협의)\n\n\n\n\n\n\n\n\n항목\n내용\n\n\n\n\n이자 지급\n월별 후취 (인출 잔액 기준)\n\n\n원금 상환\n만기 일시상환 또는 약정 분할상환\n\n\n투자 기간\n6개월 ~ 12개월 (롤링)\n\n\n신용보강\n회원사 자기자본 일십억원 후순위\n\n\n담보\n스탁론 대출채권 풀 SPC 근질권\n\n\n집금 방식\nDaily Sweep → SPC 자금관리계좌\n\n\nVehicle\n일반법인 SPC (유안타 업무수탁)\n\n\n자산관리자\n㈜솔라리스오피둠 (코디네이션)\n\n\n담보관리자\n㈜이노제이 (RMS 운영)\n\n\n준거법 · 관할\n대한민국법 / 서울중앙지방법원\n\n\n\n\n\n\n\n자문 라인업 · 업무수탁 - 유안타증권 신탁팀 │ 법률 - DB증권 법무팀\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
     "objectID": "im/index.html#section-13",
     "href": "im/index.html#section-13",
     "title": "SOLARIS OPPIDUM",
     "section": " ",
-    "text": "㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+    "text": "PART 5마무리\n\n\n인프라 참여자\n\n\n본 인프라 위에서는 각 참여자가 정해진 분기점에서 정해진 통제를 분담\n\n\n\n\n\n\n\n\n\n\n참여자\n역할\n주요 책임\n\n\n\n\n대주단\n선순위 자금 공급\n저축은행·캐피탈·증권사 — Master Facility 일백억원 약정 및 분할 실행\n\n\nSPC\nVehicle (차주)\n일반법인, 회원사 앞 기업운전자금대출 실행\n\n\n유안타증권 신탁팀\n업무수탁자\nSPC 인장·계좌 관리, 자금 집행 통제, Waterfall 분배 검증\n\n\n㈜솔라리스오피둠\n자산관리자 / 인프라 운영\nCL-Link 인프라 운영, 거래 코디네이션, 인출 신청 검증, 정산 시스템 운영\n\n\n㈜이노제이\nRMS 담보관리자\n담보 실시간 모니터링, 자동 청산 트리거, Daily Sweep 통제\n\n\n회원사 (대부)\n차주 · 영업주체 · 후순위\n자기자본 담보 선제공, 스탁론 영업, 회수금 입금\n\n\n\n\n\n법적 통제는 임의 자금집행을, 구조적 통제는 영업 부실 손실의 1차 흡수를, 기술적 통제는 시장 충격기 담보가치 하락 시 자동 회수를 담당세 층의 동시 실패가 없는 한 대주단 원금 손실 통제 가능\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
     "objectID": "im/index.html#section-14",
     "href": "im/index.html#section-14",
     "title": "SOLARIS OPPIDUM",
     "section": " ",
-    "text": "㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+    "text": "PART 5마무리\n\n\n본 인프라의 위치\n\n\n본 인프라는 한국 스탁론 시장의 운영 체계로 정착되는 과정\n\n\n\n\n\n\n\n\n\n구분\n내용\n\n\n\n\n1차 목표 시장\n금융위 등록 대부업체 약 8,000개사 — 본 시장의 완전한 인프라화\n\n\n현재 가동\n첫 번째 ABL 사이클 (Master Facility 일백억원, 본 자료의 안내 대상)\n\n\n검증 트랙\n5년 │ 부실율 0.24% (COVID-19 폭락기 포함)\n\n\n본 자료의 의의\n본 인프라 위에서 운용 가능한 자금의 검토 안내\n\n\n\n\n\n본 인프라의 확장은 1차 목표 시장의 완전한 포섭 이후 단계적으로 검토\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
     "objectID": "im/index.html#section-15",
     "href": "im/index.html#section-15",
     "title": "SOLARIS OPPIDUM",
     "section": " ",
-    "text": "㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+    "text": "APPENDIX\n\n\n면책 및 자료 제공 범위\n\n\n본 자료는 투자 권유 또는 청약의 의사표시가 아닌 정보 제공 목적\n\n\n\n\n\nDisclaimer\n\n\n본 Investment Memorandum은 정보 제공 목적으로 작성된 자료이며, 투자 권유 또는 청약의 의사표시가 아니다. 실제 거래 조건은 본계약 체결 시 확정되며, 본 자료의 내용은 사전 통지 없이 변경될 수 있다.본 자료에 포함된 시뮬레이션 및 예상 수익률은 특정 가정 하에서의 단순 계산이며, 실제 수익률 또는 손실은 시장 환경·영업 실적·부실 발생 등에 따라 달라질 수 있다.본 자료의 내용은 ㈜솔라리스오피둠의 사전 서면 동의 없이 제3자에게 제공·복제·배포할 수 없으며, 본 거래 검토 목적 외의 사용은 금지된다.\n\n\n\n\n작성 및 연락처\n\n\n㈜솔라리스오피둠대표이사 박세훈Mobile 010-8765-2309Email jeffspark@solarisoppidum.com서울특별시 강남구 압구정로 113-22, 310호\n\n\n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   }
 ]
