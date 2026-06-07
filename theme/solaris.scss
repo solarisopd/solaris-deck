@@ -432,6 +432,18 @@ $nav-inset: 40px;   // 좌우 화살표 안쪽 여백 (조절 지점)
 // 6쪽 전용 — 동적 도면을 약 100px 아래로 이동 (제목부와 간격 확보).
 .reveal section.diagram-slide.head-wide .cll-svg { transform: translateY(100px); }
 
+// 5·6쪽 동적 도면 — 슬라이드 진입 시 처음(0%)부터 재생.
+// 기존엔 페이지 로드 시점부터 infinite로 돌아 진입 시 이미 작동 중이었음.
+// reveal는 현재 슬라이드에만 .present 부여 → .present가 아니면 애니메이션 제거,
+// 진입(.present 획득) 순간 애니메이션이 0%부터 새로 시작된다. (특이성으로 우위, !important 미사용)
+.reveal section.diagram-slide:not(.present) .s6-svg [class*="s6g"],
+.reveal section.diagram-slide:not(.present) .s6-svg [class*="s6pt"],
+.reveal section.diagram-slide:not(.present) .s6-svg [class*="s6ph"],
+.reveal section.diagram-slide:not(.present) .cll-svg [class*="cll-f"],
+.reveal section.diagram-slide:not(.present) .cll-svg [class*="cll-pt"] {
+  animation: none;
+}
+
 // =====================================================================
 // 전면 SVG 슬라이드 (AI 아트워크 1쪽 = 1 SVG)
 // im/slides/NN.svg 를 슬라이드 전체에 배치한다.
