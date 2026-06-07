@@ -370,33 +370,111 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 
 ---
 
-## &nbsp; {.svg-slide data-menu-title="Waterfall"}
+## &nbsp; {data-menu-title="Waterfall" .md-slide .wrap-cells .ctrl-table .ref-card}
 
-![](slides/10.svg){.slide-art}
+<div class="eyebrow"><span class="part-badge">PART 2</span>거래구조</div>
+<div class="page-title">회수 우선순위 (Waterfall)</div>
+<div class="subtitle">SPC 자금관리계좌의 자금 분배는 업무수탁 계약에 따른 순위로 집행</div>
+
+::: {.md-body}
+
+| 순위 | 항목 | 내용 |
+|----|--------------|--------------------------------|
+| 0 | 조세 및 제비용 | SPC 법인세, 업무수탁수수료, 자산관리수수료, 회계·세무·법률자문 등 |
+| 1 | 대주단 (선순위) | 선순위 대주단 이자 및 원금 (분할상환 또는 만기일시) |
+| 2 | 회원사 잔여분 | Pool A 후순위 회수분 (잔존 시 회원사 귀속) |
+
+:::
+
+::: {.md-ref}
+<div class="card-grid cols-1">
+  <div class="card"><div class="card-h">SPC 외부 정산 — 플랫폼 시스템사용료</div><div class="card-b">솔라리스오피둠의 플랫폼 시스템사용료는 본 Waterfall에서 분리되어, SPC 외부에서 회원사가 솔라리스오피둠 앞으로 별도 정산<br>본 사용료는 SaaS 계약상 회원사가 부담하는 용역 대가로서, 대주단 채권의 회수 우선순위와 무관하게 운용</div></div>
+</div>
+:::
 
 <div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
 
 ---
 
-## &nbsp; {.svg-slide data-menu-title="시연 안내"}
+## &nbsp; {data-menu-title="시연 안내" .md-slide}
 
-![](slides/11.svg){.slide-art}
+<div class="eyebrow"><span class="part-badge">PART 3</span>시스템 시연</div>
+<div class="page-title">시스템 시연 안내</div>
+<div class="subtitle">두 시스템은 자금 사이클의 운용 분기와 회수·분배 분기를 각각 담당</div>
+
+::: {.md-body}
+<div class="card-grid cols-2">
+  <div class="card"><div class="card-h">시연 1 · 동적 담보관리 시스템</div><div class="card-b">자금 사이클 中 [운용] 분기 담당<br>· 증권계좌 단위 평가등급 체계<br>· 종목·집중도·변동성·유동성 종합 평가<br>· 5년 가동 │ 부실율 0.24%<br>· 본 카테고리 국내 최초</div></div>
+  <div class="card"><div class="card-h">시연 2 · SPC 담보관리 시스템</div><div class="card-b">자금 사이클 中 [회수·분배] 분기 담당<br>· 풀 단위 LTV 실시간 산출<br>· Daily Sweep 자동 집행<br>· 자동 청산 트리거 + Waterfall 분배 자동화<br>· 본 카테고리 국내 최초</div></div>
+</div>
+:::
+
+<div class="tagline">각 시스템 시연 시간 약 10분, 시연 후 질의응답 진행</div>
 
 <div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
 
 ---
 
-## &nbsp; {.svg-slide data-menu-title="시연 1 동적담보관리"}
+## &nbsp; {data-menu-title="시연 1 동적담보관리" .md-slide}
 
-![](slides/12.svg){.slide-art}
+<div class="eyebrow"><span class="part-badge">PART 3</span>시스템 시연</div>
+<div class="page-title">시연 1 - 동적관리 시스템</div>
+<div class="subtitle">증권계좌 단위 평가등급 체계에 기반한 동적 담보관리는 국내 최초</div>
+
+::: {.md-body}
+<div class="tagline">기존 스탁론은 종목 단위의 정적 LTV로 통제<br>본 시스템은 차주의 증권계좌 자체를 한 단위로 보고, 종목 구성·집중도·변동성·유동성을 종합한 평가등급을 산출하여 등급별 동적 LTV를 적용</div>
+
+<div class="flow-label">평상시 운용</div>
+<div class="flow">
+  <div class="flow-step"><div class="flow-badge">①</div><div class="flow-h">계좌 정보 입력</div><div class="flow-d">차주 증권계좌 정보</div></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-step"><div class="flow-badge">②</div><div class="flow-h">종목 등급 표시</div><div class="flow-d">보유 종목별 평가</div></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-step"><div class="flow-badge">③</div><div class="flow-h">계좌등급 산출</div><div class="flow-d">계좌 단위 종합 등급</div></div>
+</div>
+
+<div class="flow-label">시장 충격 발생 — 위기 대응 · 자동 통제</div>
+<div class="flow">
+  <div class="flow-step"><div class="flow-badge brand">④</div><div class="flow-h">반대매매 이벤트</div><div class="flow-d">LTV 임계점 도달</div></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-step"><div class="flow-badge brand">⑤</div><div class="flow-h">하위 종목 매도</div><div class="flow-d">시스템 자동 청산</div></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-step"><div class="flow-badge brand">⑥</div><div class="flow-h">계좌등급 우량화</div><div class="flow-d">잔여 종목 등급 상승</div></div>
+</div>
+:::
+
+<div class="tagline">위기는 손실의 시작이 아닌, 통제의 시작 — 시장 충격 시 하위 종목 자동 청산으로 잔여 계좌의 등급은 오히려 상승 (5년 가동 트랙 : 부실율 0.24%)</div>
 
 <div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
 
 ---
 
-## &nbsp; {.svg-slide data-menu-title="시연 2 SPC담보관리"}
+## &nbsp; {data-menu-title="시연 2 SPC담보관리" .md-slide}
 
-![](slides/13.svg){.slide-art}
+<div class="eyebrow"><span class="part-badge">PART 3</span>시스템 시연</div>
+<div class="page-title">시연 2 - SPC 담보관리 시스템</div>
+<div class="subtitle">개인담보대출 풀의 SPC 차원 실시간 담보관리는 국내 최초</div>
+
+::: {.md-body}
+<div class="tagline">기존 자산유동화는 신탁 wrapping 기반의 정태적 담보 관리로 월 단위 보고에 의존<br>본 시스템은 SPC가 보유한 수천~수만 건의 개인담보대출 풀을 실시간으로 통제</div>
+
+<div class="flow">
+  <div class="flow-step"><div class="flow-h">개별 자산</div><div class="flow-d">계좌 1 · 2 · 3 ⋯ N</div></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-step"><div class="flow-h">SPC 대출 풀</div><div class="flow-d">개인담보대출 통합 · 근질권 110억</div></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-step"><div class="flow-h">실시간 통제</div><div class="flow-d">풀 단위 일괄 관리</div></div>
+</div>
+
+<div class="card-grid cols-2">
+  <div class="card"><div class="card-h">풀 LTV 산출</div><div class="card-b">실시간 가중평균.</div></div>
+  <div class="card"><div class="card-h">자동 청산 트리거</div><div class="card-b">임계점 도달 시 자동 집행.</div></div>
+  <div class="card"><div class="card-h">Daily Sweep</div><div class="card-b">일별 강제 집금.</div></div>
+  <div class="card"><div class="card-h">Waterfall 분배</div><div class="card-b">대주단 선순위 → 회원사 후순위 잔여.</div></div>
+</div>
+:::
+
+<div class="tagline">5년 가동 트랙 : 자동 청산 누적 집행, 회수 성공률 검증 · IP 귀속 ㈜솔라리스오피둠</div>
 
 <div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
 
