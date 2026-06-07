@@ -77,15 +77,15 @@
     "text": "목차\n\nCONTENTS · INVESTMENT MEMORANDUM\n\n\n담보부 기업운전자금대출(ABL) 투자 설명자료 구성\n\n\n\n  \n    PART I · 회사와 인프라\n    Executive Summary3\n    CL-Link 인프라의 정의4\n    CL-Link 플랫폼 구조5\n    다수 여신 단일 접점 (N:1)6\n    운영 인력7\n  \n  \n    PART II · 거래 구조\n    자금 구조 — 이원 풀(Two-Pool)8\n    위험 통제 체계9\n    회수 우선순위 (Waterfall)10\n  \n  \n    PART III · 시스템 시연\n    시스템 시연 안내11\n    시연 1. 동적 담보관리 시스템12\n    시연 2. SPC 담보관리 시스템13\n  \n  \n    PART IV · 본 거래의 조건\n    Term Sheet — 본 거래 개요 및 조건14\n  \n  \n    PART V · 마무리\n    인프라 참여자15\n    본 인프라의 위치16\n  \n  \n    APPENDIX · 부록\n    면책 및 자료 제공 범위17\n  \n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
-    "objectID": "im/index.html#section-1",
-    "href": "im/index.html#section-1",
+    "objectID": "im/index.html#executive-summary",
+    "href": "im/index.html#executive-summary",
     "title": "SOLARIS OPPIDUM",
-    "section": " ",
-    "text": "㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+    "section": "Executive Summary",
+    "text": "Executive Summary\n\nPART I · 회사와 인프라\n\n\n출자에서 회수·분배에 이르는 자금 사이클 전체를 자동화한 인프라이다.\n\n\n\n\n8,000개사\n\n\n1차 사용자 시장 (금융위 등록 대부업체)\n\n\n\n\n0.24%\n\n\n5년 누적 부실율 (COVID-19 폭락기 포함)\n\n\n\n\n6~7%\n\n\n예상 수익률 (연, 협의)\n\n\n\n\n\n\n\n\n\n\n구분\n내용\n\n\n\n\n1차 사용자 시장\n금융위 등록 대부업체 약 8,000개사\n\n\n현재 가동 사례\n담보부 기업운전자금대출 ABL │ Master Facility 일백억원\n\n\n인프라 검증 기간\n5년 │ 누적 부실율 0.24% (COVID-19 폭락기 포함)\n\n\n거래 만기\n6개월 ~ 12개월 (롤링)\n\n\n예상 수익률\n연 6.0% ~ 7.0% (협의)\n\n\n\n\n㈜솔라리스오피둠은 한국 스탁론 시장의 운영 인프라(CL-Link)를 설계·운영하는 회사이다. 본 인프라는 대주단 자금이 SPC를 통해 개인 차주에게 도달하고, 원리금이 다시 대주단에게 회수·분배되기까지 전 사이클을 시스템적으로 통제한다.\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
-    "objectID": "im/index.html#section-2",
-    "href": "im/index.html#section-2",
+    "objectID": "im/index.html#section-1",
+    "href": "im/index.html#section-1",
     "title": "SOLARIS OPPIDUM",
     "section": " ",
     "text": "㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
@@ -105,6 +105,27 @@
     "text": "다수 여신 단일 접점 (N:1)\n\n\n\n    \n    \n      \n        \n      \n    \n\n    \n    CL-Link\n\n    \n    \n    \n    \n    \n    \n    \n\n    \n    \n    \n    \n    \n    \n    \n\n    \n    증권사\n\n    \n    RMS\n    증권사 내부\n\n    \n    동적담보관리\n    종목·계좌관리\n\n    \n    SPC 자금관리\n    SPC 자금흐름\n\n    \n    Octopus\n    통신중계버스\n\n    \n    여신기관 1\n    \n    여신기관 2\n    \n    여신기관 N\n  \n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
+    "objectID": "im/index.html#section-2",
+    "href": "im/index.html#section-2",
+    "title": "SOLARIS OPPIDUM",
+    "section": " ",
+    "text": "㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+  },
+  {
+    "objectID": "im/index.html#자금-구조-이원-풀two-pool",
+    "href": "im/index.html#자금-구조-이원-풀two-pool",
+    "title": "SOLARIS OPPIDUM",
+    "section": "자금 구조 — 이원 풀(Two-Pool)",
+    "text": "자금 구조 — 이원 풀(Two-Pool)\n\nPART II · 거래 구조\n\n\n대주단 자금과 회원사 자기자본은 본 인프라 안에서 분리된 두 풀로 운용된다.\n\n\n\n\n구분\n자금 위치\n규모\n자금 출처\n회수 순위\n\n\n\n\nPool B (선순위)\nSPC 내부\n100억\n대주단\n최우선\n\n\nPool A (후순위)\nSPC 외부 담보\n10억\n회원사 자기자본\n후순위\n\n\n총 담보풀\nSPC 근질권\n110억\n─\nLTV 90.9%\n\n\n\n\n\n\n회원사 적격 요건\n\n\n회원사는 본 거래 개시 전 자기자본 10억원으로 적격 스탁론 대출채권을 보유하고, 이를 SPC 명의 근질권으로 사전 설정한다. 사전 형성한 적격 채권은 SPC 외부에 보유되어 1차 손실의 우선 흡수 자본으로 기능하며, 동시에 SPC 근질권으로 설정되어 SPC 대출의 담보를 구성한다. 이로써 본 거래는 개시 시점부터 LTV 90.9%, 무담보 노출 0의 구조로 가동된다.\n\n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+  },
+  {
+    "objectID": "im/index.html#위험-통제-체계",
+    "href": "im/index.html#위험-통제-체계",
+    "title": "SOLARIS OPPIDUM",
+    "section": "위험 통제 체계",
+    "text": "위험 통제 체계\n\nPART II · 거래 구조\n\n\n법적·구조적·기술적 세 층의 통제 장치가 위험을 분담한다.\n\n\n\n\n\n\n\n\n\n구분\n통제 장치\n효과\n\n\n\n\n법적 통제\n일반법인 SPC + 유안타증권 업무수탁\nSPC 임의 자금집행 차단 │ 인장·계좌 분리 통제 │ 도산 위험 차단 효과\n\n\n구조적 통제\n회원사 자기자본 후순위 담보 (Pool A)\n부실 1차 손실의 우선 흡수 │ 회원사 자본의 SPC 외부 락업\n\n\n기술적 통제\nRMS 통합 담보관리 시스템\n담보 실시간 감시 │ 자동 청산(반대매매) │ Daily Sweep 강제 집금\n\n\n\n\n법적 통제는 임의 자금집행을, 구조적 통제는 영업 부실 손실의 1차 흡수를, 기술적 통제는 시장 충격기 담보가치 하락 시 자동 회수를 담당한다. 세 층의 동시 실패가 없는 한 대주단 원금 손실 가능성은 통제된다.\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+  },
+  {
     "objectID": "im/index.html#section-3",
     "href": "im/index.html#section-3",
     "title": "SOLARIS OPPIDUM",
@@ -117,13 +138,6 @@
     "title": "SOLARIS OPPIDUM",
     "section": " ",
     "text": "㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
-  },
-  {
-    "objectID": "im/index.html#위험-통제-체계",
-    "href": "im/index.html#위험-통제-체계",
-    "title": "SOLARIS OPPIDUM",
-    "section": "위험 통제 체계",
-    "text": "위험 통제 체계\n\nPART II · 거래 구조\n\n\n법적·구조적·기술적 세 층의 통제 장치가 위험을 분담한다.\n\n\n\n\n\n\n\n\n\n구분\n통제 장치\n효과\n\n\n\n\n법적 통제\n일반법인 SPC + 유안타증권 업무수탁\nSPC 임의 자금집행 차단 │ 인장·계좌 분리 통제 │ 도산 위험 차단 효과\n\n\n구조적 통제\n회원사 자기자본 후순위 담보 (Pool A)\n부실 1차 손실의 우선 흡수 │ 회원사 자본의 SPC 외부 락업\n\n\n기술적 통제\nRMS 통합 담보관리 시스템\n담보 실시간 감시 │ 자동 청산(반대매매) │ Daily Sweep 강제 집금\n\n\n\n\n법적 통제는 임의 자금집행을, 구조적 통제는 영업 부실 손실의 1차 흡수를, 기술적 통제는 시장 충격기 담보가치 하락 시 자동 회수를 담당한다. 세 층의 동시 실패가 없는 한 대주단 원금 손실 가능성은 통제된다.\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
     "objectID": "im/index.html#section-5",
@@ -163,20 +177,6 @@
   {
     "objectID": "im/index.html#section-10",
     "href": "im/index.html#section-10",
-    "title": "SOLARIS OPPIDUM",
-    "section": " ",
-    "text": "㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
-  },
-  {
-    "objectID": "im/index.html#section-11",
-    "href": "im/index.html#section-11",
-    "title": "SOLARIS OPPIDUM",
-    "section": " ",
-    "text": "㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
-  },
-  {
-    "objectID": "im/index.html#section-12",
-    "href": "im/index.html#section-12",
     "title": "SOLARIS OPPIDUM",
     "section": " ",
     "text": "㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
