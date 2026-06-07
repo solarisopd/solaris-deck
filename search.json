@@ -91,11 +91,11 @@
     "text": "PART 1CL-Link 인프라\n\n\nCL-Link 인프라의 정의\n\n\n자금의 왕복 사이클 전 분기점에 시스템 통제를 작동\n\n\n\n\n\n단계\n자금 위치\n통제 장치\n\n\n\n\n출자\n대주단 자금\n유안타증권 신탁팀 — SPC 인장·계좌 통제\n\n\n수령\nSPC 자금관리계좌\n업무수탁 검증 후 집행\n\n\n전송\n회원사 모계좌\n집금 통제 — Daily Sweep 강제\n\n\n운용\n개인 증권계좌\n동적 담보관리 — 계좌 평가등급\n\n\n회수\n회원사 모계좌\nRMS Daily Sweep — 임의인출 차단\n\n\n환수\nSPC 자금관리계좌\nSPC 명의 근질권 + 자동 Sweep\n\n\n분배\n대주단 / 후순위\nWaterfall 시스템 — 업무수탁 검증\n\n\n\n\n\n사이클의 모든 분기점에서 인적 자원의 임의 개입을 시스템 · 계약 · 업무수탁이 차단\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
-    "objectID": "im/index.html#cl-link-플랫폼-구조",
-    "href": "im/index.html#cl-link-플랫폼-구조",
+    "objectID": "im/index.html#section-3",
+    "href": "im/index.html#section-3",
     "title": "SOLARIS OPPIDUM",
-    "section": "CL-Link 플랫폼 구조",
-    "text": "CL-Link 플랫폼 구조\n\n\n\n  \n  \n  \n  CL-Link\n  Octopus\n\n  \n  DATA\n  \n    \n    10101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010\n  \n\n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n\n  자금조달\n  1\n  기업운전자금 대출\n  2\n  개인 대출\n  3\n  주식 레버리지 투자\n  4\n  원리금 상환\n  5\n  기업운전자금 원리금 상환\n  자금상환\n\n  대주단\n  SPC자금관리\n  대출계좌여신계좌\n  여신회원사\n  증권계좌\n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+    "section": " ",
+    "text": "PART 1CL-Link 인프라\n\n\nCL-Link 플랫폼 구조 -자금 순환\n\n\n자금의 왕복 사이클 전 분기점에 시스템 통제를 작동\n\n\n\n\n  \n  \n  \n  CL-Link\n  Octopus\n\n  \n  DATA\n  \n    \n    10101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010\n  \n\n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n\n  자금조달\n  1\n  기업운전자금 대출\n  2\n  개인 대출\n  3\n  주식 레버리지 투자\n  4\n  원리금 상환\n  5\n  기업운전자금 원리금 상환\n  자금상환\n\n  대주단\n  SPC자금관리\n  대출계좌여신계좌\n  여신회원사\n  증권계좌\n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
     "objectID": "im/index.html#다수-여신-단일-접점-n1",
@@ -105,60 +105,53 @@
     "text": "다수 여신 단일 접점 (N:1)\n\n\n\n    \n    \n      \n        \n      \n    \n\n    \n    CL-Link\n\n    \n    \n    \n    \n    \n    \n    \n\n    \n    \n    \n    \n    \n    \n    \n\n    \n    증권사\n\n    \n    RMS\n    증권사 내부\n\n    \n    동적담보관리\n    종목·계좌관리\n\n    \n    SPC 자금관리\n    SPC 자금흐름\n\n    \n    Octopus\n    통신중계버스\n\n    \n    여신기관 1\n    \n    여신기관 2\n    \n    여신기관 N\n  \n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
-    "objectID": "im/index.html#section-3",
-    "href": "im/index.html#section-3",
-    "title": "SOLARIS OPPIDUM",
-    "section": " ",
-    "text": "PART 1CL-Link 인프라\n\n\n운영 인력\n\n\n국내외 금융·시스템 운영 전문가들에 의해 설계 구축\n\n\n\n\n\n\n\n\n\n역할\n전문성\n\n\n\n\n대표이사 박세훈\n미국·국내 금융시장 경력. 한국 핀테크 인프라 사업 설계 및 솔라리스오피둠 창업.\n\n\nCTO (최고기술책임자)\n스탁론·여신 시스템 개발·운영 전문가. 업계 리딩 기업 핵심 인력 출신. RMS 및 신용평가 시스템 자체 설계.\n\n\n전무 (Front-end / Server)\n프론트엔드 개발 및 서버 운영 전문가. CL-Link 플랫폼 웹·서버 아키텍처 설계 책임자. 창립 멤버.\n\n\n전략부장\n종목관리·트레이딩 전문가. 트레이딩 경력 10년 이상. 동적 담보관리의 종목 평가 체계 설계.\n\n\n\n\n\n핵심 시스템(RMS, 신용평가, 동적 담보관리, SPC 담보관리)은 외주 의존도 없는 자체 개발·운영\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
-  },
-  {
     "objectID": "im/index.html#section-4",
     "href": "im/index.html#section-4",
     "title": "SOLARIS OPPIDUM",
     "section": " ",
-    "text": "PART 2거래 구조\n\n\n자금 구조 — 이원 풀(Two-Pool)\n\n\n대주단 자금과 회원사 자기자본은 본 인프라 안에서 분리된 두 풀로 운용된다.\n\n\n\n\n\n구분\n자금 위치\n규모\n자금 출처\n회수 순위\n\n\n\n\nPool B (선순위)\nSPC 내부\n100억\n대주단\n최우선\n\n\nPool A (후순위)\nSPC 외부 담보\n10억\n회원사 자기자본\n후순위\n\n\n총 담보풀\nSPC 근질권\n110억\n─\nLTV 90.9%\n\n\n\n\n\n\n\n\n회원사 적격 요건\n\n\n회원사는 본 거래 개시 전 자기자본 10억원으로 적격 스탁론 대출채권을 보유하고, 이를 SPC 명의 근질권으로 사전 설정한다. 사전 형성한 적격 채권은 SPC 외부에 보유되어 1차 손실의 우선 흡수 자본으로 기능하며, 동시에 SPC 근질권으로 설정되어 SPC 대출의 담보를 구성한다. 이로써 본 거래는 개시 시점부터 LTV 90.9%, 무담보 노출 0의 구조로 가동된다.\n\n\n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+    "text": "PART 1CL-Link 인프라\n\n\n운영 인력\n\n\n국내외 금융·시스템 운영 전문가들에 의해 설계 구축\n\n\n\n\n\n\n\n\n\n역할\n전문성\n\n\n\n\n대표이사 박세훈\n미국·국내 금융시장 경력. 한국 핀테크 인프라 사업 설계 및 솔라리스오피둠 창업.\n\n\nCTO (최고기술책임자)\n스탁론·여신 시스템 개발·운영 전문가. 업계 리딩 기업 핵심 인력 출신. RMS 및 신용평가 시스템 자체 설계.\n\n\n전무 (Front-end / Server)\n프론트엔드 개발 및 서버 운영 전문가. CL-Link 플랫폼 웹·서버 아키텍처 설계 책임자. 창립 멤버.\n\n\n전략부장\n종목관리·트레이딩 전문가. 트레이딩 경력 10년 이상. 동적 담보관리의 종목 평가 체계 설계.\n\n\n\n\n\n핵심 시스템(RMS, 신용평가, 동적 담보관리, SPC 담보관리)은 외주 의존도 없는 자체 개발·운영\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
     "objectID": "im/index.html#section-5",
     "href": "im/index.html#section-5",
     "title": "SOLARIS OPPIDUM",
     "section": " ",
-    "text": "PART 2거래 구조\n\n\n위험 통제 체계\n\n\n법적·구조적·기술적 세 층의 통제 장치가 위험을 분담한다.\n\n\n\n\n\n\n\n\n\n\n구분\n통제 장치\n효과\n\n\n\n\n법적 통제\n일반법인 SPC + 유안타증권 업무수탁\nSPC 임의 자금집행 차단 │ 인장·계좌 분리 통제 │ 도산 위험 차단 효과\n\n\n구조적 통제\n회원사 자기자본 후순위 담보 (Pool A)\n부실 1차 손실의 우선 흡수 │ 회원사 자본의 SPC 외부 락업\n\n\n기술적 통제\nRMS 통합 담보관리 시스템\n담보 실시간 감시 │ 자동 청산(반대매매) │ Daily Sweep 강제 집금\n\n\n\n\n\n법적 통제는 임의 자금집행을, 구조적 통제는 영업 부실 손실의 1차 흡수를, 기술적 통제는 시장 충격기 담보가치 하락 시 자동 회수를 담당한다. 세 층의 동시 실패가 없는 한 대주단 원금 손실 가능성은 통제된다.\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+    "text": "PART 2거래 구조\n\n\n자금 구조 — 이원 풀(Two-Pool)\n\n\n대주단 자금과 회원사 자기자본은 본 인프라 안에서 분리된 두 풀로 운용된다.\n\n\n\n\n\n구분\n자금 위치\n규모\n자금 출처\n회수 순위\n\n\n\n\nPool B (선순위)\nSPC 내부\n100억\n대주단\n최우선\n\n\nPool A (후순위)\nSPC 외부 담보\n10억\n회원사 자기자본\n후순위\n\n\n총 담보풀\nSPC 근질권\n110억\n─\nLTV 90.9%\n\n\n\n\n\n\n\n\n회원사 적격 요건\n\n\n회원사는 본 거래 개시 전 자기자본 10억원으로 적격 스탁론 대출채권을 보유하고, 이를 SPC 명의 근질권으로 사전 설정한다. 사전 형성한 적격 채권은 SPC 외부에 보유되어 1차 손실의 우선 흡수 자본으로 기능하며, 동시에 SPC 근질권으로 설정되어 SPC 대출의 담보를 구성한다. 이로써 본 거래는 개시 시점부터 LTV 90.9%, 무담보 노출 0의 구조로 가동된다.\n\n\n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
     "objectID": "im/index.html#section-6",
     "href": "im/index.html#section-6",
     "title": "SOLARIS OPPIDUM",
     "section": " ",
-    "text": "PART 2거래구조\n\n\n회수 우선순위 (Waterfall)\n\n\nSPC 자금관리계좌의 자금 분배는 업무수탁 계약에 따른 순위로 집행\n\n\n\n\n\n\n\n\n\n\n순위\n항목\n내용\n\n\n\n\n0\n조세 및 제비용\nSPC 법인세, 업무수탁수수료, 자산관리수수료, 회계·세무·법률자문 등\n\n\n1\n대주단 (선순위)\n선순위 대주단 이자 및 원금 (분할상환 또는 만기일시)\n\n\n2\n회원사 잔여분\nPool A 후순위 회수분 (잔존 시 회원사 귀속)\n\n\n\n\n\n\n\n\nSPC 외부 정산 — 플랫폼 시스템사용료\n\n\n솔라리스오피둠의 플랫폼 시스템사용료는 본 Waterfall에서 분리되어, SPC 외부에서 회원사가 솔라리스오피둠 앞으로 별도 정산본 사용료는 SaaS 계약상 회원사가 부담하는 용역 대가로서, 대주단 채권의 회수 우선순위와 무관하게 운용\n\n\n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+    "text": "PART 2거래 구조\n\n\n위험 통제 체계\n\n\n법적·구조적·기술적 세 층의 통제 장치가 위험을 분담한다.\n\n\n\n\n\n\n\n\n\n\n구분\n통제 장치\n효과\n\n\n\n\n법적 통제\n일반법인 SPC + 유안타증권 업무수탁\nSPC 임의 자금집행 차단 │ 인장·계좌 분리 통제 │ 도산 위험 차단 효과\n\n\n구조적 통제\n회원사 자기자본 후순위 담보 (Pool A)\n부실 1차 손실의 우선 흡수 │ 회원사 자본의 SPC 외부 락업\n\n\n기술적 통제\nRMS 통합 담보관리 시스템\n담보 실시간 감시 │ 자동 청산(반대매매) │ Daily Sweep 강제 집금\n\n\n\n\n\n법적 통제는 임의 자금집행을, 구조적 통제는 영업 부실 손실의 1차 흡수를, 기술적 통제는 시장 충격기 담보가치 하락 시 자동 회수를 담당한다. 세 층의 동시 실패가 없는 한 대주단 원금 손실 가능성은 통제된다.\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
     "objectID": "im/index.html#section-7",
     "href": "im/index.html#section-7",
     "title": "SOLARIS OPPIDUM",
     "section": " ",
-    "text": "PART 3시스템 시연\n\n\n시스템 시연 안내\n\n\n두 시스템은 자금 사이클의 운용 분기와 회수·분배 분기를 각각 담당\n\n\n\n\n\n시연 1 · 동적 담보관리 시스템\n\n\n자금 사이클 中 [운용] 분기 담당· 증권계좌 단위 평가등급 체계· 종목·집중도·변동성·유동성 종합 평가· 5년 가동 │ 부실율 0.24%· 본 카테고리 국내 최초\n\n\n\n\n시연 2 · SPC 담보관리 시스템\n\n\n자금 사이클 中 [회수·분배] 분기 담당· 풀 단위 LTV 실시간 산출· Daily Sweep 자동 집행· 자동 청산 트리거 + Waterfall 분배 자동화· 본 카테고리 국내 최초\n\n\n\n\n\n각 시스템 시연 시간 약 10분, 시연 후 질의응답 진행\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+    "text": "PART 2거래구조\n\n\n회수 우선순위 (Waterfall)\n\n\nSPC 자금관리계좌의 자금 분배는 업무수탁 계약에 따른 순위로 집행\n\n\n\n\n\n\n\n\n\n\n순위\n항목\n내용\n\n\n\n\n0\n조세 및 제비용\nSPC 법인세, 업무수탁수수료, 자산관리수수료, 회계·세무·법률자문 등\n\n\n1\n대주단 (선순위)\n선순위 대주단 이자 및 원금 (분할상환 또는 만기일시)\n\n\n2\n회원사 잔여분\nPool A 후순위 회수분 (잔존 시 회원사 귀속)\n\n\n\n\n\n\n\n\nSPC 외부 정산 — 플랫폼 시스템사용료\n\n\n솔라리스오피둠의 플랫폼 시스템사용료는 본 Waterfall에서 분리되어, SPC 외부에서 회원사가 솔라리스오피둠 앞으로 별도 정산본 사용료는 SaaS 계약상 회원사가 부담하는 용역 대가로서, 대주단 채권의 회수 우선순위와 무관하게 운용\n\n\n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
     "objectID": "im/index.html#section-8",
     "href": "im/index.html#section-8",
     "title": "SOLARIS OPPIDUM",
     "section": " ",
-    "text": "PART 3시스템 시연\n\n\n시연 1 - 동적관리 시스템\n\n\n증권계좌 단위 평가등급 체계에 기반한 동적 담보관리는 국내 최초\n\n\n\n기존 스탁론은 종목 단위의 정적 LTV로 통제본 시스템은 차주의 증권계좌 자체를 한 단위로 보고, 종목 구성·집중도·변동성·유동성을 종합한 평가등급을 산출하여 등급별 동적 LTV를 적용\n\n\n평상시 운용\n\n\n\n\n①\n\n\n계좌 정보 입력\n\n\n차주 증권계좌 정보\n\n\n\n→\n\n\n\n②\n\n\n종목 등급 표시\n\n\n보유 종목별 평가\n\n\n\n→\n\n\n\n③\n\n\n계좌등급 산출\n\n\n계좌 단위 종합 등급\n\n\n\n\n시장 충격 발생 — 위기 대응 · 자동 통제\n\n\n\n\n④\n\n\n반대매매 이벤트\n\n\nLTV 임계점 도달\n\n\n\n→\n\n\n\n⑤\n\n\n하위 종목 매도\n\n\n시스템 자동 청산\n\n\n\n→\n\n\n\n⑥\n\n\n계좌등급 우량화\n\n\n잔여 종목 등급 상승\n\n\n\n\n\n위기는 손실의 시작이 아닌, 통제의 시작 — 시장 충격 시 하위 종목 자동 청산으로 잔여 계좌의 등급은 오히려 상승 (5년 가동 트랙 : 부실율 0.24%)\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+    "text": "PART 3시스템 시연\n\n\n시스템 시연 안내\n\n\n두 시스템은 자금 사이클의 운용 분기와 회수·분배 분기를 각각 담당\n\n\n\n\n\n시연 1 · 동적 담보관리 시스템\n\n\n자금 사이클 中 [운용] 분기 담당· 증권계좌 단위 평가등급 체계· 종목·집중도·변동성·유동성 종합 평가· 5년 가동 │ 부실율 0.24%· 본 카테고리 국내 최초\n\n\n\n\n시연 2 · SPC 담보관리 시스템\n\n\n자금 사이클 中 [회수·분배] 분기 담당· 풀 단위 LTV 실시간 산출· Daily Sweep 자동 집행· 자동 청산 트리거 + Waterfall 분배 자동화· 본 카테고리 국내 최초\n\n\n\n\n\n각 시스템 시연 시간 약 10분, 시연 후 질의응답 진행\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
     "objectID": "im/index.html#section-9",
     "href": "im/index.html#section-9",
     "title": "SOLARIS OPPIDUM",
     "section": " ",
-    "text": "PART 3시스템 시연\n\n\n시연 2 - SPC 담보관리 시스템\n\n\n개인담보대출 풀의 SPC 차원 실시간 담보관리는 국내 최초\n\n\n\n기존 자산유동화는 신탁 wrapping 기반의 정태적 담보 관리로 월 단위 보고에 의존본 시스템은 SPC가 보유한 수천~수만 건의 개인담보대출 풀을 실시간으로 통제\n\n\n\n\n개별 자산\n\n\n계좌 1 · 2 · 3 ⋯ N\n\n\n\n→\n\n\n\nSPC 대출 풀\n\n\n개인담보대출 통합 · 근질권 110억\n\n\n\n→\n\n\n\n실시간 통제\n\n\n풀 단위 일괄 관리\n\n\n\n\n\n\n풀 LTV 산출\n\n\n실시간 가중평균.\n\n\n\n\n자동 청산 트리거\n\n\n임계점 도달 시 자동 집행.\n\n\n\n\nDaily Sweep\n\n\n일별 강제 집금.\n\n\n\n\nWaterfall 분배\n\n\n대주단 선순위 → 회원사 후순위 잔여.\n\n\n\n\n\n5년 가동 트랙 : 자동 청산 누적 집행, 회수 성공률 검증 · IP 귀속 ㈜솔라리스오피둠\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+    "text": "PART 3시스템 시연\n\n\n시연 1 - 동적관리 시스템\n\n\n증권계좌 단위 평가등급 체계에 기반한 동적 담보관리는 국내 최초\n\n\n\n기존 스탁론은 종목 단위의 정적 LTV로 통제본 시스템은 차주의 증권계좌 자체를 한 단위로 보고, 종목 구성·집중도·변동성·유동성을 종합한 평가등급을 산출하여 등급별 동적 LTV를 적용\n\n\n평상시 운용\n\n\n\n\n①\n\n\n계좌 정보 입력\n\n\n차주 증권계좌 정보\n\n\n\n→\n\n\n\n②\n\n\n종목 등급 표시\n\n\n보유 종목별 평가\n\n\n\n→\n\n\n\n③\n\n\n계좌등급 산출\n\n\n계좌 단위 종합 등급\n\n\n\n\n시장 충격 발생 — 위기 대응 · 자동 통제\n\n\n\n\n④\n\n\n반대매매 이벤트\n\n\nLTV 임계점 도달\n\n\n\n→\n\n\n\n⑤\n\n\n하위 종목 매도\n\n\n시스템 자동 청산\n\n\n\n→\n\n\n\n⑥\n\n\n계좌등급 우량화\n\n\n잔여 종목 등급 상승\n\n\n\n\n\n위기는 손실의 시작이 아닌, 통제의 시작 — 시장 충격 시 하위 종목 자동 청산으로 잔여 계좌의 등급은 오히려 상승 (5년 가동 트랙 : 부실율 0.24%)\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
     "objectID": "im/index.html#section-10",
     "href": "im/index.html#section-10",
     "title": "SOLARIS OPPIDUM",
     "section": " ",
-    "text": "㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+    "text": "PART 3시스템 시연\n\n\n시연 2 - SPC 담보관리 시스템\n\n\n개인담보대출 풀의 SPC 차원 실시간 담보관리는 국내 최초\n\n\n\n기존 자산유동화는 신탁 wrapping 기반의 정태적 담보 관리로 월 단위 보고에 의존본 시스템은 SPC가 보유한 수천~수만 건의 개인담보대출 풀을 실시간으로 통제\n\n\n\n\n개별 자산\n\n\n계좌 1 · 2 · 3 ⋯ N\n\n\n\n→\n\n\n\nSPC 대출 풀\n\n\n개인담보대출 통합 · 근질권 110억\n\n\n\n→\n\n\n\n실시간 통제\n\n\n풀 단위 일괄 관리\n\n\n\n\n\n\n풀 LTV 산출\n\n\n실시간 가중평균.\n\n\n\n\n자동 청산 트리거\n\n\n임계점 도달 시 자동 집행.\n\n\n\n\nDaily Sweep\n\n\n일별 강제 집금.\n\n\n\n\nWaterfall 분배\n\n\n대주단 선순위 → 회원사 후순위 잔여.\n\n\n\n\n\n5년 가동 트랙 : 자동 청산 누적 집행, 회수 성공률 검증 · IP 귀속 ㈜솔라리스오피둠\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
     "objectID": "im/index.html#section-11",
@@ -177,6 +170,13 @@
   {
     "objectID": "im/index.html#section-13",
     "href": "im/index.html#section-13",
+    "title": "SOLARIS OPPIDUM",
+    "section": " ",
+    "text": "㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+  },
+  {
+    "objectID": "im/index.html#section-14",
+    "href": "im/index.html#section-14",
     "title": "SOLARIS OPPIDUM",
     "section": " ",
     "text": "㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
