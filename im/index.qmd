@@ -15,9 +15,22 @@ format:
     auto-stretch: false
 ---
 
-## &nbsp; {.svg-slide background-color="#1A2A66" data-menu-title="표지"}
+## &nbsp; {.title-dark .cover data-menu-title="표지"}
 
-![](slides/01.svg){.slide-art}
+::: {.cover-inner}
+<div class="cover-title-box">
+<div class="cover-eyebrow">STRICTLY PRIVATE &amp; CONFIDENTIAL · INVESTMENT MEMORANDUM</div>
+<div class="cover-title-main">담보부 기업운전자금대출 (ABL)</div>
+</div>
+
+<div class="subtitle cover-sub">CL-Link 인프라 기반 · 거래 한도 금 일백억원 (₩10,000,000,000)<br>Master Facility &amp; Proportional Drawdown</div>
+:::
+
+<div class="cover-footer-info">
+SPC 업무수탁 유안타증권 신탁팀<br>
+인프라 운영·자산관리 ㈜솔라리스오피둠<br>
+<span class="cover-addr-line">2026년 6월 · ㈜솔라리스오피둠 · 대표이사 박세훈 · 서울시 강남구 압구정로 113-22, 310호</span>
+</div>
 
 <div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
 
@@ -32,7 +45,7 @@ format:
 <div class="toc-body">
 <div class="card-grid cols-3 toc-cards">
   <div class="card">
-    <div class="card-h">PART I · 회사와 인프라</div>
+    <div class="card-h"><span class="part-badge">PART I</span>회사와 인프라</div>
     <div class="toc-line"><span>Executive Summary</span><span class="pg">3</span></div>
     <div class="toc-line"><span>CL-Link 인프라의 정의</span><span class="pg">4</span></div>
     <div class="toc-line"><span>CL-Link 플랫폼 구조</span><span class="pg">5</span></div>
@@ -40,28 +53,28 @@ format:
     <div class="toc-line"><span>운영 인력</span><span class="pg">7</span></div>
   </div>
   <div class="card">
-    <div class="card-h">PART II · 거래 구조</div>
+    <div class="card-h"><span class="part-badge">PART II</span>거래 구조</div>
     <div class="toc-line"><span>자금 구조 — 이원 풀(Two-Pool)</span><span class="pg">8</span></div>
     <div class="toc-line"><span>위험 통제 체계</span><span class="pg">9</span></div>
     <div class="toc-line"><span>회수 우선순위 (Waterfall)</span><span class="pg">10</span></div>
   </div>
   <div class="card">
-    <div class="card-h">PART III · 시스템 시연</div>
+    <div class="card-h"><span class="part-badge">PART III</span>시스템 시연</div>
     <div class="toc-line"><span>시스템 시연 안내</span><span class="pg">11</span></div>
     <div class="toc-line"><span>시연 1. 동적 담보관리 시스템</span><span class="pg">12</span></div>
     <div class="toc-line"><span>시연 2. SPC 담보관리 시스템</span><span class="pg">13</span></div>
   </div>
   <div class="card">
-    <div class="card-h">PART IV · 본 거래의 조건</div>
+    <div class="card-h"><span class="part-badge">PART IV</span>본 거래의 조건</div>
     <div class="toc-line"><span>Term Sheet — 본 거래 개요 및 조건</span><span class="pg">14</span></div>
   </div>
   <div class="card">
-    <div class="card-h">PART V · 마무리</div>
+    <div class="card-h"><span class="part-badge">PART V</span>마무리</div>
     <div class="toc-line"><span>인프라 참여자</span><span class="pg">15</span></div>
     <div class="toc-line"><span>본 인프라의 위치</span><span class="pg">16</span></div>
   </div>
   <div class="card">
-    <div class="card-h">APPENDIX · 부록</div>
+    <div class="card-h"><span class="part-badge">APPENDIX</span>부록</div>
     <div class="toc-line"><span>면책 및 자료 제공 범위</span><span class="pg">17</span></div>
   </div>
 </div>
@@ -72,10 +85,10 @@ format:
 
 ---
 
-## Executive Summary {data-menu-title="Executive Summary"}
+## Executive summary {data-menu-title="Executive Summary" .md-slide}
 
-<div class="eyebrow">PART I · 회사와 인프라</div>
-<div class="subtitle">출자에서 회수·분배에 이르는 자금 사이클 전체를 자동화한 인프라이다.</div>
+<div class="eyebrow"><span class="part-badge">PART 1</span>회사와 인프라</div>
+<div class="subtitle">출자에서 회수·분배에 이르는 자금 사이클 전체를 자동화한 인프라</div>
 
 <div class="stat-row">
   <div class="stat"><div class="num">8,000<span style="font-size:0.4em;">개사</span></div><div class="lab">1차 사용자 시장 (금융위 등록 대부업체)</div></div>
@@ -91,7 +104,7 @@ format:
 | 거래 만기 | 6개월 ~ 12개월 (롤링) |
 | 예상 수익률 | 연 6.0% ~ 7.0% (협의) |
 
-<div class="tagline">㈜솔라리스오피둠은 한국 스탁론 시장의 운영 인프라(CL-Link)를 설계·운영하는 회사이다. 본 인프라는 대주단 자금이 SPC를 통해 개인 차주에게 도달하고, 원리금이 다시 대주단에게 회수·분배되기까지 전 사이클을 시스템적으로 통제한다.</div>
+<div class="tagline">㈜솔라리스오피둠은 한국 스탁론 시장의 운영 인프라(CL-Link)를 설계·운영<br>본 인프라는 대주단 자금이 SPC를 통해 개인 차주에게 도달하고, 원리금이 다시 대주단에게 회수·분배되기까지 전 사이클을 시스템으로 통제</div>
 
 <div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
 
