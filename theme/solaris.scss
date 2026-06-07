@@ -275,14 +275,44 @@ $nav-inset: 40px;   // 좌우 화살표 안쪽 여백 (조절 지점)
 // copyright(.confidential, fixed)·쪽수(reveal slide-number)는 영향 없음.
 // =====================================================================
 .reveal section.md-slide {
+  height: 100%;
   box-sizing: border-box;
-  padding: 56px 120px 56px;        // 상·좌우·하 외곽 여백 (브라우저 외곽~내용)
+  padding: 56px 120px 0;           // 상단·좌우 외곽 여백 (하단은 참조부가 담당)
 
-  // 제목부(eyebrow + 부제) ↓ 본문 사이 구분 여백
-  .subtitle { margin-bottom: 1.7em; }
-  // 본문(스탯 + 표) ↓ 하단 참조(tagline) 사이 구분 여백
-  .tagline { margin-top: 1.8em; }
+  // 제목부 — 단락제목(PART) → 페이지제목 → 설명 순, 상단 정렬
+  // (자동 H2 숨김 → .page-title div가 페이지제목, 메뉴는 data-menu-title)
+  > h2 { display: none; }
+  .eyebrow { margin: 0 0 0.5em; }
+  .page-title {
+    font-size: 1.5em; font-weight: 700; color: $navy; line-height: 1.15;
+    letter-spacing: -0.01em; margin: 0 0 0.25em;
+  }
+  .subtitle { margin: 0; }
+
+  // 본문 — 제목부 아래 ~ 참조부 위 영역에서 세로 중앙
+  // (reveal가 section에 inline display:block 강제 → 절대배치 래퍼 사용)
+  .md-body {
+    position: absolute;
+    left: 120px; right: 120px;
+    top: 215px;                    // 제목부와 간격
+    bottom: 130px;                 // 참조부 위
+    display: flex; flex-direction: column; justify-content: center;
+    table { width: 100%; margin: 0; }
+    .stat-row { margin: 0 0 1em; }  // 스탯 ↓ 표 간격 (3쪽)
+  }
+
+  // 참조부(tagline) — 하단 정렬 (copyright·쪽수는 그대로, 그 위)
+  .tagline {
+    position: absolute;
+    left: 120px; right: 120px;
+    bottom: 48px; margin: 0;
+  }
 }
+
+// 긴 설명 표(.wrap-cells) — 첫 열은 한 줄 유지, 나머지 열은 줄바꿈 허용
+// (예: 7쪽 운영 인력 — '전문성' 칸이 길어 nowrap 시 가로 오버플로)
+.reveal section.wrap-cells table td { white-space: normal; }
+.reveal section.wrap-cells table td:first-child { white-space: nowrap; }
 
 // =====================================================================
 // 표 (chain.link 톤: 헤더 네이비 / 본문 흰 / 얇은 선)
