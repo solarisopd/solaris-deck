@@ -23,9 +23,50 @@ format:
 
 ---
 
-## &nbsp; {.svg-slide data-menu-title="목차"}
+## 목차 {data-menu-title="목차" .toc-slide}
 
-![](slides/02.svg){.slide-art}
+<div class="eyebrow">CONTENTS · INVESTMENT MEMORANDUM</div>
+<div class="subtitle">담보부 기업운전자금대출(ABL) 투자 설명자료 구성</div>
+
+```{=html}
+<div class="toc-body">
+<div class="card-grid cols-3 toc-cards">
+  <div class="card">
+    <div class="card-h">PART I · 회사와 인프라</div>
+    <div class="toc-line"><span>Executive Summary</span><span class="pg">3</span></div>
+    <div class="toc-line"><span>CL-Link 인프라의 정의</span><span class="pg">4</span></div>
+    <div class="toc-line"><span>CL-Link 플랫폼 구조</span><span class="pg">5</span></div>
+    <div class="toc-line"><span>다수 여신 단일 접점 (N:1)</span><span class="pg">6</span></div>
+    <div class="toc-line"><span>운영 인력</span><span class="pg">7</span></div>
+  </div>
+  <div class="card">
+    <div class="card-h">PART II · 거래 구조</div>
+    <div class="toc-line"><span>자금 구조 — 이원 풀(Two-Pool)</span><span class="pg">8</span></div>
+    <div class="toc-line"><span>위험 통제 체계</span><span class="pg">9</span></div>
+    <div class="toc-line"><span>회수 우선순위 (Waterfall)</span><span class="pg">10</span></div>
+  </div>
+  <div class="card">
+    <div class="card-h">PART III · 시스템 시연</div>
+    <div class="toc-line"><span>시스템 시연 안내</span><span class="pg">11</span></div>
+    <div class="toc-line"><span>시연 1. 동적 담보관리 시스템</span><span class="pg">12</span></div>
+    <div class="toc-line"><span>시연 2. SPC 담보관리 시스템</span><span class="pg">13</span></div>
+  </div>
+  <div class="card">
+    <div class="card-h">PART IV · 본 거래의 조건</div>
+    <div class="toc-line"><span>Term Sheet — 본 거래 개요 및 조건</span><span class="pg">14</span></div>
+  </div>
+  <div class="card">
+    <div class="card-h">PART V · 마무리</div>
+    <div class="toc-line"><span>인프라 참여자</span><span class="pg">15</span></div>
+    <div class="toc-line"><span>본 인프라의 위치</span><span class="pg">16</span></div>
+  </div>
+  <div class="card">
+    <div class="card-h">APPENDIX · 부록</div>
+    <div class="toc-line"><span>면책 및 자료 제공 범위</span><span class="pg">17</span></div>
+  </div>
+</div>
+</div>
+```
 
 <div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
 

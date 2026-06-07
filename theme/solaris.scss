@@ -148,6 +148,51 @@ $nav-inset: 40px;   // 좌우 화살표 안쪽 여백 (조절 지점)
   }
 }
 
+// 목차 슬라이드 레이아웃 — 제목/부제 위치를 슬라이드 3(03.svg)에 맞춤
+// (제목 top≈92px · 좌측≈90px · 부제 끝≈187px / 1280×800 좌표계)
+// 본문(카드)은 부제목 아래~하단 footer 사이에서 세로 중앙정렬.
+.reveal section.toc-slide {
+  height: 100%;
+  padding: 88px 90px 56px;       // 상단(제목 위치)·좌우(여백)·하단(footer 위)
+  box-sizing: border-box;
+
+  > h2 { margin: 0 0 0.45em; }    // 제목 위치 = 슬라이드 3
+  .eyebrow { margin: 0 0 0.35em; }
+  .subtitle { margin: 0; }
+
+  // 본문(카드)을 부제목 아래 ~ 하단 footer 사이 영역에서 세로 중앙정렬.
+  // reveal가 현재 슬라이드 section에 inline display:block을 강제하므로
+  // flex/margin:auto 가 무효화됨 → 절대배치 래퍼로 중앙정렬한다.
+  .toc-body {
+    position: absolute;
+    left: 90px; right: 90px;
+    top: 205px;                  // 부제목 종료 아래
+    bottom: 60px;                // 하단 footer 위
+    display: flex; align-items: center;
+    .card-grid { width: 100%; margin: 0; }
+  }
+}
+
+// 목차 — 2행 3열 카드형 (소제목 + 쪽번호 노출)
+.card-grid.toc-cards {
+  gap: 16px;
+  margin: 0.6em 0;
+  grid-auto-rows: 1fr;          // 모든 행 높이를 최대 카드(PART I)에 맞춤
+  .card {
+    display: flex; flex-direction: column;
+    padding: 16px 20px;
+    .card-h {
+      font-size: 0.56em; margin-bottom: 10px;
+      padding-bottom: 7px; border-bottom: 1px solid $line;
+    }
+    .toc-line {
+      display: flex; justify-content: space-between; align-items: baseline;
+      color: $ink; font-size: 0.42em; line-height: 1.85;
+      .pg { color: $mute; font-weight: 700; margin-left: 10px; }
+    }
+  }
+}
+
 .toc-page-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
