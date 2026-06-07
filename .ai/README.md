@@ -8,17 +8,18 @@ GitHub Pages(public)로 배포 → WordPress Docs 메뉴에서 링크.
 - 집 PC: G:\solaris-deck
 - 배포 URL: https://solarisopd.github.io/solaris-deck/ (랜딩) · /im/ · /dcm/
 
-## 현재 상태 (2026-06-06)
-- 마지막: 2026-06-06 / Claude Code / 집 PC
-- IM 1~8·10~17쪽을 slide_ai SVG로 교체 완료 (.svg-slide 풀블리드, 아래 규약 참조) — 커밋·푸시 완료
-- IM 9쪽(위험 통제 체계)만 마크다운 유지 — 소스에 09.svg 없음 (추후 SVG 입수 시 동일 방식 교체)
-- main 브랜치
-- IM 덱 전면 재작성 완료 — 박세훈 ABL IM 원본 15쪽 + 확정 2쪽(자금순환·N:1) 삽입 (im/index.qmd 560줄)
-- 목차 슬라이드 추가 + Pretendard 로컬 폰트 임베드
-- 목차 페이지 raw HTML 렌더링 버그 수정
-- GitHub Pages 빌드 실패 수정 (루트 index 폰트 경로)
-- DCM 덱 7쪽 완성 (dcm/index.qmd 158줄)
-- 주의: OneDrive `...\20260609PPT\solaris-deck\solaris-deck` 는 6/2 시점 비-Git 구버전 사본 → 작업 금지, 최신본은 G:\solaris-deck
+## 현재 상태 (2026-06-07)
+- 마지막: 2026-06-07 / Claude Code / 집 PC / 커밋 f382d7d
+- **방침 전환(6/7): 전면 SVG화 폐기 → 이미지 도해 쪽만 SVG, 나머지는 마크다운.** IM 1~17쪽 전부 마크다운화 완료. 남은 `.svg-slide` 없음
+  - 5·6쪽만 제목부 마크다운(`.diagram-head`) + 동적 도면(인라인 SVG 애니메이션) 보존. `slides/05·06.svg`(제목 오버레이)는 미사용. 나머지 `slides/NN.svg`는 되돌리기 대비 보존
+- 페이지 규칙(3쪽 기준): 제목부 PART 배지(`.part-badge`)→페이지제목(`.page-title`)→설명(`.subtitle`) / 본문 `.md-body`(절대배치·세로중앙) / 하단 `.tagline` 참조부. 표 0.6em, 첫열 nowrap
+  - 표 열폭은 마크다운 구분선 대시 비율로 제어(Pandoc colgroup). 3열 비교표는 `.ctrl-table`(table-layout:fixed)+`.wrap-cells`
+  - 14쪽 좌우 2표 `.two-col.ts-cols`(상단정렬) / 11·17쪽 2카드 `.demo-cards`(옅은 배경 $region·0.6em·높이130%) / 목차 카드 `.toc-cards` 옅은 배경
+  - PART 1 섹션명: "회사와 인프라"→"CL-Link 인프라"로 통일(3·4·5·6·7쪽·목차)
+- 5·6쪽 도면 애니메이션: `.diagram-slide:not(.present)`일 때 `animation:none` → 슬라이드 진입 시 0%부터 재생(중간진입 방지)
+- 텍스트 원칙: 본문 텍스트는 slide_ai SVG에 작성한 문구를 정본으로 사용(서술형 "-다/-이다" 어미 제거 등)
+- DCM 덱 7쪽 완성 (dcm/index.qmd 158줄) — 미변경
+- 주의: OneDrive `...\20260609PPT\solaris-deck\solaris-deck` 는 비-Git 구버전 사본 → 작업 금지, 최신본은 G:\solaris-deck
 
 ## IM 슬라이드 SVG 교체 규약
 - 원본: `C:\Users\MRB\OneDrive\00솔라리스오피둠\20260609PPT\slide_ai\NN.svg` (01~17, 파일번호 = 쪽번호)
@@ -29,10 +30,10 @@ GitHub Pages(public)로 배포 → WordPress Docs 메뉴에서 링크.
 - 진행: 2026-06-06 1~8·10~17쪽 완료(9쪽 제외, 09.svg 미존재). 9쪽 SVG 입수 시 동일 방식으로 교체하면 IM 전체 SVG화 완료
 
 ## 다음 단계
-- IM 3~17쪽 SVG 교체 (사용자 SVG 첨부 시 위 규약대로)
+- IM 마크다운화 완료 — 추가 디자인/문구 다듬기는 사용자 지시별 진행
+- DCM 덱도 동일 페이지 규칙 적용 검토(현재 미적용)
+- 디자인 토큰/공통 규칙 변경은 theme/solaris.scss 한 곳만 수정 (두 덱 일괄 적용, 5·6쪽 도면 선택자 한정 주의)
 - (검토) OneDrive 구버전 사본 정리 — 백업 가치 없음, 삭제 또는 `_OLD` 표식 권장
-- assets/ Octopus N:1 다이어그램(slide3.html) 추가 후 IM 임베드 검토
-- 디자인 토큰 변경은 theme/solaris.scss 한 곳만 수정 (두 덱 일괄 적용)
 - WordPress Docs 메뉴에 IM/DCM URL 연결 확인
 
 ## 구조
