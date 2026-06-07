@@ -187,7 +187,7 @@ $nav-inset: 40px;   // 좌우 화살표 안쪽 여백 (조절 지점)
     }
     .toc-line {
       display: flex; justify-content: space-between; align-items: baseline;
-      color: $ink; font-size: 0.42em; line-height: 1.85;
+      color: $ink; font-size: 0.6em; line-height: 1.85;
       .pg { color: $mute; font-weight: 700; margin-left: 10px; }
     }
   }
@@ -263,17 +263,24 @@ $nav-inset: 40px;   // 좌우 화살표 안쪽 여백 (조절 지점)
 // 표 (chain.link 톤: 헤더 네이비 / 본문 흰 / 얇은 선)
 // =====================================================================
 .reveal table {
-  border-collapse: collapse; width: 100%; font-size: 0.5em;
+  border-collapse: collapse; width: 100%; font-size: 0.6em;
   margin: 0.4em 0;
+  table-layout: auto;
 }
 .reveal table thead th {
   background: $navy; color: #fff; font-weight: 700;
   padding: 10px 14px; text-align: left; border: none;
+  white-space: nowrap;                 // 표제목 줄바꿈 방지
 }
 .reveal table tbody td {
   padding: 9px 14px; border-bottom: 1px solid $line; color: $ink;
+  white-space: nowrap;                 // 본문 줄바꿈 방지
 }
 .reveal table tbody tr:last-child td { border-bottom: none; }
+// '구분'(첫 열)은 내용이 짧으므로 폭을 내용에 맞춰 최소화 →
+// 나머지('내용' 등) 열이 잔여 폭을 차지해 넓어진다.
+.reveal table th:first-child,
+.reveal table td:first-child { width: 1%; white-space: nowrap; }
 // 등급 강조 셀
 .reveal table .grade { font-weight: 700; color: $navy; }
 
