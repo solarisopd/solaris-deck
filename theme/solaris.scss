@@ -414,6 +414,10 @@ $nav-inset: 40px;   // 좌우 화살표 안쪽 여백 (조절 지점)
 .reveal section.diagram-slide.diagram-right .s6-svg {
   transform: translateX(150px);
 }
+// 6쪽 전용 — 제목·부제를 각각 한 줄로 표시 (제목부 폭 제한 해제 + 줄바꿈 금지).
+.reveal section.diagram-slide.head-wide .diagram-head { max-width: none; white-space: nowrap; }
+// 6쪽 전용 — 동적 도면을 약 100px 아래로 이동 (제목부와 간격 확보).
+.reveal section.diagram-slide.head-wide .cll-svg { transform: translateY(100px); }
 
 // =====================================================================
 // 전면 SVG 슬라이드 (AI 아트워크 1쪽 = 1 SVG)
