@@ -112,32 +112,18 @@
     "text": "PART 1CL-Link 인프라\n\n\n운영 인력\n\n\n국내외 금융·시스템 운영 전문가들에 의해 설계 구축\n\n\n\n\n\n\n\n\n\n역할\n전문성\n\n\n\n\n대표이사 박세훈\n미국·국내 금융시장 경력. 한국 핀테크 인프라 사업 설계 및 솔라리스오피둠 창업.\n\n\nCTO (최고기술책임자)\n스탁론·여신 시스템 개발·운영 전문가. 업계 리딩 기업 핵심 인력 출신. RMS 및 신용평가 시스템 자체 설계.\n\n\n전무 (Front-end / Server)\n프론트엔드 개발 및 서버 운영 전문가. CL-Link 플랫폼 웹·서버 아키텍처 설계 책임자. 창립 멤버.\n\n\n전략부장\n종목관리·트레이딩 전문가. 트레이딩 경력 10년 이상. 동적 담보관리의 종목 평가 체계 설계.\n\n\n\n\n\n핵심 시스템(RMS, 신용평가, 동적 담보관리, SPC 담보관리)은 외주 의존도 없는 자체 개발·운영\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
-    "objectID": "im/index.html#자금-구조-이원-풀two-pool",
-    "href": "im/index.html#자금-구조-이원-풀two-pool",
-    "title": "SOLARIS OPPIDUM",
-    "section": "자금 구조 — 이원 풀(Two-Pool)",
-    "text": "자금 구조 — 이원 풀(Two-Pool)\n\nPART II · 거래 구조\n\n\n대주단 자금과 회원사 자기자본은 본 인프라 안에서 분리된 두 풀로 운용된다.\n\n\n\n\n구분\n자금 위치\n규모\n자금 출처\n회수 순위\n\n\n\n\nPool B (선순위)\nSPC 내부\n100억\n대주단\n최우선\n\n\nPool A (후순위)\nSPC 외부 담보\n10억\n회원사 자기자본\n후순위\n\n\n총 담보풀\nSPC 근질권\n110억\n─\nLTV 90.9%\n\n\n\n\n\n\n회원사 적격 요건\n\n\n회원사는 본 거래 개시 전 자기자본 10억원으로 적격 스탁론 대출채권을 보유하고, 이를 SPC 명의 근질권으로 사전 설정한다. 사전 형성한 적격 채권은 SPC 외부에 보유되어 1차 손실의 우선 흡수 자본으로 기능하며, 동시에 SPC 근질권으로 설정되어 SPC 대출의 담보를 구성한다. 이로써 본 거래는 개시 시점부터 LTV 90.9%, 무담보 노출 0의 구조로 가동된다.\n\n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
-  },
-  {
-    "objectID": "im/index.html#위험-통제-체계",
-    "href": "im/index.html#위험-통제-체계",
-    "title": "SOLARIS OPPIDUM",
-    "section": "위험 통제 체계",
-    "text": "위험 통제 체계\n\nPART II · 거래 구조\n\n\n법적·구조적·기술적 세 층의 통제 장치가 위험을 분담한다.\n\n\n\n\n\n\n\n\n\n구분\n통제 장치\n효과\n\n\n\n\n법적 통제\n일반법인 SPC + 유안타증권 업무수탁\nSPC 임의 자금집행 차단 │ 인장·계좌 분리 통제 │ 도산 위험 차단 효과\n\n\n구조적 통제\n회원사 자기자본 후순위 담보 (Pool A)\n부실 1차 손실의 우선 흡수 │ 회원사 자본의 SPC 외부 락업\n\n\n기술적 통제\nRMS 통합 담보관리 시스템\n담보 실시간 감시 │ 자동 청산(반대매매) │ Daily Sweep 강제 집금\n\n\n\n\n법적 통제는 임의 자금집행을, 구조적 통제는 영업 부실 손실의 1차 흡수를, 기술적 통제는 시장 충격기 담보가치 하락 시 자동 회수를 담당한다. 세 층의 동시 실패가 없는 한 대주단 원금 손실 가능성은 통제된다.\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
-  },
-  {
     "objectID": "im/index.html#section-4",
     "href": "im/index.html#section-4",
     "title": "SOLARIS OPPIDUM",
     "section": " ",
-    "text": "㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+    "text": "PART 2거래 구조\n\n\n자금 구조 — 이원 풀(Two-Pool)\n\n\n대주단 자금과 회원사 자기자본은 본 인프라 안에서 분리된 두 풀로 운용된다.\n\n\n\n\n\n구분\n자금 위치\n규모\n자금 출처\n회수 순위\n\n\n\n\nPool B (선순위)\nSPC 내부\n100억\n대주단\n최우선\n\n\nPool A (후순위)\nSPC 외부 담보\n10억\n회원사 자기자본\n후순위\n\n\n총 담보풀\nSPC 근질권\n110억\n─\nLTV 90.9%\n\n\n\n\n\n\n\n\n회원사 적격 요건\n\n\n회원사는 본 거래 개시 전 자기자본 10억원으로 적격 스탁론 대출채권을 보유하고, 이를 SPC 명의 근질권으로 사전 설정한다. 사전 형성한 적격 채권은 SPC 외부에 보유되어 1차 손실의 우선 흡수 자본으로 기능하며, 동시에 SPC 근질권으로 설정되어 SPC 대출의 담보를 구성한다. 이로써 본 거래는 개시 시점부터 LTV 90.9%, 무담보 노출 0의 구조로 가동된다.\n\n\n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
     "objectID": "im/index.html#section-5",
     "href": "im/index.html#section-5",
     "title": "SOLARIS OPPIDUM",
     "section": " ",
-    "text": "㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+    "text": "PART 2거래 구조\n\n\n위험 통제 체계\n\n\n법적·구조적·기술적 세 층의 통제 장치가 위험을 분담한다.\n\n\n\n\n\n\n\n\n\n\n구분\n통제 장치\n효과\n\n\n\n\n법적 통제\n일반법인 SPC + 유안타증권 업무수탁\nSPC 임의 자금집행 차단 │ 인장·계좌 분리 통제 │ 도산 위험 차단 효과\n\n\n구조적 통제\n회원사 자기자본 후순위 담보 (Pool A)\n부실 1차 손실의 우선 흡수 │ 회원사 자본의 SPC 외부 락업\n\n\n기술적 통제\nRMS 통합 담보관리 시스템\n담보 실시간 감시 │ 자동 청산(반대매매) │ Daily Sweep 강제 집금\n\n\n\n\n\n법적 통제는 임의 자금집행을, 구조적 통제는 영업 부실 손실의 1차 흡수를, 기술적 통제는 시장 충격기 담보가치 하락 시 자동 회수를 담당한다. 세 층의 동시 실패가 없는 한 대주단 원금 손실 가능성은 통제된다.\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
     "objectID": "im/index.html#section-6",
@@ -177,6 +163,20 @@
   {
     "objectID": "im/index.html#section-11",
     "href": "im/index.html#section-11",
+    "title": "SOLARIS OPPIDUM",
+    "section": " ",
+    "text": "㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+  },
+  {
+    "objectID": "im/index.html#section-12",
+    "href": "im/index.html#section-12",
+    "title": "SOLARIS OPPIDUM",
+    "section": " ",
+    "text": "㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+  },
+  {
+    "objectID": "im/index.html#section-13",
+    "href": "im/index.html#section-13",
     "title": "SOLARIS OPPIDUM",
     "section": " ",
     "text": "㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
