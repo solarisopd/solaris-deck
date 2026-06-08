@@ -114,7 +114,7 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 
 ---
 
-## &nbsp; {data-menu-title="인프라 정의" .md-slide}
+## &nbsp; {data-menu-title="인프라 정의" .md-slide .fill-rows .head-center}
 
 <div class="eyebrow"><span class="part-badge">PART 1</span>CL-Link 인프라</div>
 <div class="page-title">CL-Link 인프라의 정의</div>

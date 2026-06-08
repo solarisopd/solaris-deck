@@ -373,6 +373,11 @@ $nav-inset: 40px;   // 좌우 화살표 안쪽 여백 (조절 지점)
 
 // 제목행 가운데 정렬 (예: 8쪽) — 기본은 좌측
 .reveal section.head-center table thead th { text-align: center; }
+// 4쪽: 표를 본문 영역(참조부 위) 높이에 맞춰 늘려 행 셀높이를 채움 — 행들이 잔여 높이를 균등 분배
+.reveal section.fill-rows .md-body table { height: 100%; }
+.reveal section.fill-rows table th,
+.reveal section.fill-rows table td { vertical-align: middle; }
+
 // 셀 내 구분선(│) — 옅은 파란색·살짝 굵게 (예: 9쪽 효과열).
 // font-size는 본문과 동일(1em)해야 세로정렬이 맞음(키우면 박스문자가 위로 뜸). 굵기는 weight+얇은 그림자로만.
 .reveal .sep { color: #8FA6DC; font-weight: 700; text-shadow: 0.4px 0 currentColor; }
