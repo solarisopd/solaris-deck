@@ -595,7 +595,7 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 
 <div class="eyebrow"><span class="part-badge">PART 5</span>마무리</div>
 <div class="page-title">본 인프라의 위치</div>
-<div class="subtitle">본 인프라는 한국 스탁론 시장의 운영 체계로 정착되는 과정</div>
+<div class="subtitle">한국 스탁론 시장의 운영 체계로 정착되는 과정</div>
 
 ::: {.md-body}
 
