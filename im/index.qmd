@@ -566,7 +566,7 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 
 ---
 
-## &nbsp; {data-menu-title="인프라 참여자" .md-slide .wrap-cells .ctrl-table}
+## &nbsp; {data-menu-title="인프라 참여자" .md-slide .wrap-cells .ctrl-table .head-center}
 
 <div class="eyebrow"><span class="part-badge">PART 5</span>마무리</div>
 <div class="page-title">인프라 참여자</div>
