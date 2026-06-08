@@ -321,6 +321,13 @@ $nav-inset: 40px;   // 좌우 화살표 안쪽 여백 (조절 지점)
   .md-body .tagline { margin: 0 0 0.6em; }
   .flow-label { color: $navy; font-weight: 700; font-size: 0.5em; margin: 0.3em 0 0.5em; }
 
+  // 12쪽(시연1)만 격리: (표제목+표)은 한 묶음으로 바짝, 두 묶음 사이는 크게 분리
+  &.demo-flow {
+    .flow-label { margin: 28px 0 6px; }          // 표제목 → 표 바짝 / 위(참고부·앞표)와는 분리
+    .flow { margin: 0; }                         // 표 자체 상하여백 제거(묶음/간격은 라벨이 담당)
+    .flow-label.shock { margin-top: 44px; }      // 평상시 묶음 ↔ 시장충격 묶음 큰 간격
+  }
+
   // 참조부 카드(.md-ref) — 박스형 참조부를 하단 정렬 (예: 8쪽 회원사 적격 요건)
   .md-ref {
     position: absolute;

@@ -423,7 +423,7 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 
 ---
 
-## &nbsp; {data-menu-title="시연 1 동적담보관리" .md-slide}
+## &nbsp; {data-menu-title="시연 1 동적담보관리" .md-slide .demo-flow}
 
 <div class="eyebrow"><span class="part-badge">PART 3</span>시스템 시연</div>
 <div class="page-title">시연 1 - 동적관리 시스템</div>
@@ -441,7 +441,7 @@ SPC 업무수탁 유안타증권 신탁팀<br>
   <div class="flow-step"><div class="flow-badge">③</div><div class="flow-h">계좌등급 산출</div><div class="flow-d">계좌 단위 종합 등급</div></div>
 </div>
 
-<div class="flow-label">시장 충격 발생 — 위기 대응 · 자동 통제</div>
+<div class="flow-label shock">시장 충격 발생 — 위기 대응 · 자동 통제</div>
 <div class="flow">
   <div class="flow-step"><div class="flow-badge brand">④</div><div class="flow-h">반대매매 이벤트</div><div class="flow-d">LTV 임계점 도달</div></div>
   <div class="flow-arrow">→</div>
