@@ -61,7 +61,7 @@ $font-family-monospace: "Monaco", "Consolas", "Menlo", "Courier New", monospace;
 
   // 슬라이드 좌상단 작은 카테고리 라벨 (PART 표기 등)
   .eyebrow {
-    font-size: 0.5em;
+    font-size: 0.62em;                 // 부제목(.subtitle)과 동일 크기로 — 제목부 라벨이 너무 작던 문제
     font-weight: 700;
     letter-spacing: 0.08em;
     color: $mute;
