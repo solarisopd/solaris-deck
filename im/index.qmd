@@ -591,7 +591,7 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 
 ---
 
-## &nbsp; {data-menu-title="인프라 위치" .md-slide .tall-rows}
+## &nbsp; {data-menu-title="인프라 위치" .md-slide .tall-rows .head-center .body-bottom}
 
 <div class="eyebrow"><span class="part-badge">PART 5</span>마무리</div>
 <div class="page-title">본 인프라의 위치</div>
@@ -601,10 +601,9 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 
 | 구분 | 내용 |
 |------|--------------------------------|
-| 1차 목표 시장 | 금융위 등록 대부업체 약 8,000개사 — 본 시장의 완전한 인프라화 |
+| 1차 목표 | 국내 대형 금융위 등록 대부업체 (상위 10여개사 접촉중) |
 | 현재 가동 | 첫 번째 ABL 사이클 (Master Facility 일백억원, 본 자료의 안내 대상) |
 | 검증 트랙 | 5년 │ 부실율 0.24% (COVID-19 폭락기 포함) |
-| 본 자료의 의의 | 본 인프라 위에서 운용 가능한 자금의 검토 안내 |
 
 :::
 
