@@ -488,6 +488,41 @@ $nav-inset: 40px;   // 좌우 화살표 안쪽 여백 (조절 지점)
   .subtitle { color: $sublt; }
 }
 
+// 마무리 슬라이드 — 흰 배경(.title-dark 미적용), 블록은 위쪽 배치, 약한 청색
+.reveal section.end-slide .cover-inner { top: 40%; }                // 블록 기준 위치
+.reveal section.end-slide .cover-title-box {
+  background: #3A4D8F;                                              // 1쪽 표지 박스(#182349)는 유지, 마무리만 약한 청색
+  position: relative; top: -55px;                                  // 박스만 위로(감사합니다는 그대로)
+}
+.reveal section.end-slide .end-thanks {
+  color: #3A4D8F; font-size: 1.5em; font-weight: 700;
+  letter-spacing: 0.02em; margin-top: 0.2em;
+}
+// 마지막 쪽: reveal 기본 우측'버튼'은 클릭 미작동 → 숨기고, 같은 모양의 링크(a.end-next)로 대체.
+// a.end-next는 .reveal 직속(컨트롤 pointer-events:none 회피). 셰브론은 reveal 좌측 화살표 수치를 직접 복제.
+.reveal .end-next { display: none; }
+.reveal.on-end-slide .controls button.navigate-right { display: none; }
+.reveal.on-end-slide .end-next {
+  display: block; position: absolute;
+  right: $nav-inset; top: 50%; transform: translateY(-50%);   // 좌측과 동일 인셋·세로중앙
+  width: 36px; height: 36px;
+  color: var(--r-link-color); opacity: 0.9;                    // 좌측 화살표와 동일 색(#2A5ADA)
+  cursor: pointer; pointer-events: auto; z-index: 30;
+}
+.reveal.on-end-slide .end-next:hover { opacity: 1; }
+.reveal .end-next .controls-arrow {
+  position: relative; display: block; width: 36px; height: 36px;
+  transform: rotate(180deg);                                   // navigate-right와 동일(좌향 기본형을 우향으로)
+}
+.reveal .end-next .controls-arrow::before,
+.reveal .end-next .controls-arrow::after {
+  content: ""; position: absolute; top: 0; left: 0;
+  width: 26px; height: 5px; border-radius: 2.5px;
+  background-color: currentColor; transform-origin: 2px 50%;
+}
+.reveal .end-next .controls-arrow::before { transform: translateX(5px) translateY(15.5px) rotate(45deg); }
+.reveal .end-next .controls-arrow::after  { transform: translateX(5px) translateY(15.5px) rotate(-45deg); }
+
 // 표지 — flex 중앙 정렬 (margin-top 사용 금지: 세로 overflow→네비 깨짐 방지)
 .reveal section.cover {
   height: 100%;
