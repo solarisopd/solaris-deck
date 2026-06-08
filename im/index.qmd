@@ -499,18 +499,18 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 <div class="tagline">기존 자산유동화는 신탁 wrapping 기반의 정태적 담보 관리로 월 단위 보고에 의존<br>본 시스템은 SPC가 보유한 수천~수만 건의 개인담보대출 풀을 실시간으로 통제</div>
 
 <div class="flow">
-  <div class="flow-step"><div class="flow-h">개별 자산</div><div class="flow-d">계좌 1 · 2 · 3 ⋯ N</div></div>
+  <div class="flow-step"><div class="flow-h">개별 자산</div><div class="flow-d">계좌 1 · 2 · 3 ⋯ n</div></div>
   <div class="flow-arrow">→</div>
   <div class="flow-step"><div class="flow-h">SPC 대출 풀</div><div class="flow-d">개인담보대출 통합 · 근질권 110억</div></div>
   <div class="flow-arrow">→</div>
-  <div class="flow-step"><div class="flow-h">실시간 통제</div><div class="flow-d">풀 단위 일괄 관리</div></div>
+  <div class="flow-step"><div class="flow-h">실시간 통제</div><div class="flow-d">풀단위 일괄 관리</div></div>
 </div>
 
 <div class="card-grid cols-2">
-  <div class="card"><div class="card-h">풀 LTV 산출</div><div class="card-b">실시간 가중평균.</div></div>
-  <div class="card"><div class="card-h">자동 청산 트리거</div><div class="card-b">임계점 도달 시 자동 집행.</div></div>
-  <div class="card"><div class="card-h">Daily Sweep</div><div class="card-b">일별 강제 집금.</div></div>
-  <div class="card"><div class="card-h">Waterfall 분배</div><div class="card-b">대주단 선순위 → 회원사 후순위 잔여.</div></div>
+  <div class="card"><div class="card-h">풀 LTV 산출</div><div class="card-b">실시간 가중평균</div></div>
+  <div class="card"><div class="card-h">자동 청산 트리거</div><div class="card-b">임계점 도달 시 자동 집행</div></div>
+  <div class="card"><div class="card-h">Daily Sweep</div><div class="card-b">일별 강제 집금</div></div>
+  <div class="card"><div class="card-h">Waterfall 분배</div><div class="card-b">대주단 선순위 → 회원사 후순위 잔여</div></div>
 </div>
 :::
 
@@ -535,7 +535,7 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 | 거래 명칭 | 담보부 기업운전자금대출 (ABL) |
 | 대출 형태 | SPC 선순위 기업대출 (담보부) |
 | 기초자산 | SPC가 회원사(대부)에 실행한 기업대출채권 |
-| Master Facility | 금 일백억원 |
+| Master Facility | 금 일백억 원 |
 | 인출 방식 | Proportional Drawdown |
 | 인출 단위 | 최소 10억원 |
 | LTV | 90.9% 상시 유지 |
@@ -601,8 +601,8 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 
 | 구분 | 내용 |
 |------|--------------------------------|
-| 1차 목표 | 국내 대형 금융위 등록 대부업체 (상위 10여개사 접촉중) |
-| 현재 가동 | 첫 번째 ABL 사이클 (Master Facility 일백억원, 본 자료의 안내 대상) |
+| 1차 목표 | 국내 대형 금융위 등록 대부업체 (상위 10여 개사 접촉 중) |
+| 현재 가동 | 첫 번째 ABL 사이클 (Master Facility 일백억 원, 본 자료의 안내 대상) |
 | 검증 트랙 | 5년 │ 부실율 0.24% (COVID-19 폭락기 포함) |
 
 :::
