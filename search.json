@@ -130,7 +130,7 @@
     "href": "im/index.html#section-8",
     "title": "SOLARIS OPPIDUM",
     "section": " ",
-    "text": "PART 2거래구조\n\n\n회수 우선순위 (Waterfall)\n\n\nSPC 자금관리계좌의 자금 분배는 업무수탁 계약에 따른 순위로 집행\n\n\n\n\n\n\n\n\n\n\n순위\n항목\n내용\n\n\n\n\n0\n조세 및 제비용\nSPC 법인세, 업무수탁수수료, 자산관리수수료, 회계·세무·법률자문 등\n\n\n1\n대주단 (선순위)\n선순위 대주단 이자 및 원금 (분할상환 또는 만기일시)\n\n\n2\n회원사 잔여분\nPool A 후순위 회수분 (잔존 시 회원사 귀속)\n\n\n\n\n\n\n\n\nSPC 외부 정산 — 플랫폼 시스템사용료\n\n\n솔라리스오피둠의 플랫폼 시스템사용료는 본 Waterfall에서 분리되어, SPC 외부에서 회원사가 솔라리스오피둠 앞으로 별도 정산본 사용료는 SaaS 계약상 회원사가 부담하는 용역 대가로서, 대주단 채권의 회수 우선순위와 무관하게 운용\n\n\n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+    "text": "PART 2거래구조\n\n\n회수 우선순위 (Waterfall)\n\n\nSPC 자금관리계좌의 자금 분배는 업무수탁 계약에 따른 순위로 집행\n\n\n\n\n\n\n\n\n\n\n순위\n항목\n내용\n\n\n\n\n0\n조세 및 제비용\nSPC 법인세, 업무수탁수수료, 자산관리수수료, 회계·세무·법률자문 등\n\n\n1\n대주단 (선순위)\n선순위 대주단 이자 및 원금 (분할상환 또는 만기일시)\n\n\n2\n여신 회원사\n선순위 지급 후 잔여분\n\n\n\n\n\n\n\n\nSPC 외부 정산 — 플랫폼 시스템사용료\n\n\n솔라리스오피둠의 플랫폼 시스템사용료는 본 Waterfall에서 분리되어, SPC 외부에서 회원사가 솔라리스오피둠 앞으로 별도 정산본 사용료는 SaaS 계약상 회원사가 부담하는 용역 대가로서, 대주단 채권의 회수 우선순위와 무관하게 운용\n\n\n\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
     "objectID": "im/index.html#section-9",
