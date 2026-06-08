@@ -328,6 +328,11 @@ $nav-inset: 40px;   // 좌우 화살표 안쪽 여백 (조절 지점)
     .flow-label.shock { margin-top: 44px; }      // 평상시 묶음 ↔ 시장충격 묶음 큰 간격
   }
 
+  // 13쪽(시연2)만 격리: 참조부 ↔ 흐름표 ↔ 하단 카드를 여백으로 구분
+  &.demo-pool {
+    .flow { margin: 30px 0; }                    // 참조부와 위로, 하단 카드와 아래로 분리
+  }
+
   // 참조부 카드(.md-ref) — 박스형 참조부를 하단 정렬 (예: 8쪽 회원사 적격 요건)
   .md-ref {
     position: absolute;

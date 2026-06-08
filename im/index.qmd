@@ -457,7 +457,7 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 
 ---
 
-## &nbsp; {data-menu-title="시연 2 SPC담보관리" .md-slide}
+## &nbsp; {data-menu-title="시연 2 SPC담보관리" .md-slide .demo-pool}
 
 <div class="eyebrow"><span class="part-badge">PART 3</span>시스템 시연</div>
 <div class="page-title">시연 2 - SPC 담보관리 시스템</div>
