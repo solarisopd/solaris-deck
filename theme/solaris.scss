@@ -373,18 +373,21 @@ $nav-inset: 40px;   // 좌우 화살표 안쪽 여백 (조절 지점)
 
 // 제목행 가운데 정렬 (예: 8쪽) — 기본은 좌측
 .reveal section.head-center table thead th { text-align: center; }
-// 8쪽 자금구조 표: colgroup 미생성 → CSS로 열폭 직접 지정(.ctrl-table의 table-layout:fixed 전제)
-// 구분:자금위치 = 12:18 = 4:6, 나머지(규모 16%·자금출처 27%·회수순위 27%)
-.reveal section.head-center table th:nth-child(1),
-.reveal section.head-center table td:nth-child(1) { width: 12%; }   // 구분
-.reveal section.head-center table th:nth-child(2),
-.reveal section.head-center table td:nth-child(2) { width: 18%; }   // 자금위치 (구분:자금위치=4:6)
-.reveal section.head-center table th:nth-child(3),
-.reveal section.head-center table td:nth-child(3) { width: 14%; }   // 규모
-.reveal section.head-center table th:nth-child(4),
-.reveal section.head-center table td:nth-child(4) { width: 28%; }   // 자금출처
-.reveal section.head-center table th:nth-child(5),
-.reveal section.head-center table td:nth-child(5) { width: 28%; }   // 회수순위 (규모:자금출처:회수순위=2:4:4)
+// 셀 내 구분선(│) — 옅은 파란색·살짝 굵게 (예: 9쪽 효과열).
+// font-size는 본문과 동일(1em)해야 세로정렬이 맞음(키우면 박스문자가 위로 뜸). 굵기는 weight+얇은 그림자로만.
+.reveal .sep { color: #8FA6DC; font-weight: 700; text-shadow: 0.4px 0 currentColor; }
+// 8쪽 자금구조 표(.fund-table 전용): colgroup 미생성 → CSS로 5열 폭 직접 지정(table-layout:fixed 전제)
+// 구분:자금위치 = 12:18 = 4:6 / 규모:자금출처:회수순위 = 14:28:28 = 2:4:4
+.reveal section.fund-table table th:nth-child(1),
+.reveal section.fund-table table td:nth-child(1) { width: 12%; }   // 구분
+.reveal section.fund-table table th:nth-child(2),
+.reveal section.fund-table table td:nth-child(2) { width: 18%; }   // 자금위치
+.reveal section.fund-table table th:nth-child(3),
+.reveal section.fund-table table td:nth-child(3) { width: 14%; }   // 규모
+.reveal section.fund-table table th:nth-child(4),
+.reveal section.fund-table table td:nth-child(4) { width: 28%; }   // 자금출처
+.reveal section.fund-table table th:nth-child(5),
+.reveal section.fund-table table td:nth-child(5) { width: 28%; }   // 회수순위
 
 // =====================================================================
 // 표 (chain.link 톤: 헤더 네이비 / 본문 흰 / 얇은 선)
