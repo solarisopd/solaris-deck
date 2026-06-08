@@ -445,7 +445,7 @@ $nav-inset: 40px;   // 좌우 화살표 안쪽 여백 (조절 지점)
 // 5쪽 전용 — 동적 도면을 문서 우측 끝에 맞춰 정렬 (좌상단 제목부 공간 확보).
 // 도면 내부 우측 여백(viewBox 1130/1280 ≈ 150px)만큼 우측 이동. 6쪽엔 영향 없음.
 .reveal section.diagram-slide.diagram-right .s6-svg {
-  transform: translate(150px, 28px);   // 우측 정렬 + 도면을 본문 하단으로(푸터 copyright과 약 2줄 간격)
+  transform: translateY(28px);   // 가운데 정렬(제목 축소로 좌측 겹침 해소 → 우측이동 불필요) + 본문 하단으로 약간 내림
 }
 // 6쪽 전용 — 제목·부제를 각각 한 줄로 표시 (제목부 폭 제한 해제 + 줄바꿈 금지).
 .reveal section.diagram-slide.head-wide .diagram-head { max-width: none; white-space: nowrap; }
