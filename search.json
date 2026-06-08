@@ -151,14 +151,14 @@
     "href": "im/index.html#section-11",
     "title": "SOLARIS OPPIDUM",
     "section": " ",
-    "text": "PART 3시스템 시연\n\n\n시연 2 - SPC 담보관리 시스템\n\n\n개인담보대출 풀의 SPC 차원 실시간 담보관리는 국내 최초\n\n\n\n기존 자산유동화는 신탁 wrapping 기반의 정태적 담보 관리로 월 단위 보고에 의존본 시스템은 SPC가 보유한 수천~수만 건의 개인담보대출 풀을 실시간으로 통제\n\n\n\n\n개별 자산\n\n\n계좌 1 · 2 · 3 ⋯ N\n\n\n\n→\n\n\n\nSPC 대출 풀\n\n\n개인담보대출 통합 · 근질권 110억\n\n\n\n→\n\n\n\n실시간 통제\n\n\n풀 단위 일괄 관리\n\n\n\n\n\n\n풀 LTV 산출\n\n\n실시간 가중평균.\n\n\n\n\n자동 청산 트리거\n\n\n임계점 도달 시 자동 집행.\n\n\n\n\nDaily Sweep\n\n\n일별 강제 집금.\n\n\n\n\nWaterfall 분배\n\n\n대주단 선순위 → 회원사 후순위 잔여.\n\n\n\n\n\n5년 가동 트랙 : 자동 청산 누적 집행, 회수 성공률 검증 · IP 귀속 ㈜솔라리스오피둠\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+    "text": "PART 3시스템 시연\n\n\n시연 2 - SPC 담보관리 시스템\n\n\n개인담보대출 풀의 SPC 차원 실시간 담보관리는 국내 최초\n\n\n\n기존 자산유동화는 신탁 wrapping 기반의 정태적 담보 관리로 월 단위 보고에 의존본 시스템은 SPC가 보유한 수천~수만 건의 개인담보대출 풀을 실시간으로 통제\n\n\n\n\n개별 자산\n\n\n계좌 1 · 2 · 3 ⋯ n\n\n\n\n→\n\n\n\nSPC 대출 풀\n\n\n개인담보대출 통합 · 근질권 110억\n\n\n\n→\n\n\n\n실시간 통제\n\n\n풀단위 일괄 관리\n\n\n\n\n\n\n풀 LTV 산출\n\n\n실시간 가중평균\n\n\n\n\n자동 청산 트리거\n\n\n임계점 도달 시 자동 집행\n\n\n\n\nDaily Sweep\n\n\n일별 강제 집금\n\n\n\n\nWaterfall 분배\n\n\n대주단 선순위 → 회원사 후순위 잔여\n\n\n\n\n\n5년 가동 트랙 : 자동 청산 누적 집행, 회수 성공률 검증 · IP 귀속 ㈜솔라리스오피둠\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
     "objectID": "im/index.html#section-12",
     "href": "im/index.html#section-12",
     "title": "SOLARIS OPPIDUM",
     "section": " ",
-    "text": "PART 4본 거래의 조건\n\n\nTerm Sheet\n\n\n본 거래의 주요 조건 (거래 개요 통합)\n\n\n\n\n\n\n\n항목\n내용\n\n\n\n\n거래 명칭\n담보부 기업운전자금대출 (ABL)\n\n\n대출 형태\nSPC 선순위 기업대출 (담보부)\n\n\n기초자산\nSPC가 회원사(대부)에 실행한 기업대출채권\n\n\nMaster Facility\n금 일백억원\n\n\n인출 방식\nProportional Drawdown\n\n\n인출 단위\n최소 10억원\n\n\nLTV\n90.9% 상시 유지\n\n\n예상 수익률\n연 6.0% ~ 7.0% (협의)\n\n\n\n\n\n\n\n\n항목\n내용\n\n\n\n\n이자 지급\n월별 후취 (인출 잔액 기준)\n\n\n원금 상환\n만기 일시상환 또는 약정 분할상환\n\n\n투자 기간\n6개월 (롤링)\n\n\n신용보강\n회원사 자기자본 일십억원 후순위\n\n\n담보\n스탁론 대출채권 풀 SPC 근질권\n\n\n집금 방식\nDaily Sweep → SPC 자금관리계좌\n\n\nVehicle\n일반법인 SPC (유안타 업무수탁)\n\n\n자산관리자\n㈜솔라리스오피둠\n\n\n담보관리자\n㈜이노제이 - (주)솔라리스오피둠 100% 자회사\n\n\n준거법 · 관할\n대한민국법 / 서울중앙지방법원\n\n\n\n\n\n\n\n자문 라인업 · 업무수탁 - 유안타증권 신탁팀 │ 법률 - DB증권 법무팀\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+    "text": "PART 4본 거래의 조건\n\n\nTerm Sheet\n\n\n본 거래의 주요 조건 (거래 개요 통합)\n\n\n\n\n\n\n\n항목\n내용\n\n\n\n\n거래 명칭\n담보부 기업운전자금대출 (ABL)\n\n\n대출 형태\nSPC 선순위 기업대출 (담보부)\n\n\n기초자산\nSPC가 회원사(대부)에 실행한 기업대출채권\n\n\nMaster Facility\n금 일백억 원\n\n\n인출 방식\nProportional Drawdown\n\n\n인출 단위\n최소 10억원\n\n\nLTV\n90.9% 상시 유지\n\n\n예상 수익률\n연 6.0% ~ 7.0% (협의)\n\n\n\n\n\n\n\n\n항목\n내용\n\n\n\n\n이자 지급\n월별 후취 (인출 잔액 기준)\n\n\n원금 상환\n만기 일시상환 또는 약정 분할상환\n\n\n투자 기간\n6개월 (롤링)\n\n\n신용보강\n회원사 자기자본 일십억원 후순위\n\n\n담보\n스탁론 대출채권 풀 SPC 근질권\n\n\n집금 방식\nDaily Sweep → SPC 자금관리계좌\n\n\nVehicle\n일반법인 SPC (유안타 업무수탁)\n\n\n자산관리자\n㈜솔라리스오피둠\n\n\n담보관리자\n㈜이노제이 - (주)솔라리스오피둠 100% 자회사\n\n\n준거법 · 관할\n대한민국법 / 서울중앙지방법원\n\n\n\n\n\n\n\n자문 라인업 · 업무수탁 - 유안타증권 신탁팀 │ 법률 - DB증권 법무팀\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
     "objectID": "im/index.html#section-13",
@@ -172,7 +172,7 @@
     "href": "im/index.html#section-14",
     "title": "SOLARIS OPPIDUM",
     "section": " ",
-    "text": "PART 5마무리\n\n\n본 인프라의 위치\n\n\n본 인프라는 한국 스탁론 시장의 운영 체계로 정착되는 과정\n\n\n\n\n\n\n\n\n\n구분\n내용\n\n\n\n\n1차 목표\n국내 대형 금융위 등록 대부업체 (상위 10여개사 접촉중)\n\n\n현재 가동\n첫 번째 ABL 사이클 (Master Facility 일백억원, 본 자료의 안내 대상)\n\n\n검증 트랙\n5년 │ 부실율 0.24% (COVID-19 폭락기 포함)\n\n\n\n\n\n본 인프라의 확장은 1차 목표 시장의 완전한 포섭 이후 단계적으로 검토\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
+    "text": "PART 5마무리\n\n\n본 인프라의 위치\n\n\n본 인프라는 한국 스탁론 시장의 운영 체계로 정착되는 과정\n\n\n\n\n\n\n\n\n\n구분\n내용\n\n\n\n\n1차 목표\n국내 대형 금융위 등록 대부업체 (상위 10여 개사 접촉 중)\n\n\n현재 가동\n첫 번째 ABL 사이클 (Master Facility 일백억 원, 본 자료의 안내 대상)\n\n\n검증 트랙\n5년 │ 부실율 0.24% (COVID-19 폭락기 포함)\n\n\n\n\n\n본 인프라의 확장은 1차 목표 시장의 완전한 포섭 이후 단계적으로 검토\n\n\n㈜솔라리스오피둠 · STRICTLY PRIVATE & CONFIDENTIAL"
   },
   {
     "objectID": "im/index.html#section-15",
