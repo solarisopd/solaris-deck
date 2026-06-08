@@ -520,7 +520,7 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 
 ---
 
-## &nbsp; {data-menu-title="Term Sheet" .md-slide .wrap-cells}
+## &nbsp; {data-menu-title="Term Sheet" .md-slide .wrap-cells .head-center}
 
 <div class="eyebrow"><span class="part-badge">PART 4</span>본 거래의 조건</div>
 <div class="page-title">Term Sheet</div>
@@ -537,7 +537,7 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 | 기초자산 | SPC가 회원사(대부)에 실행한 기업대출채권 |
 | Master Facility | 금 일백억원 |
 | 인출 방식 | Proportional Drawdown |
-| 인출 단위 | 최소 1억원 / 한도 내 자유 분할 |
+| 인출 단위 | 최소 10억원 |
 | LTV | 90.9% 상시 유지 |
 | 예상 수익률 | 연 6.0% ~ 7.0% (협의) |
 :::
@@ -547,13 +547,13 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 |------|--------------------------------|
 | 이자 지급 | 월별 후취 (인출 잔액 기준) |
 | 원금 상환 | 만기 일시상환 또는 약정 분할상환 |
-| 투자 기간 | 6개월 ~ 12개월 (롤링) |
+| 투자 기간 | 6개월 (롤링) |
 | 신용보강 | 회원사 자기자본 일십억원 후순위 |
 | 담보 | 스탁론 대출채권 풀 SPC 근질권 |
 | 집금 방식 | Daily Sweep → SPC 자금관리계좌 |
 | Vehicle | 일반법인 SPC (유안타 업무수탁) |
-| 자산관리자 | ㈜솔라리스오피둠 (코디네이션) |
-| 담보관리자 | ㈜이노제이 (RMS 운영) |
+| 자산관리자 | ㈜솔라리스오피둠 |
+| 담보관리자 | ㈜이노제이 - (주)솔라리스오피둠 100% 자회사 |
 | 준거법 · 관할 | 대한민국법 / 서울중앙지방법원 |
 :::
 
