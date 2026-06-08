@@ -436,7 +436,7 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 
 ---
 
-## &nbsp; {data-menu-title="시연 안내" .md-slide .demo-cards}
+## &nbsp; {data-menu-title="시연 안내" .md-slide .demo-cards .intro-cards}
 
 <div class="eyebrow"><span class="part-badge">PART 3</span>시스템 시연</div>
 <div class="page-title">시스템 시연 안내</div>
@@ -444,8 +444,8 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 
 ::: {.md-body}
 <div class="card-grid cols-2">
-  <div class="card"><div class="card-h">시연 1 · 동적 담보관리 시스템</div><div class="card-b">자금 사이클 中 [운용] 분기 담당<br>· 증권계좌 단위 평가등급 체계<br>· 종목·집중도·변동성·유동성 종합 평가<br>· 5년 가동 │ 부실율 0.24%<br>· 본 카테고리 국내 최초</div></div>
-  <div class="card"><div class="card-h">시연 2 · SPC 담보관리 시스템</div><div class="card-b">자금 사이클 中 [회수·분배] 분기 담당<br>· 풀 단위 LTV 실시간 산출<br>· Daily Sweep 자동 집행<br>· 자동 청산 트리거 + Waterfall 분배 자동화<br>· 본 카테고리 국내 최초</div></div>
+  <div class="card"><div class="card-h">시연 1 · 동적 담보관리 시스템 <span class="card-h-sub">— 자금 사이클의 [운용] 분기 담당</span></div><div class="card-b">· 증권계좌 단위 평가등급 체계<br>· 종목·집중도·변동성·유동성 종합 평가<br>· 5년 가동 │ 부실율 0.24%<br>· 본 카테고리 국내 최초</div></div>
+  <div class="card"><div class="card-h">시연 2 · SPC 담보관리 시스템 <span class="card-h-sub">— 자금 사이클의 [회수·분배] 분기 담당</span></div><div class="card-b">· 풀 단위 LTV 실시간 산출<br>· Daily Sweep 자동 집행<br>· 자동 청산 트리거 + Waterfall 분배 자동화<br>· 본 카테고리 국내 최초</div></div>
 </div>
 :::
 
@@ -537,7 +537,7 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 | 기초자산 | SPC가 회원사(대부)에 실행한 기업대출채권 |
 | Master Facility | 금 일백억 원 |
 | 인출 방식 | Proportional Drawdown |
-| 인출 단위 | 최소 10억원 |
+| 인출 단위 | 최소 10억 원 |
 | LTV | 90.9% 상시 유지 |
 | 예상 수익률 | 연 6.0% ~ 7.0% (협의) |
 :::
@@ -548,7 +548,7 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 | 이자 지급 | 월별 후취 (인출 잔액 기준) |
 | 원금 상환 | 만기 일시상환 또는 약정 분할상환 |
 | 투자 기간 | 6개월 (롤링) |
-| 신용보강 | 회원사 자기자본 일십억원 후순위 |
+| 신용보강 | 회원사 자기자본 일십억 원 후순위 |
 | 담보 | 스탁론 대출채권 풀 SPC 근질권 |
 | 집금 방식 | Daily Sweep → SPC 자금관리계좌 |
 | Vehicle | 일반법인 SPC (유안타 업무수탁) |

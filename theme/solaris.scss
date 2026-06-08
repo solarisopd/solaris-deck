@@ -152,6 +152,11 @@ $nav-inset: 40px;   // 좌우 화살표 안쪽 여백 (조절 지점)
   display: flex; flex-direction: column; justify-content: center;
   .card-b { font-size: 0.6em; }
 }
+// 11쪽(시연 안내)만: 박스 본문 줄간격 확대 + 제목줄과 본문 사이 간격 확대
+.reveal section.intro-cards .card-b { line-height: 1.9; }
+.reveal section.intro-cards .card-h { margin-bottom: 26px; }
+// 카드 제목 옆 분기 설명(한 줄) — 제목보다 가볍게
+.reveal .card-h-sub { font-weight: 400; font-size: 0.88em; color: $mute; }
 
 // =====================================================================
 // 목차 페이지 — 우하단 페이지 리스트 (소제목까지 전체 노출)
