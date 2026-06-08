@@ -371,6 +371,21 @@ $nav-inset: 40px;   // 좌우 화살표 안쪽 여백 (조절 지점)
 // 8·9·10쪽: 표 본문 행 높이를 약 2배로(상하 패딩 9px→28px, 세로 중앙)
 .reveal section.tall-rows table tbody td { padding-top: 28px; padding-bottom: 28px; vertical-align: middle; }
 
+// 제목행 가운데 정렬 (예: 8쪽) — 기본은 좌측
+.reveal section.head-center table thead th { text-align: center; }
+// 8쪽 자금구조 표: colgroup 미생성 → CSS로 열폭 직접 지정(.ctrl-table의 table-layout:fixed 전제)
+// 구분:자금위치 = 12:18 = 4:6, 나머지(규모 16%·자금출처 27%·회수순위 27%)
+.reveal section.head-center table th:nth-child(1),
+.reveal section.head-center table td:nth-child(1) { width: 12%; }   // 구분
+.reveal section.head-center table th:nth-child(2),
+.reveal section.head-center table td:nth-child(2) { width: 18%; }   // 자금위치 (구분:자금위치=4:6)
+.reveal section.head-center table th:nth-child(3),
+.reveal section.head-center table td:nth-child(3) { width: 14%; }   // 규모
+.reveal section.head-center table th:nth-child(4),
+.reveal section.head-center table td:nth-child(4) { width: 28%; }   // 자금출처
+.reveal section.head-center table th:nth-child(5),
+.reveal section.head-center table td:nth-child(5) { width: 28%; }   // 회수순위 (규모:자금출처:회수순위=2:4:4)
+
 // =====================================================================
 // 표 (chain.link 톤: 헤더 네이비 / 본문 흰 / 얇은 선)
 // =====================================================================

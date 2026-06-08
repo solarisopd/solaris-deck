@@ -362,7 +362,7 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 
 ---
 
-## &nbsp; {data-menu-title="자금 구조" .md-slide .ref-card .tall-rows}
+## &nbsp; {data-menu-title="자금 구조" .md-slide .ref-card .tall-rows .head-center .ctrl-table .wrap-cells}
 
 <div class="eyebrow"><span class="part-badge">PART 2</span>거래 구조</div>
 <div class="page-title">자금 구조 — 이원 풀(Two-Pool)</div>
@@ -371,10 +371,10 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 ::: {.md-body}
 
 | 구분 | 자금 위치 | 규모 | 자금 출처 | 회수 순위 |
-|------|-----------|------|-----------|-----------|
-| Pool B (선순위) | SPC 내부 | 100억 | 대주단 | 최우선 |
-| Pool A (후순위) | SPC 외부 담보 | 10억 | 회원사 자기자본 | 후순위 |
-| 총 담보풀 | SPC 근질권 | 110억 | ─ | LTV 90.9% |
+|--------|------------|------|-----------|-----------|
+| 선순위 | SPC 내부 | 100억 | 대주단 | 최우선 |
+| 후순위 | SPC 외부 담보 | 10억 | 회원사 자기자본 | 후순위 |
+| 총 담보 | SPC 근질권 | 110억 | ─ | LTV 90.9% |
 
 :::
 
