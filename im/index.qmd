@@ -23,7 +23,7 @@ format:
 <div class="cover-title-main">담보부 기업운전자금대출 (ABL)</div>
 </div>
 
-<div class="subtitle cover-sub">CL-Link 인프라 기반 · 거래 한도 금 일백억원 (₩10,000,000,000)<br>Master Facility &amp; Proportional Drawdown</div>
+<div class="subtitle cover-sub">CL-Link 인프라 기반 · 거래 한도 금 일백억 원 (₩10,000,000,000)<br>Master Facility &amp; Proportional Drawdown</div>
 :::
 
 <div class="cover-footer-info">
