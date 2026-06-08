@@ -355,8 +355,18 @@ $nav-inset: 40px;   // 좌우 화살표 안쪽 여백 (조절 지점)
 .reveal section.wrap-cells table td { white-space: normal; }
 .reveal section.wrap-cells table td:first-child { white-space: nowrap; }
 
-// 7쪽(운영 인력)만: 본문 행 높이를 2줄 행 기준으로 통일 → 1줄짜리 대표이사 행도 CTO 행과 같은 높이
-.reveal section.staff table tbody td { height: 47px; vertical-align: middle; }
+// 7쪽(운영 인력)만: 고정 px 높이는 랩탑 등 다른 배율에서 2줄 깨짐 발생 → 제거.
+//  · 역할/전문성 텍스트 가운데 정렬(가로·세로 중앙)
+//  · 역할(첫 열) 폭 축소 → 전문성 열 확대로 본문 줄바꿈 최소화 (table-layout:fixed)
+.reveal section.staff table { table-layout: fixed; }
+.reveal section.staff table tbody td { text-align: left; vertical-align: middle; }   // 본문 1~4행 좌측 정렬(이전과 동일)
+.reveal section.staff table thead th { text-align: center; vertical-align: middle; } // 제목행만 가운데
+// 역할 열 폭은 마크다운 구분선(---) 대시 비율로 제어(Pandoc colgroup가 CSS width보다 우선). 여기선 줄바꿈만 허용.
+.reveal section.staff table th:first-child,
+.reveal section.staff table td:first-child { white-space: normal; }
+// 제목행 + 모든 본문행 셀 높이를 키움(상하 padding) — 고정 height는 타 배율서 깨짐 → padding으로 통일
+.reveal section.staff table thead th,
+.reveal section.staff table tbody td { padding-top: 20px; padding-bottom: 20px; }
 
 // 8·9·10쪽: 표 본문 행 높이를 약 2배로(상하 패딩 9px→28px, 세로 중앙)
 .reveal section.tall-rows table tbody td { padding-top: 28px; padding-bottom: 28px; vertical-align: middle; }
