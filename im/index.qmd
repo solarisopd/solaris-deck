@@ -466,20 +466,20 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 
 <div class="flow-label">평상시 운용</div>
 <div class="flow">
-  <div class="flow-step"><div class="flow-badge">①</div><div class="flow-h">계좌 정보 입력</div><div class="flow-d">차주 증권계좌 정보</div></div>
+  <div class="flow-step"><div class="flow-badge">1</div><div class="flow-h">계좌 정보 입력</div><div class="flow-d">차주 증권계좌 정보</div></div>
   <div class="flow-arrow">→</div>
-  <div class="flow-step"><div class="flow-badge">②</div><div class="flow-h">종목 등급 표시</div><div class="flow-d">보유 종목별 평가</div></div>
+  <div class="flow-step"><div class="flow-badge">2</div><div class="flow-h">종목 등급 표시</div><div class="flow-d">보유 종목별 평가</div></div>
   <div class="flow-arrow">→</div>
-  <div class="flow-step"><div class="flow-badge">③</div><div class="flow-h">계좌등급 산출</div><div class="flow-d">계좌 단위 종합 등급</div></div>
+  <div class="flow-step"><div class="flow-badge">3</div><div class="flow-h">계좌등급 산출</div><div class="flow-d">계좌 단위 종합 등급</div></div>
 </div>
 
 <div class="flow-label shock">시장 충격 발생 — 위기 대응 · 자동 통제</div>
 <div class="flow">
-  <div class="flow-step"><div class="flow-badge brand">④</div><div class="flow-h">반대매매 이벤트</div><div class="flow-d">LTV 임계점 도달</div></div>
+  <div class="flow-step"><div class="flow-badge brand">4</div><div class="flow-h">반대매매 이벤트</div><div class="flow-d">LTV 임계점 도달</div></div>
   <div class="flow-arrow">→</div>
-  <div class="flow-step"><div class="flow-badge brand">⑤</div><div class="flow-h">하위 종목 매도</div><div class="flow-d">시스템 자동 청산</div></div>
+  <div class="flow-step"><div class="flow-badge brand">5</div><div class="flow-h">하위 종목 매도</div><div class="flow-d">시스템 자동 청산</div></div>
   <div class="flow-arrow">→</div>
-  <div class="flow-step"><div class="flow-badge brand">⑥</div><div class="flow-h">계좌등급 우량화</div><div class="flow-d">잔여 종목 등급 상승</div></div>
+  <div class="flow-step"><div class="flow-badge brand">6</div><div class="flow-h">계좌등급 우량화</div><div class="flow-d">잔여 종목 등급 상승</div></div>
 </div>
 :::
 

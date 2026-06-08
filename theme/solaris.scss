@@ -271,7 +271,7 @@ $nav-inset: 40px;   // 좌우 화살표 안쪽 여백 (조절 지점)
 .flow-badge {
   display: inline-flex; align-items: center; justify-content: center;
   width: 26px; height: 26px; border-radius: 50%;
-  background: $navy; color: #fff; font-weight: 700; font-size: 0.5em;
+  background: $navy; color: #fff; font-weight: 700; font-size: 0.58em;
   margin-bottom: 8px;
 }
 .flow-badge.brand { background: $brand; }
@@ -323,11 +323,11 @@ $nav-inset: 40px;   // 좌우 화살표 안쪽 여백 (조절 지점)
 
   // 12쪽(시연1)만 격리: (표제목+표)은 한 묶음으로 바짝, 두 묶음 사이는 크게 분리 + 텍스트 확대
   &.demo-flow {
-    .flow-label { margin: 28px 0 6px; font-size: 0.62em; }  // 그림 제목격 → 더 크게
+    .flow-label { margin: 28px 0 6px; font-size: 0.66em; }  // 그림 제목격 → 더 크게
     .flow { margin: 0; }                         // 표 자체 상하여백 제거(묶음/간격은 라벨이 담당)
     .flow-label.shock { margin-top: 44px; }      // 평상시 묶음 ↔ 시장충격 묶음 큰 간격
-    .flow-h { font-size: 0.6em; }                // 박스 제목 확대(0.52→0.6)
-    .flow-d { font-size: 0.5em; }                // 박스 설명 확대(0.42→0.5)
+    .flow-h { font-size: 0.64em; }               // 박스 제목 확대
+    .flow-d { font-size: 0.54em; }               // 박스 설명 확대
   }
 
   // 13쪽(시연2)만 격리: 참조부 ↔ 흐름표 ↔ 하단 카드를 여백으로 구분
