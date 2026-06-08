@@ -410,7 +410,7 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 
 ---
 
-## &nbsp; {data-menu-title="Waterfall" .md-slide .wrap-cells .ctrl-table .ref-card .tall-rows}
+## &nbsp; {data-menu-title="Waterfall" .md-slide .wrap-cells .ctrl-table .ref-card .tall-rows .head-center}
 
 <div class="eyebrow"><span class="part-badge">PART 2</span>거래구조</div>
 <div class="page-title">회수 우선순위 (Waterfall)</div>
@@ -422,7 +422,7 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 |----|--------------|--------------------------------|
 | 0 | 조세 및 제비용 | SPC 법인세, 업무수탁수수료, 자산관리수수료, 회계·세무·법률자문 등 |
 | 1 | 대주단 (선순위) | 선순위 대주단 이자 및 원금 (분할상환 또는 만기일시) |
-| 2 | 회원사 잔여분 | Pool A 후순위 회수분 (잔존 시 회원사 귀속) |
+| 2 | 여신 회원사 | 선순위 지급 후 잔여분 |
 
 :::
 
