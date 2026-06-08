@@ -330,7 +330,7 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 
 ---
 
-## &nbsp; {data-menu-title="운영 인력" .md-slide .wrap-cells}
+## &nbsp; {data-menu-title="운영 인력" .md-slide .wrap-cells .staff}
 
 <div class="eyebrow"><span class="part-badge">PART 1</span>CL-Link 인프라</div>
 <div class="page-title">운영 인력</div>
@@ -353,7 +353,7 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 
 ---
 
-## &nbsp; {data-menu-title="자금 구조" .md-slide .ref-card}
+## &nbsp; {data-menu-title="자금 구조" .md-slide .ref-card .tall-rows}
 
 <div class="eyebrow"><span class="part-badge">PART 2</span>거래 구조</div>
 <div class="page-title">자금 구조 — 이원 풀(Two-Pool)</div>
@@ -379,7 +379,7 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 
 ---
 
-## &nbsp; {data-menu-title="위험 통제" .md-slide .wrap-cells .ctrl-table}
+## &nbsp; {data-menu-title="위험 통제" .md-slide .wrap-cells .ctrl-table .tall-rows}
 
 <div class="eyebrow"><span class="part-badge">PART 2</span>거래 구조</div>
 <div class="page-title">위험 통제 체계</div>
@@ -401,7 +401,7 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 
 ---
 
-## &nbsp; {data-menu-title="Waterfall" .md-slide .wrap-cells .ctrl-table .ref-card}
+## &nbsp; {data-menu-title="Waterfall" .md-slide .wrap-cells .ctrl-table .ref-card .tall-rows}
 
 <div class="eyebrow"><span class="part-badge">PART 2</span>거래구조</div>
 <div class="page-title">회수 우선순위 (Waterfall)</div>

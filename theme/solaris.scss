@@ -353,6 +353,12 @@ $nav-inset: 40px;   // 좌우 화살표 안쪽 여백 (조절 지점)
 .reveal section.wrap-cells table td { white-space: normal; }
 .reveal section.wrap-cells table td:first-child { white-space: nowrap; }
 
+// 7쪽(운영 인력)만: 본문 행 높이를 2줄 행 기준으로 통일 → 1줄짜리 대표이사 행도 CTO 행과 같은 높이
+.reveal section.staff table tbody td { height: 47px; vertical-align: middle; }
+
+// 8·9·10쪽: 표 본문 행 높이를 약 2배로(상하 패딩 9px→28px, 세로 중앙)
+.reveal section.tall-rows table tbody td { padding-top: 28px; padding-bottom: 28px; vertical-align: middle; }
+
 // =====================================================================
 // 표 (chain.link 톤: 헤더 네이비 / 본문 흰 / 얇은 선)
 // =====================================================================
