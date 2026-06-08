@@ -9,7 +9,9 @@ format:
 <style>
   @font-face{font-family:'Pretendard';src:url('assets/fonts/PretendardVariable.woff2') format('woff2-variations');font-weight:100 900;font-style:normal;font-display:swap;}
   body{font-family:'Pretendard','Apple SD Gothic Neo','Noto Sans KR',system-ui,sans-serif;}
-  .deck-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:980px;margin:40px auto;}
+  /* 반응형 세로 중앙: 전체화면(긴 뷰포트)에서 카드가 상단에 붙지 않고 남는 공간 중앙으로 */
+  main#quarto-document-content{display:flex;flex-direction:column;min-height:calc(100vh - 12rem);}
+  .deck-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:980px;width:100%;margin:auto;}
   .deck-card{display:block;text-decoration:none;background:#fff;border:1px solid #D8E0F0;padding:36px 32px;transition:.15s;}
   .deck-card:hover{border-color:#2A5ADA;box-shadow:0 6px 24px rgba(26,42,102,.10);}
   .deck-eyebrow{font-size:12px;font-weight:700;letter-spacing:.08em;color:#5B6B8C;text-transform:uppercase;}
