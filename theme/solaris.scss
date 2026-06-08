@@ -462,18 +462,6 @@ $nav-inset: 40px;   // 좌우 화살표 안쪽 여백 (조절 지점)
   }
 }
 
-// 시스템 시연 진입 슬라이드 — 랜딩 페이지를 iframe으로 풀블리드 임베드
-.reveal section.demo-slide {
-  height: 100%;
-  > h2 { display: none; }              // 자동 h2 숨김 (메뉴는 data-menu-title)
-  iframe.demo-frame {
-    position: absolute; inset: 0;
-    width: 100%; height: 100%;
-    border: 0;
-    background: #fff;
-  }
-}
-
 // 도면 슬라이드의 제목 텍스트 오버레이 (slide_ai 텍스트 SVG)
 // 원본 동적(애니메이션) 다이어그램은 그대로 두고, 제목/부제 텍스트만
 // 새 SVG로 교체한다. 텍스트 SVG는 투명 배경·좌상단 배치.

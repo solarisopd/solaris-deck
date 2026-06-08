@@ -597,7 +597,3 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 
 <div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
 
-## &nbsp; {.demo-slide data-menu-title="시스템 시연"}
-
-<iframe class="demo-frame" src="../index.html" title="시스템 시연 진입"></iframe>
-
