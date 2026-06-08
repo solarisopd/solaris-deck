@@ -166,7 +166,7 @@ CONTENTS · INVESTMENT MEMORANDUM
     <div class="toc-line"><span>Executive Summary</span><span class="pg">3</span></div>
     <div class="toc-line"><span>CL-Link 인프라의 정의</span><span class="pg">4</span></div>
     <div class="toc-line"><span>CL-Link 플랫폼 구조</span><span class="pg">5</span></div>
-    <div class="toc-line"><span>다수 여신 단일 접점 (N:1)</span><span class="pg">6</span></div>
+    <div class="toc-line"><span>다수 여신 단일 접점 (1:n)</span><span class="pg">6</span></div>
     <div class="toc-line"><span>운영 인력</span><span class="pg">7</span></div>
   </div>
   <div class="card">
@@ -450,7 +450,7 @@ CL-Link 인프라의 정의
 <span class="part-badge">PART 1</span>CL-Link 인프라
 </div>
 <div class="page-title">
-CL-Link 연결 구조 - 여신 단일 접점 (N:1)
+CL-Link 연결 구조 - 여신 단일 접점 (1:n)
 </div>
 <div class="subtitle">
 다수 여신 회원사를 단일 접점으로 증권사 시스템 RMS·동적담보관리·SPC 자금관리에 연결
@@ -480,50 +480,60 @@ CL-Link 연결 구조 - 여신 단일 접점 (N:1)
       </filter>
     </defs>
 
-    <rect class="cll-container" x="185" y="135" width="762" height="330" rx="18"></rect>
-    <text class="cll-clabel" x="270" y="182">CL-Link</text>
+    <rect class="cll-container" x="231" y="135" width="762" height="330" rx="18"></rect>
+    <text class="cll-clabel" x="612" y="190">CL-Link</text>
 
-    <path class="cll-flow cll-f0" pathlength="100" d="M161,300 L203,300"></path>
-    <path class="cll-flow cll-f1" pathlength="100" d="M353,300 L395,300"></path>
-    <path class="cll-flow cll-f2" pathlength="100" d="M545,300 L587,300"></path>
-    <path class="cll-flow cll-f3" pathlength="100" d="M737,300 L779,300"></path>
-    <path class="cll-flow cll-f4" pathlength="100" d="M929,300 L1017,205"></path>
-    <path class="cll-flow cll-f5" pathlength="100" d="M929,300 L1017,300"></path>
-    <path class="cll-flow cll-f6" pathlength="100" d="M929,300 L1017,395"></path>
+    <!-- SPC → 여신기관(3) 팬아웃 (간격 92, 우측 RMS↔증권사와 대칭) -->
+    <path class="cll-flow cll-f0" pathlength="100" d="M161,300 L249,205"></path>
+    <path class="cll-flow cll-f0" pathlength="100" d="M161,300 L249,300"></path>
+    <path class="cll-flow cll-f0" pathlength="100" d="M161,300 L249,395"></path>
+    <!-- 여신기관(3) → Octopus 수렴 -->
+    <path class="cll-flow cll-f1" pathlength="100" d="M399,205 L441,300"></path>
+    <path class="cll-flow cll-f1" pathlength="100" d="M399,300 L441,300"></path>
+    <path class="cll-flow cll-f1" pathlength="100" d="M399,395 L441,300"></path>
+    <!-- Octopus → 동적담보관리 → RMS → 증권사 (선형) -->
+    <path class="cll-flow cll-f2" pathlength="100" d="M591,300 L633,300"></path>
+    <path class="cll-flow cll-f3" pathlength="100" d="M783,300 L825,300"></path>
+    <path class="cll-flow cll-f4" pathlength="100" d="M975,300 L1063,300"></path>
 
-    <path class="cll-tip cll-pt0" d="M0,0 L-9,-4.5 L-9,4.5 Z" transform="translate(203,300)"></path>
-    <path class="cll-tip cll-pt1" d="M0,0 L-9,-4.5 L-9,4.5 Z" transform="translate(395,300)"></path>
-    <path class="cll-tip cll-pt2" d="M0,0 L-9,-4.5 L-9,4.5 Z" transform="translate(587,300)"></path>
-    <path class="cll-tip cll-pt3" d="M0,0 L-9,-4.5 L-9,4.5 Z" transform="translate(779,300)"></path>
-    <path class="cll-tip cll-pt4" d="M0,0 L-9,-4.5 L-9,4.5 Z" transform="translate(1017,205) rotate(-47)"></path>
-    <path class="cll-tip cll-pt5" d="M0,0 L-9,-4.5 L-9,4.5 Z" transform="translate(1017,300)"></path>
-    <path class="cll-tip cll-pt6" d="M0,0 L-9,-4.5 L-9,4.5 Z" transform="translate(1017,395) rotate(47)"></path>
+    <path class="cll-tip cll-pt0" d="M0,0 L-9,-4.5 L-9,4.5 Z" transform="translate(249,205) rotate(-47)"></path>
+    <path class="cll-tip cll-pt0" d="M0,0 L-9,-4.5 L-9,4.5 Z" transform="translate(249,300)"></path>
+    <path class="cll-tip cll-pt0" d="M0,0 L-9,-4.5 L-9,4.5 Z" transform="translate(249,395) rotate(47)"></path>
+    <path class="cll-tip cll-pt1" d="M0,0 L-9,-4.5 L-9,4.5 Z" transform="translate(441,300)"></path>
+    <path class="cll-tip cll-pt2" d="M0,0 L-9,-4.5 L-9,4.5 Z" transform="translate(633,300)"></path>
+    <path class="cll-tip cll-pt3" d="M0,0 L-9,-4.5 L-9,4.5 Z" transform="translate(825,300)"></path>
+    <path class="cll-tip cll-pt4" d="M0,0 L-9,-4.5 L-9,4.5 Z" transform="translate(1063,300)"></path>
 
+    <!-- Pos1: SPC (단일, 고정) -->
     <rect class="cll-box" x="13" y="254" width="146" height="92" rx="12"></rect>
-    <text class="cll-title" x="86" y="300">증권사</text>
+    <text class="cll-title" x="86" y="300">SPC</text>
 
-    <rect class="cll-box" x="205" y="254" width="146" height="92" rx="12"></rect>
-    <text class="cll-title" x="278" y="292">RMS</text>
-    <text class="cll-sub" x="278" y="314">증권사 내부</text>
+    <!-- Pos2: 여신기관 ×3 (+46) -->
+    <rect class="cll-box" x="251" y="169" width="146" height="72" rx="12"></rect>
+    <text class="cll-title" x="324" y="205">여신기간계 1</text>
+    <rect class="cll-box" x="251" y="264" width="146" height="72" rx="12"></rect>
+    <text class="cll-title" x="324" y="300">여신기간계 2</text>
+    <rect class="cll-box" x="251" y="359" width="146" height="72" rx="12"></rect>
+    <text class="cll-title" x="324" y="395">여신기간계 n</text>
 
-    <rect class="cll-box" x="397" y="254" width="146" height="92" rx="12"></rect>
-    <text class="cll-title" x="470" y="292">동적담보관리</text>
-    <text class="cll-sub" x="470" y="314">종목·계좌관리</text>
+    <!-- Pos3: Octopus (청색) -->
+    <rect class="cll-accent" x="443" y="254" width="146" height="92" rx="12"></rect>
+    <text class="cll-title-inv" x="516" y="292">Octopus</text>
+    <text class="cll-sub-inv" x="516" y="314">통신중계버스</text>
 
-    <rect class="cll-box" x="589" y="254" width="146" height="92" rx="12"></rect>
-    <text class="cll-title" x="662" y="292">SPC 자금관리</text>
-    <text class="cll-sub" x="662" y="314">SPC 자금흐름</text>
+    <!-- Pos4: 동적담보관리 -->
+    <rect class="cll-box" x="635" y="254" width="146" height="92" rx="12"></rect>
+    <text class="cll-title" x="708" y="292">동적담보관리</text>
+    <text class="cll-sub" x="708" y="314">종목·계좌관리</text>
 
-    <rect class="cll-accent" x="781" y="254" width="146" height="92" rx="12"></rect>
-    <text class="cll-title-inv" x="854" y="292">Octopus</text>
-    <text class="cll-sub-inv" x="854" y="314">통신중계버스</text>
+    <!-- Pos5: RMS -->
+    <rect class="cll-box" x="827" y="254" width="146" height="92" rx="12"></rect>
+    <text class="cll-title" x="900" y="292">RMS</text>
+    <text class="cll-sub" x="900" y="314">증권사 내부</text>
 
-    <rect class="cll-box" x="1019" y="169" width="146" height="72" rx="12"></rect>
-    <text class="cll-title" x="1092" y="205">여신기관 1</text>
-    <rect class="cll-box" x="1019" y="264" width="146" height="72" rx="12"></rect>
-    <text class="cll-title" x="1092" y="300">여신기관 2</text>
-    <rect class="cll-box" x="1019" y="359" width="146" height="72" rx="12"></rect>
-    <text class="cll-title" x="1092" y="395">여신기관 N</text>
+    <!-- Pos6: 증권사 (단일) -->
+    <rect class="cll-box" x="1065" y="254" width="146" height="92" rx="12"></rect>
+    <text class="cll-title" x="1138" y="300">증권사</text>
   </svg>
 </div>
 <div class="confidential">
