@@ -523,6 +523,16 @@ $nav-inset: 40px;   // 좌우 화살표 안쪽 여백 (조절 지점)
 .reveal .end-next .controls-arrow::before { transform: translateX(5px) translateY(15.5px) rotate(45deg); }
 .reveal .end-next .controls-arrow::after  { transform: translateX(5px) translateY(15.5px) rotate(-45deg); }
 
+// 이동 방향 강조 — 이동한 방향 화살표는 진하게, 반대는 옅게. (.enabled 한정: 경계 쪽 비활성 화살표는 그대로 숨김)
+// reveal 기본 'back-arrows faded'(좌측 .navigate-left.enabled opacity:.3) 규칙보다 특이성을 높여 덮어씀(:not(.rtl)+속성선택자)
+.reveal.dir-prev:not(.rtl) .controls[data-controls-back-arrows] .navigate-left.enabled  { opacity: 0.95; }
+.reveal.dir-prev:not(.rtl) .controls[data-controls-back-arrows] .navigate-right.enabled { opacity: 0.15; }
+.reveal.dir-next:not(.rtl) .controls[data-controls-back-arrows] .navigate-right.enabled { opacity: 0.95; }
+.reveal.dir-next:not(.rtl) .controls[data-controls-back-arrows] .navigate-left.enabled  { opacity: 0.15; }
+// 옅게 처리된 반대 화살표도 마우스 올리면 복원(클릭 유도)
+.reveal.dir-prev:not(.rtl) .controls[data-controls-back-arrows] .navigate-right.enabled:hover,
+.reveal.dir-next:not(.rtl) .controls[data-controls-back-arrows] .navigate-left.enabled:hover { opacity: 1; }
+
 // 표지 — flex 중앙 정렬 (margin-top 사용 금지: 세로 overflow→네비 깨짐 방지)
 .reveal section.cover {
   height: 100%;

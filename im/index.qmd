@@ -630,11 +630,20 @@ SPC 업무수탁 유안타증권 신탁팀<br>
     function refresh() {                       // 마지막 쪽에서만 .end-next 표시(+reveal 기본 우측버튼 숨김)
       if (revealEl) revealEl.classList.toggle("on-end-slide", onEnd());
     }
+    // 이동 방향에 따라 화살표 강조: 이동한 방향 화살표는 진하게(dir-next/prev), 반대는 옅게
+    var prevH = Reveal.getIndices().h;
+    function onChange(e) {
+      var h = (e && typeof e.indexh === "number") ? e.indexh : Reveal.getIndices().h;
+      if (h > prevH)      { revealEl.classList.add("dir-next"); revealEl.classList.remove("dir-prev"); }
+      else if (h < prevH) { revealEl.classList.add("dir-prev"); revealEl.classList.remove("dir-next"); }
+      prevH = h;
+      refresh();
+    }
     // 키보드 우측화살표(→)는 reveal 기본 동작이 없으므로 직접 랜딩 이동(마우스는 링크가 네이티브 처리)
     document.addEventListener("keydown", function (e) {
       if (onEnd() && e.key === "ArrowRight") { e.preventDefault(); e.stopImmediatePropagation(); window.location.href = LANDING; }
     }, true);
-    Reveal.on("slidechanged", refresh);
+    Reveal.on("slidechanged", onChange);
     refresh();
   });
 })();
