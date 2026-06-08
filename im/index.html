@@ -31,7 +31,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-e69488b8ec5b363f25da8d79e918a608.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-3fca849db672f2efc8ac7a659f6d8486.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -1243,6 +1243,52 @@ Disclaimer
 <div class="confidential">
 ㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL
 </div>
+</section>
+<section id="section-16" class="slide level2 cover end-slide" data-menu-title="감사합니다">
+<h2>&nbsp;</h2>
+<div class="cover-inner">
+<div class="cover-title-box">
+<div class="cover-eyebrow">
+STRICTLY PRIVATE &amp; CONFIDENTIAL · INVESTMENT MEMORANDUM
+</div>
+<div class="cover-title-main">
+담보부 기업운전자금대출 (ABL)
+</div>
+</div>
+<div class="end-thanks">
+감사합니다
+</div>
+</div>
+<!-- 좌측 화살표(.controls-arrow)와 동일 모양을 직접 복제. .reveal 직속으로 이동(컨트롤의 pointer-events:none 회피). 진짜 링크라 클릭 동작 -->
+<a class="end-next" href="../index.html" aria-label="시연 페이지로 이동"><div class="controls-arrow"></div></a>
+<script>
+(function () {
+  var LANDING = "../index.html";              // 배포·로컬 공통(상대경로): im/ → 랜딩 루트
+  function whenReady(cb) {
+    if (window.Reveal && typeof Reveal.isReady === "function" && Reveal.isReady()) cb();
+    else setTimeout(function () { whenReady(cb); }, 120);
+  }
+  whenReady(function () {
+    function onEnd() {
+      var s = Reveal.getCurrentSlide();
+      return !!(s && s.classList.contains("end-slide"));
+    }
+    var revealEl = document.querySelector(".reveal");
+    var link = document.querySelector("a.end-next");
+    // .reveal 직속으로 이동 → 슬라이드 배율 영향 제거(좌측과 동일 좌표계), 컨트롤의 pointer-events:none 회피
+    if (revealEl && link && link.parentElement !== revealEl) revealEl.appendChild(link);
+    function refresh() {                       // 마지막 쪽에서만 .end-next 표시(+reveal 기본 우측버튼 숨김)
+      if (revealEl) revealEl.classList.toggle("on-end-slide", onEnd());
+    }
+    // 키보드 우측화살표(→)는 reveal 기본 동작이 없으므로 직접 랜딩 이동(마우스는 링크가 네이티브 처리)
+    document.addEventListener("keydown", function (e) {
+      if (onEnd() && e.key === "ArrowRight") { e.preventDefault(); e.stopImmediatePropagation(); window.location.href = LANDING; }
+    }, true);
+    Reveal.on("slidechanged", refresh);
+    refresh();
+  });
+})();
+</script>
 
 
 </section>
