@@ -425,6 +425,26 @@ CL-Link 플랫폼 구조 -<br>자금 순환
 <div class="confidential">
 ㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL
 </div>
+<script>
+/* 5쪽 DATA(101010) 텍스트는 SMIL(<animate begin=0s>) 사용. reveal는 비활성 슬라이드를 display:none 처리하는데,
+   Chrome은 display:none 하위의 SMIL을 시작/재개하지 않아 진입 시 멈춰 보인다(화살표는 CSS라 .present 규칙으로 재시작됨).
+   → 슬라이드 진입 시 해당 슬라이드 SVG의 SMIL 타임라인을 0으로 리셋해 재생을 보장한다. */
+(function () {
+  function whenReady(cb) {
+    if (window.Reveal && typeof Reveal.isReady === "function" && Reveal.isReady()) cb();
+    else setTimeout(function () { whenReady(cb); }, 120);
+  }
+  whenReady(function () {
+    function restartSMIL(slide) {
+      if (!slide) return;
+      var svgs = slide.querySelectorAll("svg");
+      for (var i = 0; i < svgs.length; i++) { try { svgs[i].setCurrentTime(0); } catch (e) {} }
+    }
+    Reveal.on("slidechanged", function (e) { restartSMIL(e && e.currentSlide); });
+    restartSMIL(Reveal.getCurrentSlide());
+  });
+})();
+</script>
 </section>
 <section id="section-4" class="slide level2 diagram-slide head-wide" data-menu-title="N:1 연결 구조">
 <h2>&nbsp;</h2>
