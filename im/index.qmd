@@ -276,8 +276,8 @@ SPC 업무수탁 유안타증권 신탁팀<br>
       </filter>
     </defs>
 
-    <rect class="cll-container" x="231" y="135" width="762" height="330" rx="18"/>
-    <text class="cll-clabel" x="612" y="190">CL-Link</text>
+    <rect class="cll-container" x="86" y="135" width="933" height="330" rx="18"/>
+    <text class="cll-clabel" x="552" y="190" text-anchor="middle">CL-Link</text>
 
     <!-- SPC → 여신기관(3) 팬아웃 (간격 92, 우측 RMS↔증권사와 대칭) -->
     <path class="cll-flow cll-f0" pathLength="100" d="M161,300 L249,205"/>
