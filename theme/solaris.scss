@@ -155,8 +155,22 @@ $nav-inset: 40px;   // 좌우 화살표 안쪽 여백 (조절 지점)
 // 11쪽(시연 안내)만: 박스 본문 줄간격 확대 + 제목줄과 본문 사이 간격 확대
 .reveal section.intro-cards .card-b { line-height: 1.9; }
 .reveal section.intro-cards .card-h { margin-bottom: 26px; }
+
+// 11쪽 2열 분할: 좌측 카드 2개 세로 적층 / 우측 SVG 영역(480×600, 4:5)
+.reveal section.demo-split .page-title,
+.reveal section.demo-split .subtitle,
+.reveal section.demo-split .eyebrow { max-width: 510px; }            // 제목부를 좌측 폭으로 제한
+// 카드 폭 최소화(시연2 제목 한 줄 유지) + 하단을 우측 SVG 박스 하단(y=700)에 맞춰 정렬(flex-end)
+.reveal section.demo-split .md-body { right: auto; width: 510px; top: 230px; bottom: 100px; justify-content: flex-end; }
+.reveal section.md-slide.demo-split .card-grid { grid-template-columns: 1fr; gap: 18px; }  // 세로 적층
+.reveal section.md-slide.demo-split .card { min-height: 0; }         // 높이 자동(2개 수용)
+.reveal section.demo-split .demo-right {
+  position: absolute; right: 120px; top: 100px;
+  width: 490px; height: 600px;                                       // SVG 자리: 490×600 (49:60)
+  background: #F5F8FF; border: 2px dashed #B9C4DE; border-radius: 4px; // 자리표시(SVG 삽입 시 교체)
+}
 // 카드 제목 옆 분기 설명(한 줄) — 제목보다 가볍게
-.reveal .card-h-sub { font-weight: 400; font-size: 0.88em; color: $mute; }
+.reveal .card-h-sub { font-weight: 400; font-size: 0.82em; color: $mute; }
 
 // =====================================================================
 // 목차 페이지 — 우하단 페이지 리스트 (소제목까지 전체 노출)

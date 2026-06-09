@@ -436,18 +436,21 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 
 ---
 
-## &nbsp; {data-menu-title="시연 안내" .md-slide .demo-cards .intro-cards}
+## &nbsp; {data-menu-title="시연 안내" .md-slide .demo-cards .intro-cards .demo-split}
 
 <div class="eyebrow"><span class="part-badge">PART 3</span>시스템 시연</div>
 <div class="page-title">시스템 시연 안내</div>
 <div class="subtitle">두 시스템은 자금 사이클의 운용 분기와 회수·분배 분기를 각각 담당</div>
 
 ::: {.md-body}
-<div class="card-grid cols-2">
+<div class="card-grid cols-1">
   <div class="card"><div class="card-h">시연 1 · 동적 담보관리 시스템 <span class="card-h-sub">— 자금 사이클의 [운용] 분기 담당</span></div><div class="card-b">· 증권계좌 단위 평가등급 체계<br>· 종목·집중도·변동성·유동성 종합 평가<br>· 5년 가동 │ 부실율 0.24%<br>· 본 카테고리 국내 최초</div></div>
   <div class="card"><div class="card-h">시연 2 · SPC 담보관리 시스템 <span class="card-h-sub">— 자금 사이클의 [회수·분배] 분기 담당</span></div><div class="card-b">· 풀 단위 LTV 실시간 산출<br>· Daily Sweep 자동 집행<br>· 자동 청산 트리거 + Waterfall 분배 자동화<br>· 본 카테고리 국내 최초</div></div>
 </div>
 :::
+
+<!-- 우측 SVG 영역 (480×600, 4:5) — 추후 SVG 삽입 위치 -->
+<div class="demo-right"></div>
 
 <div class="tagline">각 시스템 시연 시간 약 10분, 시연 후 질의응답 진행</div>
 
