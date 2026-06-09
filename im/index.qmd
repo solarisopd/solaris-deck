@@ -479,16 +479,16 @@ SPC 업무수탁 유안타증권 신탁팀<br>
   <!-- Card 1 · 증권사 / RMS (라운드, 흰 헤더) -->
   <rect x="85" y="5" width="320" height="145" rx="10" fill="#fff" stroke="#D8E0F0" stroke-width="1.5" filter="url(#stk-sh)"/>
   <line x1="85" y1="43" x2="405" y2="43" stroke="#E3E9F5" stroke-width="1"/>
-  <rect x="101" y="17" width="13" height="13" rx="2" fill="#1A2A66"/>
-  <rect x="118" y="17" width="13" height="13" rx="2" fill="#1A2A66"/>
-  <text class="stk-ttl" x="245" y="24" fill="#16223D">증권사</text>
-  <text class="stk-code" x="389" y="24" fill="#9FB0E0">&lt;/&gt;</text>
-  <g class="stk-ico" stroke="#1A2A66" stroke-width="1.5" transform="translate(245,79) scale(1.45) translate(-12,-12)">
+  <rect x="101" y="19" width="13" height="13" rx="2" fill="#1A2A66"/>
+  <rect x="118" y="19" width="13" height="13" rx="2" fill="#1A2A66"/>
+  <text class="stk-ttl" x="245" y="27" fill="#16223D">증권사</text>
+  <text class="stk-code" x="389" y="27" fill="#9FB0E0">&lt;/&gt;</text>
+  <g class="stk-ico" stroke="#1A2A66" stroke-width="1.5" transform="translate(245,85) scale(1.45) translate(-12,-12)">
     <ellipse cx="12" cy="5" rx="9" ry="3"/>
     <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
     <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
   </g>
-  <text class="stk-lbl" x="245" y="120">RMS</text>
+  <text class="stk-lbl" x="245" y="126">RMS</text>
 
   <!-- 화살표 1 (증권사 ↕ IDC) -->
   <g class="stk-arr">
@@ -503,18 +503,18 @@ SPC 업무수탁 유안타증권 신탁팀<br>
   <rect x="85" y="225" width="320" height="145" fill="#fff" filter="url(#stk-sh)"/>
   <rect x="85" y="225" width="320" height="38" fill="#2A5ADA"/>
   <rect x="85" y="225" width="320" height="145" fill="none" stroke="#2A5ADA" stroke-width="1.5"/>
-  <rect x="101" y="237" width="13" height="13" rx="2" fill="#fff"/>
-  <rect x="118" y="237" width="13" height="13" rx="2" fill="#fff"/>
-  <text class="stk-ttl" x="245" y="244" fill="#fff">IDC</text>
-  <text class="stk-code" x="389" y="244" fill="#fff" opacity="0.72">&lt;/&gt;</text>
-  <g class="stk-ico" stroke="#2A5ADA" stroke-width="1.3" transform="translate(245,299) scale(1.7) translate(-12,-12)">
+  <rect x="101" y="239" width="13" height="13" rx="2" fill="#fff"/>
+  <rect x="118" y="239" width="13" height="13" rx="2" fill="#fff"/>
+  <text class="stk-ttl" x="245" y="247" fill="#fff">IDC</text>
+  <text class="stk-code" x="389" y="247" fill="#fff" opacity="0.72">&lt;/&gt;</text>
+  <g class="stk-ico" stroke="#2A5ADA" stroke-width="1.3" transform="translate(245,305) scale(1.7) translate(-12,-12)">
     <rect x="3.5" y="4.5" width="17" height="15" rx="2"/>
     <circle cx="12" cy="12" r="3.8"/>
     <circle cx="12" cy="12" r="0.9" fill="#2A5ADA" stroke="none"/>
     <line x1="12" y1="4.5" x2="12" y2="6"/>
     <line x1="20.5" y1="10" x2="20.5" y2="14"/>
   </g>
-  <text class="stk-lbl" x="245" y="340">Vault 서버</text>
+  <text class="stk-lbl" x="245" y="346">Vault 서버</text>
 
   <!-- 화살표 2 (IDC ↕ 금융Cloud) -->
   <g class="stk-arr">
@@ -528,14 +528,14 @@ SPC 업무수탁 유안타증권 신탁팀<br>
   <!-- Card 3 · 금융Cloud / Cloud 서버 (라운드, 흰 헤더) -->
   <rect x="85" y="445" width="320" height="145" rx="10" fill="#fff" stroke="#D8E0F0" stroke-width="1.5" filter="url(#stk-sh)"/>
   <line x1="85" y1="483" x2="405" y2="483" stroke="#E3E9F5" stroke-width="1"/>
-  <rect x="101" y="457" width="13" height="13" rx="2" fill="#1A2A66"/>
-  <rect x="118" y="457" width="13" height="13" rx="2" fill="#1A2A66"/>
-  <text class="stk-ttl" x="245" y="464" fill="#16223D">금융Cloud</text>
-  <text class="stk-code" x="389" y="464" fill="#9FB0E0">&lt;/&gt;</text>
-  <g class="stk-ico" stroke="#5B6B8C" stroke-width="1.45" transform="translate(245,519) scale(1.5) translate(-12,-13)">
+  <rect x="101" y="459" width="13" height="13" rx="2" fill="#1A2A66"/>
+  <rect x="118" y="459" width="13" height="13" rx="2" fill="#1A2A66"/>
+  <text class="stk-ttl" x="245" y="467" fill="#16223D">금융Cloud</text>
+  <text class="stk-code" x="389" y="467" fill="#9FB0E0">&lt;/&gt;</text>
+  <g class="stk-ico" stroke="#5B6B8C" stroke-width="1.45" transform="translate(245,525) scale(1.5) translate(-12,-13)">
     <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
   </g>
-  <text class="stk-lbl" x="245" y="560">Cloud 서버</text>
+  <text class="stk-lbl" x="245" y="566">Cloud 서버</text>
 </svg>
 </div>
 ```
