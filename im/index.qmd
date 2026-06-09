@@ -85,7 +85,7 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 
 ---
 
-## &nbsp; {data-menu-title="Executive Summary" .md-slide}
+## &nbsp; {data-menu-title="Executive Summary" .md-slide .head-center}
 
 <div class="eyebrow"><span class="part-badge">PART 1</span>CL-Link 인프라</div>
 <div class="page-title">Executive summary</div>
