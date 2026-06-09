@@ -488,7 +488,7 @@ SPC 업무수탁 유안타증권 신탁팀<br>
     <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
     <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
   </g>
-  <text class="stk-lbl" x="245" y="126">RMS</text>
+  <text class="stk-lbl" x="245" y="120">RMS</text>
 
   <!-- 화살표 1 (증권사 ↕ IDC) -->
   <g class="stk-arr">
@@ -514,7 +514,7 @@ SPC 업무수탁 유안타증권 신탁팀<br>
     <line x1="12" y1="4.5" x2="12" y2="6"/>
     <line x1="20.5" y1="10" x2="20.5" y2="14"/>
   </g>
-  <text class="stk-lbl" x="245" y="346">Vault 서버</text>
+  <text class="stk-lbl" x="245" y="340">Vault 서버</text>
 
   <!-- 화살표 2 (IDC ↕ 금융Cloud) -->
   <g class="stk-arr">
@@ -535,7 +535,7 @@ SPC 업무수탁 유안타증권 신탁팀<br>
   <g class="stk-ico" stroke="#5B6B8C" stroke-width="1.45" transform="translate(245,525) scale(1.5) translate(-12,-13)">
     <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
   </g>
-  <text class="stk-lbl" x="245" y="566">Cloud 서버</text>
+  <text class="stk-lbl" x="245" y="556">Cloud 서버</text>
 </svg>
 </div>
 ```
