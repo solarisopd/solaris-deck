@@ -154,7 +154,7 @@ $nav-inset: 40px;   // 좌우 화살표 안쪽 여백 (조절 지점)
 }
 // 11쪽(시연 안내)만: 박스 본문 줄간격 확대 + 제목줄과 본문 사이 간격 확대
 .reveal section.intro-cards .card-b { line-height: 1.9; }
-.reveal section.intro-cards .card-h { margin-bottom: 26px; }
+.reveal section.intro-cards .card-h { margin-bottom: 5px; }
 
 // 11쪽 2열 분할: 좌측 카드 2개 세로 적층 / 우측 SVG 영역(480×600, 4:5)
 .reveal section.demo-split .page-title,
@@ -170,7 +170,7 @@ $nav-inset: 40px;   // 좌우 화살표 안쪽 여백 (조절 지점)
 }
 .reveal section.demo-split .demo-right svg { width: 100%; height: 100%; display: block; }
 // 카드 제목 옆 분기 설명(한 줄) — 제목보다 가볍게
-.reveal .card-h-sub { font-weight: 400; font-size: 0.82em; color: $mute; }
+.reveal .card-h-sub { display: block; text-align: right; padding-right: 16px; margin-top: 6px; font-weight: 400; font-size: 0.82em; color: $mute; }
 
 // =====================================================================
 // 목차 페이지 — 우하단 페이지 리스트 (소제목까지 전체 노출)
