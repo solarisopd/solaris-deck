@@ -454,15 +454,26 @@ SPC 업무수탁 유안타증권 신탁팀<br>
 <svg class="stk-svg" viewBox="0 0 490 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="인프라 스택: 증권사 RMS · IDC Vault 서버 · 금융Cloud Cloud 서버">
   <defs>
     <filter id="stk-sh" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDev="3" flood-color="#16223D" flood-opacity="0.08"/></filter>
+    <clipPath id="cg1l"><rect x="218" y="150" width="16" height="70"/></clipPath>
+    <clipPath id="cg1r"><rect x="258" y="150" width="16" height="70"/></clipPath>
+    <clipPath id="cg2l"><rect x="218" y="372" width="16" height="70"/></clipPath>
+    <clipPath id="cg2r"><rect x="258" y="372" width="16" height="70"/></clipPath>
   </defs>
   <style>
     .stk-svg text{font-family:'Pretendard','Apple SD Gothic Neo','Noto Sans KR',sans-serif;dominant-baseline:middle}
     .stk-ttl{font-size:18px;font-weight:600;text-anchor:middle}
     .stk-lbl{fill:#16223D;font-size:22px;font-weight:500;text-anchor:middle}
     .stk-code{font-size:15px;font-weight:700;text-anchor:end;font-family:'Monaco','Consolas',monospace}
-    .stk-data{fill:#9FB0E0;font-size:11px;font-weight:600;letter-spacing:2px;text-anchor:middle;font-family:'Monaco','Consolas',monospace}
+    .stk-svg .stk-flow{fill:#9FB0E0;font-size:12px;font-weight:400;letter-spacing:2px;text-anchor:start;dominant-baseline:central;font-family:'Monaco','Consolas','Menlo','Courier New',monospace}
     .stk-arrow{fill:none;stroke:#16223D;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
     .stk-ico{fill:none;stroke-linecap:round;stroke-linejoin:round}
+    @keyframes stkDown{from{transform:translateY(0)}to{transform:translateY(36px)}}
+    @keyframes stkUp{from{transform:translateY(0)}to{transform:translateY(-36px)}}
+    .stk-down{animation:stkDown 4.5s linear infinite}
+    .stk-up{animation:stkUp 4.5s linear infinite}
+    /* 양방향 화살표: 가운데에서 시작→위·아래로 확장→사라짐, 다시 가운데에서 반복(방출형) */
+    .stk-arr{transform-box:fill-box;transform-origin:center;animation:arrEmit 1.8s ease-out infinite}
+    @keyframes arrEmit{0%{transform:scaleY(0.05)}75%{transform:scaleY(1)}100%{transform:scaleY(1)}}
   </style>
 
   <!-- Card 1 · 증권사 / RMS (라운드, 흰 헤더) -->
@@ -472,19 +483,21 @@ SPC 업무수탁 유안타증권 신탁팀<br>
   <rect x="118" y="17" width="13" height="13" rx="2" fill="#1A2A66"/>
   <text class="stk-ttl" x="245" y="24" fill="#16223D">증권사</text>
   <text class="stk-code" x="389" y="24" fill="#9FB0E0">&lt;/&gt;</text>
-  <g class="stk-ico" stroke="#1A2A66" stroke-width="1.3" transform="translate(245,90) scale(1.7) translate(-12,-12)">
+  <g class="stk-ico" stroke="#1A2A66" stroke-width="1.5" transform="translate(245,79) scale(1.45) translate(-12,-12)">
     <ellipse cx="12" cy="5" rx="9" ry="3"/>
     <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
     <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
   </g>
-  <text class="stk-lbl" x="245" y="130">RMS</text>
+  <text class="stk-lbl" x="245" y="120">RMS</text>
 
   <!-- 화살표 1 (증권사 ↕ IDC) -->
-  <path class="stk-arrow" d="M245,160 V214"/>
-  <path class="stk-arrow" d="M239,167 L245,160 L251,167"/>
-  <path class="stk-arrow" d="M239,207 L245,214 L251,207"/>
-  <text class="stk-data" transform="translate(226,187) rotate(-90)">10101010</text>
-  <text class="stk-data" transform="translate(266,187) rotate(-90)">10101010</text>
+  <g class="stk-arr">
+    <path class="stk-arrow" d="M245,160 V214"/>
+    <path class="stk-arrow" d="M239,167 L245,160 L251,167"/>
+    <path class="stk-arrow" d="M239,207 L245,214 L251,207"/>
+  </g>
+  <g clip-path="url(#cg1l)"><g class="stk-down"><text class="stk-flow" transform="translate(226,313) rotate(-90)" textLength="252" lengthAdjust="spacing">1010101010101010101010101010</text></g></g>
+  <g clip-path="url(#cg1r)"><g class="stk-up"><text class="stk-flow" transform="translate(266,313) rotate(-90)" textLength="252" lengthAdjust="spacing">1010101010101010101010101010</text></g></g>
 
   <!-- Card 2 · IDC / Vault 서버 (직각 사각형, 청색 헤더) -->
   <rect x="85" y="225" width="320" height="145" fill="#fff" filter="url(#stk-sh)"/>
@@ -494,21 +507,23 @@ SPC 업무수탁 유안타증권 신탁팀<br>
   <rect x="118" y="237" width="13" height="13" rx="2" fill="#fff"/>
   <text class="stk-ttl" x="245" y="244" fill="#fff">IDC</text>
   <text class="stk-code" x="389" y="244" fill="#fff" opacity="0.72">&lt;/&gt;</text>
-  <g class="stk-ico" stroke="#2A5ADA" stroke-width="1.3" transform="translate(245,310) scale(1.7) translate(-12,-12)">
+  <g class="stk-ico" stroke="#2A5ADA" stroke-width="1.3" transform="translate(245,299) scale(1.7) translate(-12,-12)">
     <rect x="3.5" y="4.5" width="17" height="15" rx="2"/>
     <circle cx="12" cy="12" r="3.8"/>
     <circle cx="12" cy="12" r="0.9" fill="#2A5ADA" stroke="none"/>
     <line x1="12" y1="4.5" x2="12" y2="6"/>
     <line x1="20.5" y1="10" x2="20.5" y2="14"/>
   </g>
-  <text class="stk-lbl" x="245" y="350">Vault 서버</text>
+  <text class="stk-lbl" x="245" y="340">Vault 서버</text>
 
   <!-- 화살표 2 (IDC ↕ 금융Cloud) -->
-  <path class="stk-arrow" d="M245,380 V434"/>
-  <path class="stk-arrow" d="M239,387 L245,380 L251,387"/>
-  <path class="stk-arrow" d="M239,427 L245,434 L251,427"/>
-  <text class="stk-data" transform="translate(226,407) rotate(-90)">10101010</text>
-  <text class="stk-data" transform="translate(266,407) rotate(-90)">10101010</text>
+  <g class="stk-arr">
+    <path class="stk-arrow" d="M245,380 V434"/>
+    <path class="stk-arrow" d="M239,387 L245,380 L251,387"/>
+    <path class="stk-arrow" d="M239,427 L245,434 L251,427"/>
+  </g>
+  <g clip-path="url(#cg2l)"><g class="stk-down"><text class="stk-flow" transform="translate(226,533) rotate(-90)" textLength="252" lengthAdjust="spacing">1010101010101010101010101010</text></g></g>
+  <g clip-path="url(#cg2r)"><g class="stk-up"><text class="stk-flow" transform="translate(266,533) rotate(-90)" textLength="252" lengthAdjust="spacing">1010101010101010101010101010</text></g></g>
 
   <!-- Card 3 · 금융Cloud / Cloud 서버 (라운드, 흰 헤더) -->
   <rect x="85" y="445" width="320" height="145" rx="10" fill="#fff" stroke="#D8E0F0" stroke-width="1.5" filter="url(#stk-sh)"/>
@@ -517,10 +532,10 @@ SPC 업무수탁 유안타증권 신탁팀<br>
   <rect x="118" y="457" width="13" height="13" rx="2" fill="#1A2A66"/>
   <text class="stk-ttl" x="245" y="464" fill="#16223D">금융Cloud</text>
   <text class="stk-code" x="389" y="464" fill="#9FB0E0">&lt;/&gt;</text>
-  <g class="stk-ico" stroke="#5B6B8C" stroke-width="1.2" transform="translate(245,530) scale(1.8) translate(-12,-12)">
+  <g class="stk-ico" stroke="#5B6B8C" stroke-width="1.45" transform="translate(245,519) scale(1.5) translate(-12,-13)">
     <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
   </g>
-  <text class="stk-lbl" x="245" y="570">Cloud 서버</text>
+  <text class="stk-lbl" x="245" y="560">Cloud 서버</text>
 </svg>
 </div>
 ```
