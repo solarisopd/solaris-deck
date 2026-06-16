@@ -12,6 +12,7 @@ format:
     progress: true
     center: false
     embed-resources: false
+    include-after-body: ../theme/protect.html
 ---
 
 ## &nbsp; {.title-dark .cover data-menu-title="표지"}
