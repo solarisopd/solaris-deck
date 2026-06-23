@@ -13,7 +13,7 @@ website:
   site-url: "https://docs.solarisoppidum.com"
   navbar:
     title: "SOLARIS OPPIDUM"
-    title-href: "https://solarisoppidum.com"
+    href: "https://solarisoppidum.com"
     background: "#1A2A66"
     foreground: "#FFFFFF"
     left:
