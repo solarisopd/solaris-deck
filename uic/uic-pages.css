@@ -151,11 +151,11 @@
 
 
 /* 슬라이드 루트: 1280×800 에 인쇄 트림을 그대로 채운다 */
-/* 위 12px 여백, 아래는 핵심 띠 밑에 14px 을 더 비워 대외비 문구 자리를 만든다(IM 과 같은 방식) */
-.reveal .slides section.uic-slide .uic-page { --trim-w: 338.67mm; --trim-h: calc(800px - 26px); position: absolute; left: 0; top: 0; width: 1280px; height: 800px; margin: 0; padding: 0;
+/* 슬라이드 1280×820: 위 16px 여백 + 아래 14px(대외비 문구 자리) 를 빼도 본문 높이가 인쇄본(약 790px)과 같다 */
+.reveal .slides section.uic-slide .uic-page { --trim-w: 338.67mm; --trim-h: calc(820px - 30px); position: absolute; left: 0; top: 0; width: 1280px; height: 820px; margin: 0; padding: 0;
   overflow: hidden; text-align: left; letter-spacing: normal; text-transform: none; text-shadow: none; }
-.reveal .slides section.uic-slide .uic-page > .trim { left: 0; top: 12px; width: var(--trim-w); height: var(--trim-h); }
-.reveal .slides section.uic-slide .uic-page > .bleed-band { left: 0; top: 12px; width: 1280px; height: 33.1mm; }
+.reveal .slides section.uic-slide .uic-page > .trim { left: 0; top: 16px; width: var(--trim-w); height: var(--trim-h); }
+.reveal .slides section.uic-slide .uic-page > .bleed-band { left: 0; top: 16px; width: 1280px; height: 33.1mm; }
 
 
 /* ── 쪽00_속표지목차 ── */
@@ -508,13 +508,10 @@
 
 
 /* ── 웹 전용: 표지·마무리 ───────────────────────────────────────── */
+/* 표지·뒷표지: 대표님 InDesign 표지(IR_유아이크레디트표지260930.pdf)를 그대로 쓰고 바탕만 곤색으로 유지한다.
+   글자·로고 글자만 곤색 위에서 보이도록 흰색 계열로 바꾼 벡터(assets/uic/cover.svg, back.svg) */
 .reveal .slides section.uic-slide .uic-page.uic-cover-page { background: var(--navy); }
-.reveal .slides section.uic-slide .uic-page .uic-cover-brand { position: absolute; left: 22mm; top: 22mm; font-family: Calibri, "Segoe UI", sans-serif; font-size: var(--s28); color: var(--teal); letter-spacing: .02em; }
-.reveal .slides section.uic-slide .uic-page .uic-cover-title { position: absolute; left: 22mm; right: 22mm; top: 78mm; font-size: 40pt; font-weight: 700; color: #fff; line-height: 1.25; }
-.reveal .slides section.uic-slide .uic-page .uic-cover-rule { position: absolute; left: 22mm; top: 118mm; width: 34mm; height: 1.8mm; background: var(--orange); }
-.reveal .slides section.uic-slide .uic-page .uic-cover-sub { position: absolute; left: 22mm; right: 22mm; top: 126mm; font-size: var(--s20); color: #fff; }
-.reveal .slides section.uic-slide .uic-page .uic-end-text { position: absolute; left: 22mm; right: 22mm; top: 100mm; font-size: var(--s16); color: #fff; line-height: 1.6; }
-.reveal .slides section.uic-slide .uic-page .uic-end-note { position: absolute; left: 22mm; right: 22mm; bottom: 22mm; font-size: var(--s12); color: var(--line); line-height: 1.6; }
+.reveal .slides section.uic-slide .uic-page .uic-cover-img { position: absolute; left: 0; top: 0; width: 1280px; height: 820px; max-width: none; max-height: none; margin: 0; border: 0; box-shadow: none; background: none; object-fit: cover; object-position: center top; }   /* reveal 기본 img 규칙(크기 제한·여백)을 해제 */
 /* 하단 대외비 문구: IM(theme/solaris.scss .confidential)과 같은 위치·크기·색 */
 .reveal .slides section.uic-slide .uic-page .confidential { position: absolute; bottom: 12px; right: 18px; font-size: 11px; color: #5B6B8C; opacity: 0.7; letter-spacing: 0.04em; line-height: 1.2; }
 .reveal .slides section.uic-slide .uic-page.uic-cover-page .confidential { color: #C9D6FF; }
