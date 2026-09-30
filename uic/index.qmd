@@ -5,7 +5,7 @@ format:
     theme: ../theme/uic.scss
     css: uic-pages.css
     width: 1280
-    height: 800
+    height: 820
     margin: 0
     slide-number: false
     hash: true
@@ -25,10 +25,7 @@ format:
 
 ```{=html}
 <div class="uic-page uic-cover-page">
-<div class="uic-cover-brand">SOLARIS OPPIDUM</div>
-<div class="uic-cover-title">CL-Link 스탁론 사업 참여 제안</div>
-<div class="uic-cover-rule"></div>
-<div class="uic-cover-sub">자기자본 운용형 · ㈜유아이크레디트 귀중</div>
+<img class="uic-cover-img" src="../assets/uic/cover.svg" alt="">
 <div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
 </div>
 ```
@@ -866,9 +863,7 @@ format:
 
 ```{=html}
 <div class="uic-page uic-cover-page">
-<div class="uic-cover-brand">SOLARIS OPPIDUM</div>
-<div class="uic-end-text">㈜솔라리스오피둠 · 대표이사 박세훈 · 010-8765-2309 · jeffspark@solarisoppidum.com</div>
-<div class="uic-end-note">본 자료는 정보 제공 목적이며 청약 또는 청약의 권유가 아님 · 손익 수치는 특정 가정 하의 예시 · 사전 서면 동의 없이 제3자 제공·복제·배포 불가</div>
+<img class="uic-cover-img" src="../assets/uic/back.svg" alt="">
 <div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
 </div>
 ```
