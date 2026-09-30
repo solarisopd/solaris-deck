@@ -430,8 +430,20 @@
     Array.prototype.forEach.call(document.querySelectorAll('svg.k05-fig'), styleDiagram5);
   }
 
+  /* 이동화살표 강조: 이동한 방향 화살표는 진하게, 반대는 옅게(샘플 im 덱과 같은 동작 — 색은 theme/uic.scss) */
+  function trackDirection() {
+    var el = document.querySelector('.reveal'), prev = Reveal.getIndices().h;
+    Reveal.on('slidechanged', function (e) {
+      var h = typeof e.indexh === 'number' ? e.indexh : Reveal.getIndices().h;
+      if (h > prev) { el.classList.add('dir-next'); el.classList.remove('dir-prev'); }
+      else if (h < prev) { el.classList.add('dir-prev'); el.classList.remove('dir-next'); }
+      prev = h;
+    });
+  }
+
   function boot() {
     if (!window.Reveal) { return setTimeout(boot, 50); }
+    trackDirection();
     initStatic();
     Reveal.on('ready', function (e) { initStatic(); play(e.currentSlide); });
     Reveal.on('slidechanged', function (e) { play(e.currentSlide); });

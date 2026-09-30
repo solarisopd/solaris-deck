@@ -2,8 +2,21 @@
 $body-bg: #ffffff;
 $presentation-heading-font: "KP", "Pretendard", sans-serif;
 $presentation-heading-text-transform: none;
+$link-color: #2A5ADA;   // 이동화살표·진행 막대 색 = 샘플(im) 덱과 동일한 브랜드 블루
 
 /*-- scss:rules --*/
 // 웹 덱 전용 테마(최소). 쪽 디자인은 uic-pages.css(인쇄 CSS 를 슬라이드 범위로 감싼 것)가 담당한다.
 .reveal .slides section.uic-slide { padding: 0; }
 .reveal .slides section.uic-slide > h2 { display: none; }
+
+// 이동화살표 — 샘플(im) 덱(theme/solaris.scss)과 같은 위치·동작
+// 좌우 화살표를 가장자리에서 안쪽으로 40px 들이고, 이동한 방향 화살표는 진하게 · 반대는 옅게 한다.
+$nav-inset: 40px;
+.reveal .controls[data-controls-layout="edges"] .navigate-left  { left:  $nav-inset; transform: translateX(0); }
+.reveal .controls[data-controls-layout="edges"] .navigate-right { right: $nav-inset; transform: translateX(0); }
+.reveal.dir-prev:not(.rtl) .controls[data-controls-back-arrows] .navigate-left.enabled  { opacity: 0.95; }
+.reveal.dir-prev:not(.rtl) .controls[data-controls-back-arrows] .navigate-right.enabled { opacity: 0.15; }
+.reveal.dir-next:not(.rtl) .controls[data-controls-back-arrows] .navigate-right.enabled { opacity: 0.95; }
+.reveal.dir-next:not(.rtl) .controls[data-controls-back-arrows] .navigate-left.enabled  { opacity: 0.15; }
+.reveal.dir-prev:not(.rtl) .controls[data-controls-back-arrows] .navigate-right.enabled:hover,
+.reveal.dir-next:not(.rtl) .controls[data-controls-back-arrows] .navigate-left.enabled:hover { opacity: 1; }
