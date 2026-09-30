@@ -53,11 +53,11 @@
     svg.__uicStyled = true;
     var T = svg.querySelectorAll('text'), B = svg.querySelectorAll('rect');
     for (var i = 7; i <= 11; i++) { T[i].style.fontSize = 'var(--s16)'; T[i].style.fontWeight = '700'; }
-    T[12].style.fontSize = 'var(--s12)'; T[12].style.fontWeight = '400';
+    T[12].style.fontSize = 'var(--s16)'; T[12].style.fontWeight = '400';   // 곤색 값과 같은 크기, 굵기만 보통
 
     var june = B[4], aug = B[5];
     var yPeak = num(june, 'y'), yTop = num(aug, 'y');
-    var xa = num(aug, 'x') + num(aug, 'width') + 9;                 // 화살표 x (주황 막대 오른쪽)
+    var xa = num(aug, 'x') + num(aug, 'width') + 13;                // 화살표 x (주황 막대 오른쪽)
     var guide = document.createElementNS(NS, 'line');
     guide.setAttribute('class', 'uic-peak');
     guide.setAttribute('x1', num(june, 'x') + num(june, 'width')); guide.setAttribute('x2', xa + 6);
@@ -66,10 +66,10 @@
     var arrow = document.createElementNS(NS, 'g');
     arrow.setAttribute('class', 'uic-drop');
     var shaft = document.createElementNS(NS, 'line');
-    shaft.setAttribute('x1', xa); shaft.setAttribute('x2', xa); shaft.setAttribute('y1', yPeak + 3); shaft.setAttribute('y2', yTop - 7);
-    shaft.setAttribute('stroke', 'var(--orange)'); shaft.setAttribute('stroke-width', '2');
+    shaft.setAttribute('x1', xa); shaft.setAttribute('x2', xa); shaft.setAttribute('y1', yPeak + 3); shaft.setAttribute('y2', yTop - 12);
+    shaft.setAttribute('stroke', 'var(--orange)'); shaft.setAttribute('stroke-width', '5');   // 굵은 화살표
     var head = document.createElementNS(NS, 'polygon');
-    head.setAttribute('points', (xa - 5) + ',' + (yTop - 9) + ' ' + (xa + 5) + ',' + (yTop - 9) + ' ' + xa + ',' + (yTop - 1));
+    head.setAttribute('points', (xa - 9) + ',' + (yTop - 14) + ' ' + (xa + 9) + ',' + (yTop - 14) + ' ' + xa + ',' + (yTop + 1));
     head.setAttribute('fill', 'var(--orange)');
     arrow.appendChild(shaft); arrow.appendChild(head);
     svg.insertBefore(guide, svg.querySelector('line[stroke-width="1.2"]').nextSibling || null);
