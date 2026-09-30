@@ -24,7 +24,7 @@ format:
 ## &nbsp; {.uic-slide data-menu-title="표지"}
 
 ```{=html}
-<div class="uic-page uic-cover-page">
+<div class="uic-page uic-cover-page uic-m2">
 <img class="uic-cover-img" src="../assets/uic/cover.svg" alt="">
 <div class="confidential">㈜솔라리스오피둠 · STRICTLY PRIVATE &amp; CONFIDENTIAL</div>
 </div>
@@ -66,7 +66,7 @@ format:
 ## &nbsp; {.uic-slide data-menu-title="쪽1 Executive Summary"}
 
 ```{=html}
-<div class="uic-page">
+<div class="uic-page uic-m2">
 <div class="bleed-band"></div>
   <div class="trim">
     <h1 class="chapter">Executive Summary</h1>
