@@ -534,3 +534,10 @@
 .reveal .slides section.uic-slide .uic-page.uic-cover-page .confidential { color: #C9D6FF; bottom: 44px; right: 30px; }
 /* 목차 항목 링크 */
 .reveal .slides section.uic-slide .uic-page a.uic-link { color: inherit; text-decoration: none; }
+/* 뒷표지 이동 버튼(ADMIN · CUSTOM): 랜딩(index.qmd .deck-btn)과 같은 모양 — 흰 바탕 · 브랜드 블루 테두리와 글자, 올리면 블루로 반전 */
+.reveal .slides section.uic-slide .uic-page .uic-end-links { position: absolute; left: 0; width: 1280px; top: 676px; padding-left: 492px; display: flex; justify-content: flex-start; gap: 69px; z-index: 5; }   /* 대표님이 표시한 자리 */
+.reveal .slides section.uic-slide .uic-page a.uic-end-btn { display: block; height: 42px; line-height: 40px; text-align: center; box-sizing: border-box; background: #fff;
+  border: 1px solid #2A5ADA; color: #2A5ADA; font-size: 15px; font-weight: 700; text-decoration: none; letter-spacing: 0; transition: .15s; }
+.reveal .slides section.uic-slide .uic-page a.uic-end-btn.admin { width: 121px; }
+.reveal .slides section.uic-slide .uic-page a.uic-end-btn.custom { width: 130px; }
+.reveal .slides section.uic-slide .uic-page a.uic-end-btn:hover { background: #2A5ADA; color: #fff; }
