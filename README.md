@@ -1,6 +1,6 @@
 # SOLARIS OPPIDUM 발표 사이트 (Quarto)
 
-CL-Link 투자설명자료(IM)와 동적담보관리(DCM) 두 개의 reveal.js 슬라이드를
+CL-Link 투자설명자료(IM) · 동적담보관리(DCM) · 스탁론 사업 참여 제안(uic) 세 개의 reveal.js 슬라이드를
 하나의 사이트로 묶어 GitHub Pages(public)로 배포한다.
 WordPress Docs 메뉴에서 각 URL을 링크하면, 구성원이 클릭 → 슬라이드 발표가 가능하다.
 
@@ -8,19 +8,29 @@ WordPress Docs 메뉴에서 각 URL을 링크하면, 구성원이 클릭 → 슬
 
 ```
 solaris-deck/
-├─ _quarto.yml                  # 사이트 설정 (랜딩 + 2개 덱)
-├─ theme/solaris.scss           # 공용 디자인 토큰 (chain.link 톤)
-├─ index.qmd                    # 랜딩(두 덱 진입 카드)
-├─ im/index.qmd                 # INVESTMENT MEMORANDUM (15쪽 예정, 현재 4쪽 샘플)
-├─ dcm/index.qmd                # Dynamic Collateral Management (7쪽 완성)
+├─ _quarto.yml                  # 사이트 설정 (랜딩 + 덱)
+├─ CNAME                        # 사용자 도메인 docs.solarisoppidum.com
+├─ theme/solaris.scss           # 공용 디자인 토큰 (chain.link 톤) — im · dcm
+├─ theme/uic.scss               # uic 덱 전용 최소 테마 (생성물)
+├─ index.qmd                    # 랜딩(덱 진입 카드). uic 는 비공개 덱이라 카드를 두지 않는다
+├─ im/index.qmd                 # INVESTMENT MEMORANDUM
+├─ dcm/index.qmd                # Dynamic Collateral Management
+├─ uic/index.qmd                # CL-Link 스탁론 사업 참여 제안 (14쪽, 생성물 — 직접 고치지 않는다)
+├─ uic/uic-pages.css            # uic 쪽 디자인 (생성물)
+├─ uic/uic-motion.html          # uic 그래픽 움직임(쪽2·5·9·12) — 손으로 관리하는 원본
+├─ assets/uic/                  # uic 표지·뒷표지·라벨 SVG
 ├─ assets/slide6.html           # 임베드 다이어그램
 └─ .github/workflows/publish.yml
 ```
 
-배포 후 URL (예시, `<id>`는 본인 GitHub 사용자명):
-- 랜딩 : `https://<id>.github.io/solaris-deck/`
-- IM   : `https://<id>.github.io/solaris-deck/im/`
-- DCM  : `https://<id>.github.io/solaris-deck/dcm/`
+> uic 의 `index.qmd` · `uic-pages.css` · `theme/uic.scss` 는 인쇄 원고에서 만든 생성물이다.
+> 문구·디자인을 고칠 때는 생성 도구(`build_uic.py`)나 `uic/uic-motion.html` 을 고치고 다시 생성한다.
+
+배포 후 URL (운영 도메인은 `CNAME` 의 `docs.solarisoppidum.com`):
+- 랜딩 : `https://docs.solarisoppidum.com/`
+- IM   : `https://docs.solarisoppidum.com/im/`
+- DCM  : `https://docs.solarisoppidum.com/dcm/`
+- uic  : `https://docs.solarisoppidum.com/uic/`  (쪽12 바로가기: `.../uic/#/13`)
 
 ---
 
@@ -95,8 +105,16 @@ WordPress 관리자 → 메뉴 → 사용자 정의 링크로 추가:
 
 | 메뉴 이름 | URL |
 |-----------|-----|
-| INVESTMENT MEMORANDUM | `https://<id>.github.io/solaris-deck/im/` |
-| Dynamic Collateral Management | `https://<id>.github.io/solaris-deck/dcm/` |
+| INVESTMENT MEMORANDUM | `https://docs.solarisoppidum.com/im/` |
+| Dynamic Collateral Management | `https://docs.solarisoppidum.com/dcm/` |
+| CL-Link 스탁론 사업 참여 제안 | `https://docs.solarisoppidum.com/uic/` |
+
+- 각 항목의 **링크 대상을 "새 탭"** 으로 두면 발표 중 WordPress 화면이 그대로 남아 돌아가기 쉽다
+  (메뉴 화면 오른쪽 위 "화면 옵션"에서 "링크 대상"을 켜야 보인다).
+- uic 는 검색 노출을 막아 두었다(`noindex,nofollow`). 랜딩 페이지에도 카드를 두지 않는다 — **링크를 아는 사람만** 들어온다.
+- ⚠ 이 사이트는 GitHub Pages(public)라 **WordPress 메뉴는 링크를 보이게/숨기게 할 뿐 접근을 막지 못한다.**
+  주소를 아는 사람은 메뉴 없이도 열 수 있다. 접근 제한이 필요하면 별도 조치(비밀번호·로그인 등)가 필요하다.
+- 같은 사이트 안에서는 덱 간 이동이 없다(uic 뒷표지의 ADMIN · CUSTOM 버튼은 CL-Link 사이트로 나가는 새 탭 링크).
 
 ---
 
