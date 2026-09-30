@@ -7,6 +7,7 @@ project:
     - index.qmd
     - im/index.qmd
     - dcm/index.qmd
+    - uic/index.qmd
 
 website:
   title: "SOLARIS OPPIDUM"

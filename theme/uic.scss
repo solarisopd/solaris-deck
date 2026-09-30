@@ -1,0 +1,9 @@
+/*-- scss:defaults --*/
+$body-bg: #ffffff;
+$presentation-heading-font: "KP", "Pretendard", sans-serif;
+$presentation-heading-text-transform: none;
+
+/*-- scss:rules --*/
+// 웹 덱 전용 테마(최소). 쪽 디자인은 uic-pages.css(인쇄 CSS 를 슬라이드 범위로 감싼 것)가 담당한다.
+.reveal .slides section.uic-slide { padding: 0; }
+.reveal .slides section.uic-slide > h2 { display: none; }
