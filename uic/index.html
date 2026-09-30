@@ -1510,7 +1510,83 @@
         return true;
       }
 
-      var MOTIONS = [playPage2, playPage5];
+      /* ── 쪽9 : 귀사 원금 보호 피라미드 ─────────────────────────────────────
+         표 → 피라미드가 아래에서부터(1 종목관리 → 2 계좌 직접평가 → 3 손실보전 → 귀사 원금) 쌓이고,
+         다 쌓인 뒤 충격 고리가 1층에서 크게 퍼지고 2층·3층에서 작아지며 귀사 원금에는 닿지 않는다(반복). 새 문구·수치 없음 */
+      function playPage9(slide) {
+        var svg = slide.querySelector('svg.k09-fig');
+        if (!svg) return false;
+        var R = svg.querySelectorAll('rect'), P = svg.querySelectorAll('polygon'), S = svg.querySelectorAll('path'), T = svg.querySelectorAll('text');
+        /* DOM 순서: rect 0 귀사 원금 띠 / 1 손실보전 / 2 계좌 직접평가 / 3 높이 0 / 4 종목관리
+                     polygon 0 귀사 원금 삼각형 / 1 손실보전 / 2 계좌 / 3 종목관리, path 방패 0 손실보전 / 1 계좌 / 2 종목관리
+                     text 0 귀사 원금 / 1-2 손실보전(번호·문구) / 3-4 계좌 / 5-6 종목관리 */
+        var layers = [
+          { band: R[4], poly: P[3], shield: S[2], texts: [T[5], T[6]], amp: 1.10, ring: 18 },     // 1 종목관리 (맨 아래)
+          { band: R[2], poly: P[2], shield: S[1], texts: [T[3], T[4]], amp: 1.07, ring: 13 },     // 2 계좌 직접평가
+          { band: R[1], poly: P[1], shield: S[0], texts: [T[1], T[2]], amp: 1.04, ring: 8 },      // 3 손실보전
+          { band: R[0], poly: P[0], shield: null, texts: [T[0]], amp: 1, ring: 0 }                // 귀사 원금 (맨 위)
+        ];
+        var T0 = 350, STEP = 550;
+
+        /* 왼쪽 표: 제목 → 행 순서대로 */
+        var sub = slide.querySelector('.k09-sub');
+        if (sub) anim(sub, [{ opacity: 0 }, { opacity: 1 }], { duration: 350 });
+        Array.prototype.forEach.call(slide.querySelectorAll('.k09-tbl tr'), function (tr, i) {
+          anim(tr, [{ opacity: 0 }, { opacity: 1 }], { duration: 380, delay: 150 + i * 130 });
+        });
+
+        /* 피라미드: 아래에서부터 쌓인다 */
+        layers.forEach(function (L, i) {
+          var t = T0 + i * STEP, top = i === 3;
+          L.poly.style.transformBox = 'fill-box'; L.poly.style.transformOrigin = '50% 50%';
+          anim(L.poly, [{ opacity: 0, transform: 'translateY(' + (top ? -30 : 26) + 'px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 500, delay: t });
+          L.band.style.transformBox = 'fill-box'; L.band.style.transformOrigin = '0% 50%';
+          anim(L.band, [{ transform: 'scaleX(0)', opacity: 0.4 }, { transform: 'scaleX(1)', opacity: 1 }], { duration: 500, delay: t + 100 });
+          if (L.shield) {
+            L.shield.style.transformBox = 'fill-box'; L.shield.style.transformOrigin = '50% 50%';
+            anim(L.shield, [{ opacity: 0, transform: 'scale(.3)' }, { opacity: 1, transform: 'scale(1)' }], { duration: 280, delay: t + 380 });
+          }
+          L.texts.forEach(function (x) { anim(x, [{ opacity: 0, transform: 'translateX(-10px)' }, { opacity: 1, transform: 'translateX(0)' }], { duration: 350, delay: t + 420 }); });
+        });
+
+        /* 아래 문장 */
+        var endBuild = T0 + 3 * STEP + 900;
+        var call = slide.querySelector('.k09-callout');
+        if (call) anim(call, [{ opacity: 0 }, { opacity: 1 }], { duration: 500, delay: endBuild - 300 });
+
+        /* 충격 고리: 층마다 왼쪽 비스듬한 변의 가운데에 만든다(한 번만) */
+        var NS2 = 'http://www.w3.org/2000/svg';
+        var rings = svg.__uicRings;
+        if (!rings) {
+          rings = layers.slice(0, 3).map(function (L) {
+            var pts = L.poly.getAttribute('points').trim().split(/\s+/).map(function (p) { return p.split(',').map(Number); });
+            var cx = (pts[0][0] + pts[3][0]) / 2, cy = (pts[0][1] + pts[3][1]) / 2;       // 왼쪽 변 가운데(위-왼 · 아래-왼)
+            var c = document.createElementNS(NS2, 'circle');
+            c.setAttribute('class', 'uic-ring'); c.setAttribute('cx', cx); c.setAttribute('cy', cy); c.setAttribute('r', L.ring);   // 최대 크기로 두고 배율만 바꾼다(브라우저 호환)
+            c.setAttribute('fill', 'none'); c.setAttribute('stroke', 'var(--red)'); c.setAttribute('stroke-width', '2.5'); c.setAttribute('opacity', '0');
+            c.setAttribute('vector-effect', 'non-scaling-stroke');
+            c.style.transformBox = 'fill-box'; c.style.transformOrigin = '50% 50%';
+            svg.appendChild(c); return c;
+          });
+          svg.__uicRings = rings;
+        }
+        var CYCLE = 4600, timers = [];
+        function shock() {
+          layers.slice(0, 3).forEach(function (L, i) {
+            var d = i * 520;
+            var a = rings[i].animate([{ opacity: 0.95, transform: 'scale(' + (3 / L.ring) + ')' }, { opacity: 0, transform: 'scale(1)' }], { duration: 750, delay: d, easing: 'ease-out', fill: 'none' });
+            var b = L.poly.animate([{ transform: 'scale(1)' }, { transform: 'scale(' + L.amp + ')', offset: 0.35 }, { transform: 'scale(1)' }], { duration: 650, delay: d + 60, easing: 'ease-in-out', fill: 'none' });
+            var c = L.band.animate([{ opacity: 1 }, { opacity: 0.72 }, { opacity: 1 }], { duration: 650, delay: d + 60, easing: 'ease-in-out', fill: 'none' });
+            running.push(a, b, c);
+          });
+          timers.push(setTimeout(shock, CYCLE));
+        }
+        timers.push(setTimeout(shock, endBuild + 500));
+        running.push(function () { timers.forEach(clearTimeout); rings.forEach(function (r) { r.setAttribute('opacity', '0'); }); });
+        return true;
+      }
+
+      var MOTIONS = [playPage2, playPage5, playPage9];
 
       function play(slide) {
         cancelAll();
