@@ -163,17 +163,46 @@
       var i = kids.indexOf(c);
       return { n: parseInt(kids[i + 1].textContent, 10), path: kids[i - 2], head: kids[i - 1], circle: c, num: kids[i + 1], label: kids[i + 2] };
     });
-    var boxes = rects.slice(2);                        // 0 영역, 1 본점(위), 이하 아래 세 상자
-    var lo = boxes.reduce(function (a, b) { return num(b, 'x') < num(a, 'x') ? b : a; });
-    var hi = boxes.reduce(function (a, b) { return num(b, 'x') > num(a, 'x') ? b : a; });
+    /* 상자 사이 간격을 넓혀 2·4번 화살표 길이를 확보한다(상자 150×64 는 그대로, 간격 53.8 → 84) */
+    var BW = 150, G = 84, X0 = 16;
+    var top = rects[1], left = rects[2], mid = rects[3], right = rects[4];   // rects[0] 은 CL-Link 영역
+    function place(r, x) {
+      var i = kids.indexOf(r);
+      r.setAttribute('x', x);
+      kids[i + 1].setAttribute('x', x + BW / 2); kids[i + 2].setAttribute('x', x + BW / 2);
+    }
+    place(left, X0); place(mid, X0 + BW + G); place(right, X0 + 2 * (BW + G)); place(top, X0 + BW + G);
+    var W = X0 + 3 * BW + 2 * G + X0;
+    rects[0].setAttribute('width', W);
+    svg.setAttribute('viewBox', '0 0 ' + W + ' 385.51'); svg.setAttribute('width', (W * 0.2645833) + 'mm');
+    var xm = X0 + BW + G + BW / 2;                     // 가운데(본점·모계좌) 중심 x
+    var yTopBottom = num(top, 'y') + num(top, 'height'), yBoxTop = num(mid, 'y'), yMid = 260;
+    var lo = left, hi = right;
+    var BRIGHT = 'var(--uic-bright)', BRIGHT_LINE = 'var(--uic-bright-line)';    // 4·5번: 곤색과 구분되는 IM 의 밝은 파랑
 
+    function straight(s, x1, y1, ax, ay) {             // 시작 (x1,y1), 화살촉 꼭짓점 (ax,ay). 선은 꼭짓점 8px 앞에서 끝난다
+      var dx = ax - x1, dy = ay - y1, L = Math.sqrt(dx * dx + dy * dy), ux = dx / L, uy = dy / L;
+      s.path.setAttribute('x1', x1); s.path.setAttribute('y1', y1);
+      s.path.setAttribute('x2', ax - HEAD * ux); s.path.setAttribute('y2', ay - HEAD * uy);
+      s.head.setAttribute('points', headPoints(ax, ay, ux, uy));
+    }
+    function badge(s, cx, cy, lx, ly) {
+      s.circle.setAttribute('cx', cx); s.circle.setAttribute('cy', cy); s.num.setAttribute('x', cx); s.num.setAttribute('y', cy);
+      s.label.setAttribute('x', lx); s.label.setAttribute('y', ly);
+    }
     steps.forEach(function (s) {
-      if (s.path.tagName === 'line') {
-        var x1 = num(s.path, 'x1'), y1 = num(s.path, 'y1'), x2 = num(s.path, 'x2'), y2 = num(s.path, 'y2');
-        var dx = x2 - x1, dy = y2 - y1, L = Math.sqrt(dx * dx + dy * dy), ux = dx / L, uy = dy / L;
-        s.path.setAttribute('x1', x1 + GAP * ux); s.path.setAttribute('y1', y1 + GAP * uy);
-        s.path.setAttribute('x2', x2 - HEAD * ux); s.path.setAttribute('y2', y2 - HEAD * uy);
-        s.head.setAttribute('points', headPoints(x2, y2, ux, uy));      // 꼭짓점 = 원래 선 끝(목표 상자 8px 앞)
+      if (s.n === 1) {                                 // 본점 → 모계좌 (아래로)
+        var x1c = xm + 14;
+        straight(s, x1c, yTopBottom + GAP, x1c, yBoxTop - GAP); badge(s, x1c, 146, x1c + 16, 146);
+      } else if (s.n === 5) {                          // 모계좌 → 본점 (위로)
+        var x5c = xm - 14;
+        straight(s, x5c, yBoxTop - GAP, x5c, yTopBottom + GAP); badge(s, x5c, 146, x5c - 16, 146);
+      } else if (s.n === 2) {                          // 모계좌 → 대부대출계좌 (오른쪽)
+        var a2 = num(mid, 'x') + BW, b2 = num(right, 'x');
+        straight(s, a2 + GAP, yMid, b2 - GAP, yMid); badge(s, (a2 + b2) / 2, yMid, (a2 + b2) / 2, 216);
+      } else if (s.n === 4) {                          // 고객증권계좌 → 모계좌 (오른쪽)
+        var a4 = num(left, 'x') + BW, b4 = num(mid, 'x');
+        straight(s, a4 + GAP, yMid, b4 - GAP, yMid); badge(s, (a4 + b4) / 2, yMid, (a4 + b4) / 2, 216);
       } else {                                                          // 원호(주식 레버리지 투자)
         var yb = num(hi, 'y') + num(hi, 'height') + GAP;
         var sx = num(hi, 'x') + INSET, ex = num(lo, 'x') + num(lo, 'width') - INSET;
@@ -186,6 +215,10 @@
         s.circle.setAttribute('cx', cx); s.circle.setAttribute('cy', cy);
         s.num.setAttribute('x', cx); s.num.setAttribute('y', cy);
         s.label.setAttribute('x', cx); s.label.setAttribute('y', cy + 25);
+      }
+      if (s.n === 4 || s.n === 5) {                    // 곤색(1·2·3)과 구분: IM 5쪽과 같은 밝은 파랑
+        s.circle.setAttribute('fill', BRIGHT); s.label.setAttribute('fill', BRIGHT);
+        s.path.setAttribute('stroke', BRIGHT_LINE); s.head.setAttribute('fill', BRIGHT_LINE);
       }
     });
   }
