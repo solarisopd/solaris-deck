@@ -39,8 +39,8 @@ format:
     <div class="deck-title">Dynamic Collateral Management</div>
     <div class="deck-desc">동적 담보관리 로직 상세. 7팩터 종목등급, 계좌등급 산정, 동적 LTV, 위기 시 자동 통제 메커니즘.</div>
     <div class="deck-actions">
-      <a class="deck-btn" href="https://admin-test.cl-link.co.kr" target="_blank" rel="noopener">ADMIN →</a>
-      <a class="deck-btn" href="https://bloan-test.cl-link.co.kr" target="_blank" rel="noopener">CUSTOM →</a>
+      <a class="deck-btn" href="https://admin.cl-link.co.kr" target="_blank" rel="noopener">ADMIN →</a>
+      <a class="deck-btn" href="https://cl-link.co.kr" target="_blank" rel="noopener">CUSTOM →</a>
     </div>
   </div>
 </div>
