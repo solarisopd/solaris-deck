@@ -1,8 +1,7 @@
-/* KoPub돋움: 설치된 PC 에서는 그대로, 없으면 Pretendard 로 대체(게시 전 웹폰트 라이선스 확인 필요) */
-@font-face { font-family: "KP"; font-weight: 400;
-  src: local("KoPubDotum Medium"), local("KoPubDotumMedium"), url("../assets/fonts/PretendardVariable.woff2") format("woff2-variations"); }
-@font-face { font-family: "KP"; font-weight: 700;
-  src: local("KoPubDotum Bold"), local("KoPubDotumBold"), url("../assets/fonts/PretendardVariable.woff2") format("woff2-variations"); }
+/* 웹 덱 글꼴은 Pretendard 하나로 통일(IM 과 같은 방식: 사이트가 assets/fonts 의 파일을 직접 내려 준다).
+   인쇄본 CSS 가 쓰는 이름 "KP" 를 Pretendard 로 연결하므로 어느 PC 에서나 같은 글꼴로 보인다 */
+@font-face { font-family: "KP"; font-weight: 100 900; font-style: normal; font-display: block;
+  src: url("../assets/fonts/PretendardVariable.woff2") format("woff2-variations"); }
 
 
 /* ── 인쇄 공통 CSS(슬라이드 범위로 감쌈) ── */
@@ -514,6 +513,9 @@
 .reveal .slides section.uic-slide .uic-page .uic-cover-img { position: absolute; left: 0; top: 28px; width: 1280px; height: 824px; max-width: none; max-height: none; margin: 0; border: 0; box-shadow: none; background: none; object-fit: cover; object-position: center top; }   /* reveal 기본 img 규칙(크기 제한·여백)을 해제 */
 /* 표지·뒷표지: 남색 면을 위아래 28px 띄워 흰 여백을 둔다 */
 .reveal .slides section.uic-slide .uic-page.uic-cover-page::before { content: ""; position: absolute; left: 0; right: 0; top: 28px; bottom: 28px; background: var(--navy); }
+/* 인쇄본의 Calibri 라벨: 글자 윤곽 SVG(assets/uic/brand.svg)를 라벨 자리에 배경으로 넣어 어느 PC 에서나 같게 보이게 한다.
+   글자는 스크린리더용으로 남기고 투명 처리(글꼴이 없어도 영향 없음) */
+.reveal .slides section.uic-slide .uic-page .brand { color: transparent; background: url("../assets/uic/brand.svg") right center / auto 1em no-repeat; }
 /* 쪽번호: 글자 윗선을 왼쪽 핵심 띠의 아랫선(본문 아래 끝에서 8mm 위)에 맞춘다 = 띠 바로 아래 줄 */
 .reveal .slides section.uic-slide .uic-page .pn { top: calc(100% - 8mm); bottom: auto; height: auto; align-items: flex-start; }
 /* 하단 대외비 문구: IM(theme/solaris.scss .confidential)과 같은 서식, 위치는 아래 여백 안(30px) */
