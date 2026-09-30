@@ -151,10 +151,11 @@
 
 
 /* 슬라이드 루트: 1280×800 에 인쇄 트림을 그대로 채운다 */
-.reveal .slides section.uic-slide .uic-page { --trim-w: 338.67mm; --trim-h: 211.67mm; position: absolute; left: 0; top: 0; width: 1280px; height: 800px; margin: 0; padding: 0;
+/* 위 12px 여백, 아래는 핵심 띠 밑에 14px 을 더 비워 대외비 문구 자리를 만든다(IM 과 같은 방식) */
+.reveal .slides section.uic-slide .uic-page { --trim-w: 338.67mm; --trim-h: calc(800px - 26px); position: absolute; left: 0; top: 0; width: 1280px; height: 800px; margin: 0; padding: 0;
   overflow: hidden; text-align: left; letter-spacing: normal; text-transform: none; text-shadow: none; }
-.reveal .slides section.uic-slide .uic-page > .trim { left: 0; top: 0; width: var(--trim-w); height: var(--trim-h); }
-.reveal .slides section.uic-slide .uic-page > .bleed-band { left: 0; top: 0; width: 1280px; height: 33.1mm; }
+.reveal .slides section.uic-slide .uic-page > .trim { left: 0; top: 12px; width: var(--trim-w); height: var(--trim-h); }
+.reveal .slides section.uic-slide .uic-page > .bleed-band { left: 0; top: 12px; width: 1280px; height: 33.1mm; }
 
 
 /* ── 쪽00_속표지목차 ── */
@@ -514,5 +515,8 @@
 .reveal .slides section.uic-slide .uic-page .uic-cover-sub { position: absolute; left: 22mm; right: 22mm; top: 126mm; font-size: var(--s20); color: #fff; }
 .reveal .slides section.uic-slide .uic-page .uic-end-text { position: absolute; left: 22mm; right: 22mm; top: 100mm; font-size: var(--s16); color: #fff; line-height: 1.6; }
 .reveal .slides section.uic-slide .uic-page .uic-end-note { position: absolute; left: 22mm; right: 22mm; bottom: 22mm; font-size: var(--s12); color: var(--line); line-height: 1.6; }
+/* 하단 대외비 문구: IM(theme/solaris.scss .confidential)과 같은 위치·크기·색 */
+.reveal .slides section.uic-slide .uic-page .confidential { position: absolute; bottom: 12px; right: 18px; font-size: 11px; color: #5B6B8C; opacity: 0.7; letter-spacing: 0.04em; line-height: 1.2; }
+.reveal .slides section.uic-slide .uic-page.uic-cover-page .confidential { color: #C9D6FF; }
 /* 목차 항목 링크 */
 .reveal .slides section.uic-slide .uic-page a.uic-link { color: inherit; text-decoration: none; }
