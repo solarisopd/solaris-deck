@@ -514,8 +514,8 @@
 .reveal .slides section.uic-slide .uic-page .uic-cover-img { position: absolute; left: 0; top: 28px; width: 1280px; height: 824px; max-width: none; max-height: none; margin: 0; border: 0; box-shadow: none; background: none; object-fit: cover; object-position: center top; }   /* reveal 기본 img 규칙(크기 제한·여백)을 해제 */
 /* 표지·뒷표지: 남색 면을 위아래 28px 띄워 흰 여백을 둔다 */
 .reveal .slides section.uic-slide .uic-page.uic-cover-page::before { content: ""; position: absolute; left: 0; right: 0; top: 28px; bottom: 28px; background: var(--navy); }
-/* 쪽번호: 핵심 띠의 아래 끝에 맞춘다(띠와 같은 줄에서 세로 가운데가 아니라 아래) */
-.reveal .slides section.uic-slide .uic-page .pn { align-items: flex-end; }
+/* 쪽번호: 글자 윗선을 왼쪽 핵심 띠의 아랫선(본문 아래 끝에서 8mm 위)에 맞춘다 = 띠 바로 아래 줄 */
+.reveal .slides section.uic-slide .uic-page .pn { top: calc(100% - 8mm); bottom: auto; height: auto; align-items: flex-start; }
 /* 하단 대외비 문구: IM(theme/solaris.scss .confidential)과 같은 서식, 위치는 아래 여백 안(30px) */
 .reveal .slides section.uic-slide .uic-page .confidential { position: absolute; bottom: 30px; right: 18px; font-size: 11px; color: #5B6B8C; opacity: 0.7; letter-spacing: 0.04em; line-height: 1.2; }
 .reveal .slides section.uic-slide .uic-page.uic-cover-page .confidential { color: #C9D6FF; bottom: 44px; right: 30px; }
