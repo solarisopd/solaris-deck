@@ -19,7 +19,9 @@ format:
       - text: |
           <meta name="robots" content="noindex,nofollow">
           <link rel="preload" href="../assets/fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
-    include-after-body: ../theme/protect.html
+    include-after-body:
+      - ../theme/protect.html
+      - uic-motion.html
 ---
 
 ## &nbsp; {.uic-slide data-menu-title="표지"}
