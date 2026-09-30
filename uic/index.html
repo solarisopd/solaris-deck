@@ -1588,22 +1588,15 @@
       }
 
       /* ── 쪽12 : 론칭 일정 타임라인 ─────────────────────────────────────────
-         전체 모양(선·카드·문장·숫자)은 처음부터 그대로 두고, 번호 원 1~5 가 차례로 한 번 반짝 빛난 뒤 원래 색으로 돌아와 멈춘다.
-         숫자는 흰색 그대로이고 원만 밝아지며 은은한 빛무리가 번진다. 새 문구·수치 없음 */
+         전체 모양(선·카드·문장)은 처음부터 그대로 두고, 번호 원 1~5(숫자 포함)는 처음에 옅게 깔려 있다가
+         차례로 제 색으로 진해지며 들어온 뒤 멈춘다. 빛무리·크기 변화 없이 원 자체의 농도만 바뀐다. 새 문구·수치 없음 */
       function playPage12(slide) {
         var tl = slide.querySelector('.k12-tl');
         if (!tl) return false;
         var dots = tl.querySelectorAll('.k12-n');
-        var T0 = 600, STEP = 1000, DUR = 1100;              // 첫 원은 0.6초 뒤 시작, 1초 간격, 한 번 반짝이는 데 1.1초
+        var T0 = 600, STEP = 1000, DUR = 900;               // 첫 원은 0.6초 뒤 시작, 1초 간격, 한 원이 들어오는 데 0.9초
         for (var i = 0; i < dots.length; i++) {
-          var d = dots[i], base = getComputedStyle(d).backgroundColor;
-          var last = d.classList.contains('k12-last');      // 5번(스탁론 론칭)은 주황, 나머지는 곤색 → 밝은 파랑
-          var peak = last ? '#FFA463' : '#5B86E5', glow = last ? 'rgba(255,164,99,' : 'rgba(91,134,229,';
-          anim(d, [
-            { backgroundColor: base, boxShadow: '0 0 0 0 ' + glow + '0)' },
-            { backgroundColor: peak, boxShadow: '0 0 0 1.2mm ' + glow + '.45), 0 0 5mm 1.4mm ' + glow + '.85)', offset: 0.38 },
-            { backgroundColor: base, boxShadow: '0 0 0 0 ' + glow + '0)' }
-          ], { duration: DUR, delay: T0 + i * STEP, easing: 'ease-in-out' });
+          anim(dots[i], [{ opacity: 0.18 }, { opacity: 1 }], { duration: DUR, delay: T0 + i * STEP, easing: 'ease-out' });
         }
         return true;
       }
