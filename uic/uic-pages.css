@@ -517,6 +517,13 @@
 .reveal .slides section.uic-slide .uic-page .p05-ins .bl li { font-size: var(--s14); line-height: 1.5; margin-bottom: 4.5mm; }
 .reveal .slides section.uic-slide .uic-page .p05-ins .bl li > .bl li { font-size: var(--s12); line-height: 1.5; margin-bottom: 1.5mm; }
 .reveal .slides section.uic-slide .uic-page .p05-ins .bl li > .bl { margin-top: 1.5mm; }
+/* 쪽5 자금순환도: 단계 목록을 한 줄씩 정리해 도식 칸을 넓히고(172mm), 4·5번은 곤색과 구분되는 IM 의 밝은 파랑 */
+.reveal .slides section.uic-slide .uic-page { --uic-bright: #2A5ADA; --uic-bright-line: #5B86E5; }
+.reveal .slides section.uic-slide .uic-page .k05-grid { grid-template-columns: 172mm 1fr; }
+.reveal .slides section.uic-slide .uic-page .k05-step > div { white-space: nowrap; }
+.reveal .slides section.uic-slide .uic-page .k05-step .t, .reveal .slides section.uic-slide .uic-page .k05-step .d { display: inline; }
+.reveal .slides section.uic-slide .uic-page .k05-step .d { margin: 0 0 0 3mm; }
+.reveal .slides section.uic-slide .uic-page .k05-step.b .k05-n { background: var(--uic-bright); }
 /* 인쇄본의 Calibri 라벨: 글자 윤곽 SVG(assets/uic/brand.svg)를 라벨 자리에 배경으로 넣어 어느 PC 에서나 같게 보이게 한다.
    글자는 스크린리더용으로 남기고 투명 처리(글꼴이 없어도 영향 없음) */
 .reveal .slides section.uic-slide .uic-page .brand { color: transparent; background: url("../assets/uic/brand.svg") right center / auto 1em no-repeat; }
