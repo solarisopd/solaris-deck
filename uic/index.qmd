@@ -6,7 +6,7 @@ format:
     css: uic-pages.css
     width: 1280
     height: 880
-    margin: 0
+    margin: 0.06
     slide-number: false
     hash: true
     transition: fade
