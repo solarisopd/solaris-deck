@@ -1588,50 +1588,23 @@
       }
 
       /* ── 쪽12 : 론칭 일정 타임라인 ─────────────────────────────────────────
-         W0 → W5 로 연결선이 오른쪽으로 그어지고, 선이 닿는 순서대로 주차 → 번호 원 → 카드가 나타난다.
-         끝(5 스탁론 론칭)은 주황 원이 크게 한 번 뛰고 이후 은은한 고리가 반복된다. 새 문구·수치 없음 */
+         전체 모양(선·카드·문장·숫자)은 처음부터 그대로 두고, 번호 원 1~5 가 차례로 한 번 반짝 빛난 뒤 원래 색으로 돌아와 멈춘다.
+         숫자는 흰색 그대로이고 원만 밝아지며 은은한 빛무리가 번진다. 새 문구·수치 없음 */
       function playPage12(slide) {
         var tl = slide.querySelector('.k12-tl');
         if (!tl) return false;
-        var weeks = tl.querySelectorAll('.k12-w'), dots = tl.querySelectorAll('.k12-n');
-        var cards = tl.querySelectorAll('.k12-card'), nrow = tl.querySelector('.k12-nrow');
-        var T0 = 300, STEP = 650, n = dots.length;
-
-        /* 연결선: 첫 원 중심 → 마지막 원 중심, 선형으로 그어 각 원에 닿는 때가 원이 나타나는 때와 같다 */
-        try {
-          var line = nrow.animate([{ transform: 'scaleX(0)', transformOrigin: '0% 50%' }, { transform: 'scaleX(1)', transformOrigin: '0% 50%' }],
-            { duration: STEP * (n - 1), delay: T0, easing: 'linear', fill: 'backwards', pseudoElement: '::before' });
-          running.push(line);
-        } catch (e) { /* 의사 요소 애니메이션을 못 쓰는 브라우저: 선은 처음부터 보인다 */ }
-
-        for (var i = 0; i < n; i++) {
-          var t = T0 + i * STEP, last = i === n - 1;
-          anim(weeks[i], [{ opacity: 0, transform: 'translateY(8px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 420, delay: t - 120 });
-          anim(dots[i], [{ opacity: 0, transform: 'scale(.3)' }, { opacity: 1, transform: 'scale(1)' }], { duration: 380, delay: t, easing: 'cubic-bezier(.3,1.5,.5,1)' });
-          anim(cards[i], [{ opacity: 0, transform: 'translateY(16px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 520, delay: t + 120 });
+        var dots = tl.querySelectorAll('.k12-n');
+        var T0 = 600, STEP = 1000, DUR = 1100;              // 첫 원은 0.6초 뒤 시작, 1초 간격, 한 번 반짝이는 데 1.1초
+        for (var i = 0; i < dots.length; i++) {
+          var d = dots[i], base = getComputedStyle(d).backgroundColor;
+          var last = d.classList.contains('k12-last');      // 5번(스탁론 론칭)은 주황, 나머지는 곤색 → 밝은 파랑
+          var peak = last ? '#FFA463' : '#5B86E5', glow = last ? 'rgba(255,164,99,' : 'rgba(91,134,229,';
+          anim(d, [
+            { backgroundColor: base, boxShadow: '0 0 0 0 ' + glow + '0)' },
+            { backgroundColor: peak, boxShadow: '0 0 0 1.2mm ' + glow + '.45), 0 0 5mm 1.4mm ' + glow + '.85)', offset: 0.38 },
+            { backgroundColor: base, boxShadow: '0 0 0 0 ' + glow + '0)' }
+          ], { duration: DUR, delay: T0 + i * STEP, easing: 'ease-in-out' });
         }
-
-        /* 아래 문장: 확정 필요 3항목 → 둘째 줄(확정 시 W1 착수) */
-        var endBuild = T0 + (n - 1) * STEP + 700;
-        var call = slide.querySelector('.k12-callout'), red = slide.querySelector('.k12-red');
-        if (call) anim(call, [{ opacity: 0 }, { opacity: 1 }], { duration: 500, delay: endBuild });
-        if (red) anim(red, [{ opacity: 0 }, { opacity: 1 }], { duration: 500, delay: endBuild + 650 });
-        var key = slide.querySelector('.keyband');
-        if (key) anim(key, [{ opacity: 0 }, { opacity: 1 }], { duration: 500, delay: endBuild + 1000 });
-
-        /* 마지막 단계 강조: 5번 원이 한 번 크게 뛰고, 이후 고리가 4.6초마다 퍼진다 */
-        var lastDot = dots[n - 1], lastCard = cards[n - 1];
-        var tLast = T0 + (n - 1) * STEP;
-        anim(lastDot, [{ transform: 'scale(1)' }, { transform: 'scale(1.35)', offset: 0.4 }, { transform: 'scale(1)' }], { duration: 700, delay: tLast + 420, easing: 'ease-in-out', fill: 'none' });
-        anim(lastCard, [{ transform: 'scale(1)' }, { transform: 'scale(1.04)', offset: 0.4 }, { transform: 'scale(1)' }], { duration: 700, delay: tLast + 420, easing: 'ease-in-out', fill: 'none' });
-        var timers = [];
-        function pulse() {
-          var a = lastDot.animate([{ boxShadow: '0 0 0 0 rgba(226,116,38,.55)' }, { boxShadow: '0 0 0 3.2mm rgba(226,116,38,0)' }], { duration: 1200, easing: 'ease-out', fill: 'none' });
-          running.push(a);
-          timers.push(setTimeout(pulse, 4600));
-        }
-        timers.push(setTimeout(pulse, tLast + 1300));
-        running.push(function () { timers.forEach(clearTimeout); });
         return true;
       }
 
