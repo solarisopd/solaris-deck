@@ -371,15 +371,22 @@
   }
 
   /* ── 쪽12 : 론칭 일정 타임라인 ─────────────────────────────────────────
-     전체 모양(선·카드·문장)은 처음부터 그대로 두고, 번호 원 1~5(숫자 포함)는 처음에 옅게 깔려 있다가
-     차례로 제 색으로 진해지며 들어온 뒤 멈춘다. 빛무리·크기 변화 없이 원 자체의 농도만 바뀐다. 새 문구·수치 없음 */
+     전체 모양(선·카드·문장)은 처음부터 그대로 두고, 번호 원 1~5(숫자 포함)는 처음에 옅은 색으로 깔려 있다가
+     차례로 제 색으로 진해지며 들어온 뒤 멈춘다. 빛무리·크기 변화 없이 원 자체의 색만 바뀐다.
+     원을 반투명(opacity)으로 만들면 뒤의 연결선이 비쳐 보이므로, 옅은 상태도 불투명한 색(제 색 + 흰색 섞기)으로 둔다. 새 문구·수치 없음 */
   function playPage12(slide) {
     var tl = slide.querySelector('.k12-tl');
     if (!tl) return false;
     var dots = tl.querySelectorAll('.k12-n');
     var T0 = 600, STEP = 1000, DUR = 900;               // 첫 원은 0.6초 뒤 시작, 1초 간격, 한 원이 들어오는 데 0.9초
+    var FAINT = 0.18;                                   // 옅은 상태 = 제 색 18% + 흰색 82%
+    function faintOf(rgb) {
+      var m = rgb.match(/\d+(\.\d+)?/g).map(Number);
+      return 'rgb(' + [0, 1, 2].map(function (k) { return Math.round(255 - (255 - m[k]) * FAINT); }).join(',') + ')';
+    }
     for (var i = 0; i < dots.length; i++) {
-      anim(dots[i], [{ opacity: 0.18 }, { opacity: 1 }], { duration: DUR, delay: T0 + i * STEP, easing: 'ease-out' });
+      var base = getComputedStyle(dots[i]).backgroundColor;
+      anim(dots[i], [{ backgroundColor: faintOf(base) }, { backgroundColor: base }], { duration: DUR, delay: T0 + i * STEP, easing: 'ease-out' });
     }
     return true;
   }
