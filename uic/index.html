@@ -1214,6 +1214,114 @@
       }, true);
     }());
     </script>
+    <script>
+    /* uic 덱 그래픽 움직임 모듈
+       - 슬라이드에 들어올 때마다 처음부터 재생한다(다른 쪽에 갔다 오면 다시 재생).
+       - Web Animations API 의 'backwards' 채움만 쓰므로 움직임이 끝난 화면 = 인쇄본과 같은 원래 그림이다.
+       - 브라우저의 '움직임 줄이기' 설정이면 재생하지 않고 최종 화면을 그대로 보여 준다.
+       - 문구·값은 SVG 원본에서 읽는다(여기에 새 문구를 넣지 않는다).
+       그래픽을 추가하려면 MOTIONS 에 (선택자 → 재생 함수)를 한 줄 더한다. */
+    (function () {
+      'use strict';
+      var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var running = [];      // 재생 중인 Animation / rAF 취소 함수
+
+      function cancelAll() {
+        running.forEach(function (a) { try { a.cancel ? a.cancel() : a(); } catch (e) { /* 무시 */ } });
+        running = [];
+      }
+      function anim(el, frames, opts) {
+        var a = el.animate(frames, Object.assign({ fill: 'backwards', easing: 'cubic-bezier(.2,.7,.2,1)' }, opts));
+        running.push(a);
+        return a;
+      }
+      function countUp(el, delay, duration) {
+        var finalText = el.textContent;
+        var target = parseFloat(finalText.replace(/,/g, ''));
+        if (!isFinite(target)) return;
+        var start = null, raf = 0, timer = 0, stopped = false;
+        function fmt(v) { return Math.round(v).toLocaleString('en-US'); }
+        function step(ts) {
+          if (stopped) return;
+          if (start === null) start = ts;
+          var p = Math.min(1, (ts - start) / duration), e = 1 - Math.pow(1 - p, 3);
+          el.textContent = p < 1 ? fmt(target * e) : finalText;
+          if (p < 1) raf = requestAnimationFrame(step);
+        }
+        el.textContent = '0';
+        timer = setTimeout(function () { raf = requestAnimationFrame(step); }, delay);
+        running.push(function () { stopped = true; clearTimeout(timer); cancelAnimationFrame(raf); el.textContent = finalText; });
+      }
+
+      /* ── 쪽2 : 온투업 스탁론 잔액 막대그래프 ───────────────────────────── */
+      function playPage2(slide) {
+        var svg = slide.querySelector('svg.p05-chart');
+        if (!svg) return false;
+        var texts = svg.querySelectorAll('text');       // 0-1 제목·단위 / 2-6 세로축 / 7-12 막대 값 / 13-18 월
+        var lines = svg.querySelectorAll('line');       // 0-3 눈금선 / 4 기준선
+        var bars = svg.querySelectorAll('rect');        // 6개
+        var STEP = 150, GROW = 700, BASE = 300;
+
+        [texts[0], texts[1]].forEach(function (t) { anim(t, [{ opacity: 0 }, { opacity: 1 }], { duration: 400 }); });
+        Array.prototype.forEach.call(lines, function (l, i) {
+          anim(l, [{ opacity: 0 }, { opacity: 1 }], { duration: 400, delay: 60 * i });
+        });
+        Array.prototype.slice.call(texts, 2, 7).concat(Array.prototype.slice.call(texts, 13, 19)).forEach(function (t, i) {
+          anim(t, [{ opacity: 0 }, { opacity: 1 }], { duration: 400, delay: 150 + 30 * i });
+        });
+
+        Array.prototype.forEach.call(bars, function (b, i) {
+          b.style.transformBox = 'fill-box';
+          b.style.transformOrigin = '50% 100%';
+          var d = BASE + i * STEP;
+          anim(b, [{ transform: 'scaleY(0)' }, { transform: 'scaleY(1)' }], { duration: GROW, delay: d });
+          var v = texts[7 + i], vd = d + GROW - 150;
+          anim(v, [{ opacity: 0, transform: 'translateY(8px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 300, delay: vd });
+          countUp(v, vd, 650);
+        });
+
+        /* 마지막(주황) 막대와 값: 다 자란 뒤 한 번 강조 */
+        var last = bars[bars.length - 1], lastVal = texts[12];
+        var hd = BASE + (bars.length - 1) * STEP + GROW + 100;
+        lastVal.style.transformBox = 'fill-box';
+        lastVal.style.transformOrigin = '50% 100%';
+        anim(last, [{ transform: 'scale(1,1)' }, { transform: 'scale(1.08,1.03)' }, { transform: 'scale(1,1)' }],
+          { duration: 700, delay: hd, fill: 'none', easing: 'ease-in-out' });
+        anim(lastVal, [{ transform: 'scale(1)' }, { transform: 'scale(1.25)' }, { transform: 'scale(1)' }],
+          { duration: 700, delay: hd, fill: 'none', easing: 'ease-in-out' });
+
+        /* 오른쪽 시장 인사이트: 제목 → 글머리 순서대로 */
+        var ins = slide.querySelector('.p05-ins');
+        if (ins) {
+          var rd = hd - 300;
+          anim(ins.querySelector('h3'), [{ opacity: 0, transform: 'translateX(18px)' }, { opacity: 1, transform: 'translateX(0)' }], { duration: 450, delay: rd });
+          Array.prototype.forEach.call(ins.querySelectorAll('li'), function (li, i) {
+            anim(li, [{ opacity: 0, transform: 'translateX(18px)' }, { opacity: 1, transform: 'translateX(0)' }], { duration: 420, delay: rd + 200 + i * 130 });
+          });
+        }
+        var note = slide.querySelector('.note');
+        if (note) anim(note, [{ opacity: 0 }, { opacity: 1 }], { duration: 500, delay: hd + 900 });
+        return true;
+      }
+
+      var MOTIONS = [playPage2];
+
+      function play(slide) {
+        cancelAll();
+        if (reduce || !slide) return;
+        for (var i = 0; i < MOTIONS.length; i++) { if (MOTIONS[i](slide)) return; }
+      }
+
+      function boot() {
+        if (!window.Reveal) { return setTimeout(boot, 50); }
+        Reveal.on('ready', function (e) { play(e.currentSlide); });
+        Reveal.on('slidechanged', function (e) { play(e.currentSlide); });
+        if (Reveal.isReady && Reveal.isReady()) { play(Reveal.getCurrentSlide()); }
+      }
+      boot();
+      window.UICMotion = { replay: function () { play(Reveal.getCurrentSlide()); } };
+    })();
+    </script>
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
