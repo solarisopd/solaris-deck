@@ -280,7 +280,7 @@
           </div>
         </div>
 
-        <p class="note">출처: 금융위원회·금융감독원(2026. 7. 15.), 금융투자협회, 머니투데이(2026. 9. 28. 2026.08은 기타담보(스탁론 포함) 잔액 7,708억원으로 스탁론 단독 잔액은 이보다 작음 ― 6월 기타담보 1조132억원 대비 -2,424억원). 2023·2024말은 연간 증가폭에서 역산.</p>
+        <p class="note">출처: 금융위원회·금융감독원(2026. 7. 15.), 금융투자협회.</p>
       </div>
       <div class="keyband">온투업이 비운 스탁론 공급 공백 ― 먼저 들어가는 등록 대부업체가 그 자리를 가져간다</div>
     </div>
@@ -1217,14 +1217,15 @@
     <script>
     /* uic 덱 그래픽 움직임 모듈
        - 슬라이드에 들어올 때마다 처음부터 재생한다(다른 쪽에 갔다 오면 다시 재생).
-       - Web Animations API 의 'backwards' 채움만 쓰므로 움직임이 끝난 화면 = 인쇄본과 같은 원래 그림이다.
+       - Web Animations API 의 'backwards' 채움만 쓰므로 움직임이 끝난 화면 = 최종(정지) 화면이다.
        - 브라우저의 '움직임 줄이기' 설정이면 재생하지 않고 최종 화면을 그대로 보여 준다.
-       - 문구·값은 SVG 원본에서 읽는다(여기에 새 문구를 넣지 않는다).
-       그래픽을 추가하려면 MOTIONS 에 (선택자 → 재생 함수)를 한 줄 더한다. */
+       - 문구·값·좌표는 SVG 원본에서 읽는다(여기에 새 문구·수치를 넣지 않는다).
+       그래픽을 추가하려면 MOTIONS 에 재생 함수를 한 줄 더한다. */
     (function () {
       'use strict';
+      var NS = 'http://www.w3.org/2000/svg';
       var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-      var running = [];      // 재생 중인 Animation / rAF 취소 함수
+      var running = [];      // 재생 중인 Animation / 취소 함수
 
       function cancelAll() {
         running.forEach(function (a) { try { a.cancel ? a.cancel() : a(); } catch (e) { /* 무시 */ } });
@@ -1235,18 +1236,26 @@
         running.push(a);
         return a;
       }
-      function countUp(el, delay, duration) {
-        var finalText = el.textContent;
-        var target = parseFloat(finalText.replace(/,/g, ''));
-        if (!isFinite(target)) return;
+      function num(el, attr) { return parseFloat(el.getAttribute(attr)); }
+      function val(el) { return parseFloat(el.textContent.replace(/,/g, '')); }
+      function fmt(v) { return Math.round(v).toLocaleString('en-US'); }
+      function ease(p) { return 1 - Math.pow(1 - p, 3); }
+
+      /* 숫자 카운트: steps = [{to, dur}, ...] 를 0 에서 차례로 지난다. 끝나면 원래 글자로 복원 */
+      function countSeq(el, steps, delay) {
+        var finalText = el.textContent, total = steps.reduce(function (s, x) { return s + x.dur; }, 0);
         var start = null, raf = 0, timer = 0, stopped = false;
-        function fmt(v) { return Math.round(v).toLocaleString('en-US'); }
         function step(ts) {
           if (stopped) return;
           if (start === null) start = ts;
-          var p = Math.min(1, (ts - start) / duration), e = 1 - Math.pow(1 - p, 3);
-          el.textContent = p < 1 ? fmt(target * e) : finalText;
-          if (p < 1) raf = requestAnimationFrame(step);
+          var e = ts - start, from = 0, acc = 0, out = null;
+          for (var i = 0; i < steps.length; i++) {
+            if (e <= acc + steps[i].dur) { out = from + (steps[i].to - from) * ease((e - acc) / steps[i].dur); break; }
+            acc += steps[i].dur; from = steps[i].to;
+          }
+          if (e >= total) { el.textContent = finalText; return; }
+          el.textContent = fmt(out);
+          raf = requestAnimationFrame(step);
         }
         el.textContent = '0';
         timer = setTimeout(function () { raf = requestAnimationFrame(step); }, delay);
@@ -1254,49 +1263,91 @@
       }
 
       /* ── 쪽2 : 온투업 스탁론 잔액 막대그래프 ───────────────────────────── */
+      /* 정지 화면(최종) 서식: 곤색 막대 값은 크고 굵게, 주황 막대 값은 작고 가늘게 + 6월 정점 점선·아래 화살표 */
+      function styleChart(svg) {
+        if (svg.__uicStyled) return;
+        svg.__uicStyled = true;
+        var T = svg.querySelectorAll('text'), B = svg.querySelectorAll('rect');
+        for (var i = 7; i <= 11; i++) { T[i].style.fontSize = 'var(--s16)'; T[i].style.fontWeight = '700'; }
+        T[12].style.fontSize = 'var(--s12)'; T[12].style.fontWeight = '400';
+
+        var june = B[4], aug = B[5];
+        var yPeak = num(june, 'y'), yTop = num(aug, 'y');
+        var xa = num(aug, 'x') + num(aug, 'width') + 9;                 // 화살표 x (주황 막대 오른쪽)
+        var guide = document.createElementNS(NS, 'line');
+        guide.setAttribute('class', 'uic-peak');
+        guide.setAttribute('x1', num(june, 'x') + num(june, 'width')); guide.setAttribute('x2', xa + 6);
+        guide.setAttribute('y1', yPeak); guide.setAttribute('y2', yPeak);
+        guide.setAttribute('stroke', 'var(--mid)'); guide.setAttribute('stroke-width', '1.2'); guide.setAttribute('stroke-dasharray', '5 4');
+        var arrow = document.createElementNS(NS, 'g');
+        arrow.setAttribute('class', 'uic-drop');
+        var shaft = document.createElementNS(NS, 'line');
+        shaft.setAttribute('x1', xa); shaft.setAttribute('x2', xa); shaft.setAttribute('y1', yPeak + 3); shaft.setAttribute('y2', yTop - 7);
+        shaft.setAttribute('stroke', 'var(--orange)'); shaft.setAttribute('stroke-width', '2');
+        var head = document.createElementNS(NS, 'polygon');
+        head.setAttribute('points', (xa - 5) + ',' + (yTop - 9) + ' ' + (xa + 5) + ',' + (yTop - 9) + ' ' + xa + ',' + (yTop - 1));
+        head.setAttribute('fill', 'var(--orange)');
+        arrow.appendChild(shaft); arrow.appendChild(head);
+        svg.insertBefore(guide, svg.querySelector('line[stroke-width="1.2"]').nextSibling || null);
+        svg.appendChild(arrow);
+      }
+
       function playPage2(slide) {
         var svg = slide.querySelector('svg.p05-chart');
         if (!svg) return false;
-        var texts = svg.querySelectorAll('text');       // 0-1 제목·단위 / 2-6 세로축 / 7-12 막대 값 / 13-18 월
-        var lines = svg.querySelectorAll('line');       // 0-3 눈금선 / 4 기준선
-        var bars = svg.querySelectorAll('rect');        // 6개
-        var STEP = 150, GROW = 700, BASE = 300;
+        styleChart(svg);
+        var T = svg.querySelectorAll('text');           // 0-1 제목·단위 / 2-6 세로축 / 7-12 막대 값 / 13-18 월
+        var L = svg.querySelectorAll('line:not(.uic-peak)');   // 0-3 눈금선 / 4 기준선
+        var B = svg.querySelectorAll('rect');           // 6개
+        var STEP = 150, GROW = 700, BASE = 300, ORANGE = 1500, PEAK = 0.6;
+        var peakVal = val(T[11]), finalVal = val(T[12]);   // 카운트가 글자를 0 으로 바꾸기 전에 원래 값을 읽어 둔다
 
-        [texts[0], texts[1]].forEach(function (t) { anim(t, [{ opacity: 0 }, { opacity: 1 }], { duration: 400 }); });
-        Array.prototype.forEach.call(lines, function (l, i) {
+        [T[0], T[1]].forEach(function (t) { anim(t, [{ opacity: 0 }, { opacity: 1 }], { duration: 400 }); });
+        Array.prototype.forEach.call(L, function (l, i) {
+          if (l.closest('.uic-drop')) return;
           anim(l, [{ opacity: 0 }, { opacity: 1 }], { duration: 400, delay: 60 * i });
         });
-        Array.prototype.slice.call(texts, 2, 7).concat(Array.prototype.slice.call(texts, 13, 19)).forEach(function (t, i) {
+        Array.prototype.slice.call(T, 2, 7).concat(Array.prototype.slice.call(T, 13, 19)).forEach(function (t, i) {
           anim(t, [{ opacity: 0 }, { opacity: 1 }], { duration: 400, delay: 150 + 30 * i });
         });
 
-        Array.prototype.forEach.call(bars, function (b, i) {
-          b.style.transformBox = 'fill-box';
-          b.style.transformOrigin = '50% 100%';
-          var d = BASE + i * STEP;
+        /* 곤색 막대 5개: 바닥에서 자라고 값은 0 에서 올라간다 */
+        for (var i = 0; i < 5; i++) {
+          var b = B[i], v = T[7 + i], d = BASE + i * STEP, vd = d + GROW - 150;
+          b.style.transformBox = 'fill-box'; b.style.transformOrigin = '50% 100%';
           anim(b, [{ transform: 'scaleY(0)' }, { transform: 'scaleY(1)' }], { duration: GROW, delay: d });
-          var v = texts[7 + i], vd = d + GROW - 150;
           anim(v, [{ opacity: 0, transform: 'translateY(8px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 300, delay: vd });
-          countUp(v, vd, 650);
-        });
+          countSeq(v, [{ to: val(v), dur: 650 }], vd);
+        }
 
-        /* 마지막(주황) 막대와 값: 다 자란 뒤 한 번 강조 */
-        var last = bars[bars.length - 1], lastVal = texts[12];
-        var hd = BASE + (bars.length - 1) * STEP + GROW + 100;
-        lastVal.style.transformBox = 'fill-box';
-        lastVal.style.transformOrigin = '50% 100%';
-        anim(last, [{ transform: 'scale(1,1)' }, { transform: 'scale(1.08,1.03)' }, { transform: 'scale(1,1)' }],
-          { duration: 700, delay: hd, fill: 'none', easing: 'ease-in-out' });
-        anim(lastVal, [{ transform: 'scale(1)' }, { transform: 'scale(1.25)' }, { transform: 'scale(1)' }],
-          { duration: 700, delay: hd, fill: 'none', easing: 'ease-in-out' });
+        /* 주황 막대: 6월 높이까지 솟았다가 내려앉는다. 값은 정점(6월 값)까지 올라갔다 최종 값으로 줄어든다 */
+        var aug = B[5], june = B[4], augVal = T[12], d5 = BASE + 5 * STEP;
+        var k = num(june, 'height') / num(aug, 'height');
+        aug.style.transformBox = 'fill-box'; aug.style.transformOrigin = '50% 100%';
+        anim(aug, [
+          { transform: 'scaleY(0)', easing: 'cubic-bezier(.2,.7,.2,1)' },
+          { transform: 'scaleY(' + k + ')', offset: PEAK, easing: 'cubic-bezier(.45,0,.55,1)' },
+          { transform: 'scaleY(1)' }], { duration: ORANGE, delay: d5, easing: 'linear' });
+        var hAug = num(aug, 'height'), dyPeak = num(june, 'y') - num(aug, 'y');
+        anim(augVal, [
+          { transform: 'translateY(' + hAug + 'px)', opacity: 0 },
+          { transform: 'translateY(' + dyPeak + 'px)', opacity: 1, offset: PEAK },
+          { transform: 'translateY(0px)', opacity: 1 }], { duration: ORANGE, delay: d5, easing: 'linear' });
+        countSeq(augVal, [{ to: peakVal, dur: ORANGE * PEAK }, { to: finalVal, dur: ORANGE * (1 - PEAK) }], d5);
+
+        var guide = svg.querySelector('.uic-peak'), drop = svg.querySelector('.uic-drop');
+        guide.style.transformBox = 'fill-box'; guide.style.transformOrigin = '0% 50%';
+        anim(guide, [{ opacity: 0, transform: 'scaleX(0)' }, { opacity: 1, transform: 'scaleX(1)' }], { duration: 350, delay: d5 + ORANGE * PEAK - 100 });
+        anim(drop, [{ opacity: 0, transform: 'translateY(-8px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 400, delay: d5 + ORANGE - 150 });
 
         /* 오른쪽 시장 인사이트: 제목 → 글머리 순서대로 */
+        var hd = d5 + ORANGE;
         var ins = slide.querySelector('.p05-ins');
         if (ins) {
-          var rd = hd - 300;
+          var rd = hd - 200;
           anim(ins.querySelector('h3'), [{ opacity: 0, transform: 'translateX(18px)' }, { opacity: 1, transform: 'translateX(0)' }], { duration: 450, delay: rd });
-          Array.prototype.forEach.call(ins.querySelectorAll('li'), function (li, i) {
-            anim(li, [{ opacity: 0, transform: 'translateX(18px)' }, { opacity: 1, transform: 'translateX(0)' }], { duration: 420, delay: rd + 200 + i * 130 });
+          Array.prototype.forEach.call(ins.querySelectorAll('li'), function (li, n) {
+            anim(li, [{ opacity: 0, transform: 'translateX(18px)' }, { opacity: 1, transform: 'translateX(0)' }], { duration: 420, delay: rd + 200 + n * 130 });
           });
         }
         var note = slide.querySelector('.note');
@@ -1311,10 +1362,14 @@
         if (reduce || !slide) return;
         for (var i = 0; i < MOTIONS.length; i++) { if (MOTIONS[i](slide)) return; }
       }
+      function initStatic() {
+        Array.prototype.forEach.call(document.querySelectorAll('svg.p05-chart'), styleChart);
+      }
 
       function boot() {
         if (!window.Reveal) { return setTimeout(boot, 50); }
-        Reveal.on('ready', function (e) { play(e.currentSlide); });
+        initStatic();
+        Reveal.on('ready', function (e) { initStatic(); play(e.currentSlide); });
         Reveal.on('slidechanged', function (e) { play(e.currentSlide); });
         if (Reveal.isReady && Reveal.isReady()) { play(Reveal.getCurrentSlide()); }
       }
