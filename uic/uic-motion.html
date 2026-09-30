@@ -139,7 +139,129 @@
     return true;
   }
 
-  var MOTIONS = [playPage2];
+  /* ── 쪽5 : 자금순환구조 도식 (IM 5쪽 자금순환도와 같은 리듬) ──────────
+     단계 1→5 를 0.55초 간격으로: 선이 0.6초 동안 그려지고(0 100 → 100 100), 선이 절반쯤 그려질 때 번호 원·문구,
+     선이 끝난 뒤 화살촉이 나타난다. 오른쪽 단계 카드는 같은 순서로 켜진다.
+     다 그려진 뒤에는 자금 입자(주황 점)가 선을 따라 1→5 로 계속 순환하고 해당 단계 카드에 주황 막대가 표시된다. */
+  /* 정지 화면(최종) 서식: IM 자금순환도(im/index.qmd 5쪽)와 같은 도형 규칙.
+     - 상자 rx=4(라운드), 영역 배경은 각지게
+     - 직선 화살표: 상자에서 8px 띄워 시작하고 화살촉 끝도 목표 상자 8px 앞(화살촉 길이 8, 반폭 4)
+     - 원호 화살표: 상자 바닥 8px 아래·상자 안쪽 29px 에서 출발/도착하는 타원 호(IM 비율 rx:ry = 350:90, 끝점 각도 -159°) */
+  function styleDiagram5(svg) {
+    if (svg.__uicStyled5) return;
+    svg.__uicStyled5 = true;
+    var kids = Array.prototype.slice.call(svg.children).filter(function (e) { return !e.classList.contains('uic-dot'); });
+    var GAP = 8, HEAD = 8, HALF = 4, INSET = 29;
+    var rects = kids.filter(function (e) { return e.tagName === 'rect'; });
+    rects.slice(1).forEach(function (r) { r.setAttribute('rx', '4'); });
+
+    function headPoints(ax, ay, ux, uy) {              // 꼭짓점 (ax,ay), 진행 방향 단위벡터 u
+      var bx = ax - HEAD * ux, by = ay - HEAD * uy, nx = -uy, ny = ux;
+      return [ax + ',' + ay, (bx + HALF * nx) + ',' + (by + HALF * ny), (bx - HALF * nx) + ',' + (by - HALF * ny)].join(' ');
+    }
+    var steps = kids.filter(function (e) { return e.tagName === 'circle'; }).map(function (c) {
+      var i = kids.indexOf(c);
+      return { n: parseInt(kids[i + 1].textContent, 10), path: kids[i - 2], head: kids[i - 1], circle: c, num: kids[i + 1], label: kids[i + 2] };
+    });
+    var boxes = rects.slice(2);                        // 0 영역, 1 본점(위), 이하 아래 세 상자
+    var lo = boxes.reduce(function (a, b) { return num(b, 'x') < num(a, 'x') ? b : a; });
+    var hi = boxes.reduce(function (a, b) { return num(b, 'x') > num(a, 'x') ? b : a; });
+
+    steps.forEach(function (s) {
+      if (s.path.tagName === 'line') {
+        var x1 = num(s.path, 'x1'), y1 = num(s.path, 'y1'), x2 = num(s.path, 'x2'), y2 = num(s.path, 'y2');
+        var dx = x2 - x1, dy = y2 - y1, L = Math.sqrt(dx * dx + dy * dy), ux = dx / L, uy = dy / L;
+        s.path.setAttribute('x1', x1 + GAP * ux); s.path.setAttribute('y1', y1 + GAP * uy);
+        s.path.setAttribute('x2', x2 - HEAD * ux); s.path.setAttribute('y2', y2 - HEAD * uy);
+        s.head.setAttribute('points', headPoints(x2, y2, ux, uy));      // 꼭짓점 = 원래 선 끝(목표 상자 8px 앞)
+      } else {                                                          // 원호(주식 레버리지 투자)
+        var yb = num(hi, 'y') + num(hi, 'height') + GAP;
+        var sx = num(hi, 'x') + INSET, ex = num(lo, 'x') + num(lo, 'width') - INSET;
+        var chord = sx - ex, k = 291 / 350, sinT = Math.sqrt(1 - k * k);
+        var rx = chord / (2 * k), ry = rx * 90 / 350;
+        s.path.setAttribute('d', 'M' + sx + ',' + yb + ' A' + rx.toFixed(2) + ',' + ry.toFixed(2) + ' 0 0 1 ' + ex + ',' + yb);
+        var ang = Math.atan2(ry * (-k), -rx * sinT);                    // 끝점 접선 방향(IM: -159°)
+        s.head.setAttribute('points', headPoints(ex, yb, Math.cos(ang), Math.sin(ang)));
+        var cy = yb + ry * (1 - sinT), cx = (sx + ex) / 2;
+        s.circle.setAttribute('cx', cx); s.circle.setAttribute('cy', cy);
+        s.num.setAttribute('x', cx); s.num.setAttribute('y', cy);
+        s.label.setAttribute('x', cx); s.label.setAttribute('y', cy + 25);
+      }
+    });
+  }
+
+  function playPage5(slide) {
+    var svg = slide.querySelector('svg.k05-fig');
+    if (!svg) return false;
+    styleDiagram5(svg);
+    var kids = Array.prototype.slice.call(svg.children).filter(function (e) { return !e.classList.contains('uic-dot'); });
+    var steps = kids.filter(function (e) { return e.tagName === 'circle'; }).map(function (c) {
+      var i = kids.indexOf(c);
+      return { n: parseInt(kids[i + 1].textContent, 10), path: kids[i - 2], head: kids[i - 1], circle: c, num: kids[i + 1], label: kids[i + 2] };
+    }).sort(function (a, b) { return a.n - b.n; });
+    if (steps.length !== 5) return false;
+    var cards = Array.prototype.slice.call(slide.querySelectorAll('.k05-step'));
+    var STEP0 = 650, STEP = 550, DRAW = 600;
+
+    /* 영역·상자: 먼저 차례로 나타난다 */
+    var rects = kids.filter(function (e) { return e.tagName === 'rect'; });
+    rects.forEach(function (r, i) {
+      var group = [r, kids[kids.indexOf(r) + 1]];
+      if (i > 0) group.push(kids[kids.indexOf(r) + 2]);
+      group.forEach(function (g) { anim(g, [{ opacity: 0 }, { opacity: 1 }], { duration: 350, delay: 60 * i }); });
+    });
+
+    steps.forEach(function (s, k) {
+      var t = STEP0 + k * STEP;
+      s.path.setAttribute('pathLength', '100');
+      anim(s.path, [{ strokeDasharray: '0 100' }, { strokeDasharray: '100 100' }], { duration: DRAW, delay: t, easing: 'linear' });
+      s.head.style.transformBox = 'fill-box'; s.head.style.transformOrigin = '50% 50%';
+      anim(s.head, [{ opacity: 0, transform: 'scale(.3)' }, { opacity: 1, transform: 'scale(1)' }], { duration: 180, delay: t + DRAW - 60 });
+      [s.circle, s.num, s.label].forEach(function (e) { anim(e, [{ opacity: 0 }, { opacity: 1 }], { duration: 250, delay: t + 250, easing: 'ease-out' }); });
+      if (cards[k]) anim(cards[k], [{ opacity: 0.2, transform: 'translateX(24px)' }, { opacity: 1, transform: 'translateX(0)' }], { duration: 450, delay: t + 250 });
+    });
+
+    /* 순환 입자: 다 그려진 뒤 시작 */
+    var NS2 = 'http://www.w3.org/2000/svg';
+    var dots = svg.__uicDots;
+    if (!dots) {
+      dots = steps.map(function () {
+        var d = document.createElementNS(NS2, 'circle');
+        d.setAttribute('class', 'uic-dot'); d.setAttribute('r', '4.5'); d.setAttribute('fill', 'var(--orange)'); d.setAttribute('opacity', '0');
+        svg.appendChild(d); return d;
+      });
+      svg.__uicDots = dots;
+    }
+    var lens = steps.map(function (s) { return s.path.getTotalLength(); });
+    var W = 800, GAP = 620, CYCLE = 5 * GAP + W + 900;   // 각 단계 이동 0.8초, 단계 간격 0.62초, 한 바퀴 뒤 0.9초 쉼
+    var startAt = STEP0 + 4 * STEP + DRAW + 500, raf = 0, timer = 0, stopped = false, on = [false, false, false, false, false], t0 = 0;
+    cards.forEach(function (c) { c.style.transition = 'box-shadow .25s'; });
+    function frame(ts) {
+      if (stopped) return;
+      if (!t0) t0 = ts;
+      var e = (ts - t0) % CYCLE;
+      steps.forEach(function (s, k) {
+        var local = e - k * GAP, active = local >= 0 && local < W;
+        if (active) {
+          var p = local / W, q = p < .5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+          var pt = s.path.getPointAtLength(q * lens[k]);
+          dots[k].setAttribute('cx', pt.x); dots[k].setAttribute('cy', pt.y);
+          dots[k].setAttribute('opacity', Math.min(1, p * 8, (1 - p) * 8).toFixed(2));
+        } else { dots[k].setAttribute('opacity', '0'); }
+        if (active !== on[k]) { on[k] = active; if (cards[k]) cards[k].style.boxShadow = active ? 'inset 6px 0 0 0 var(--orange)' : 'none'; }
+      });
+      raf = requestAnimationFrame(frame);
+    }
+    timer = setTimeout(function () { raf = requestAnimationFrame(frame); }, startAt);
+    running.push(function () {
+      stopped = true; clearTimeout(timer); cancelAnimationFrame(raf);
+      dots.forEach(function (d) { d.setAttribute('opacity', '0'); });
+      cards.forEach(function (c) { c.style.boxShadow = 'none'; });
+    });
+    return true;
+  }
+
+  var MOTIONS = [playPage2, playPage5];
 
   function play(slide) {
     cancelAll();
@@ -148,6 +270,7 @@
   }
   function initStatic() {
     Array.prototype.forEach.call(document.querySelectorAll('svg.p05-chart'), styleChart);
+    Array.prototype.forEach.call(document.querySelectorAll('svg.k05-fig'), styleDiagram5);
   }
 
   function boot() {
